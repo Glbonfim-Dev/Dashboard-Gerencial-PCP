@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dashboard gerencial de melhorias e faturamento 2026" />
+    <title>Dashboard Gerencial – Melhorias e Faturamento 2026</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
+    <svg class="svg-defs" aria-hidden="true">
+      <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v5l-4 2v-7L3 5Z" /></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13" /><circle cx="3" cy="6" r="1" /><circle cx="3" cy="12" r="1" /><circle cx="3" cy="18" r="1" /></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M8 3v4M16 3v4M3 10h18" /></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6" /><path d="M5.6 15a8 8 0 0 0 13-3M18.4 9A8 8 0 0 0 5.5 6" /></symbol>
+      <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2" /><path d="M9 4V2h6v2M9 9h6M9 13h6M9 17h4" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="m8 12 3 3 5-6" /></symbol>
+      <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 5 3 5 5 9-2 4-5 4-5 9M17 3c0 5-3 5-5 9 2 4 5 4 5 9" /></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1" /><path d="m15 9 6-6M17 3h4v4" /></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19" /></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol>
+    </svg>
+
+    <!-- Estrutura geral: filtros recolhíveis à esquerda e dashboard à direita. -->
+    <div class="app-shell filters-collapsed" id="app-shell">
+      <!-- Painel com os filtros que atualizam KPIs, gráficos e tabelas de ações. -->
+      <aside class="sidebar" id="painel-filtros" aria-label="Filtros do dashboard">
+        <div class="sidebar-title"><svg><use href="#i-filter"></use></svg><span>Filtros</span></div>
+
+        <div class="filter-grid">
+          <label class="filter-group" for="filtro-responsavel">
+            <span class="filter-label"><svg><use href="#i-user"></use></svg>Responsável</span>
+            <select id="filtro-responsavel"><option value="">Todos</option></select>
+          </label>
+
+          <label class="filter-group" for="filtro-status">
+            <span class="filter-label"><svg><use href="#i-list"></use></svg>Status</span>
+            <select id="filtro-status"><option value="">Todos</option></select>
+          </label>
+
+          <label class="filter-group" for="filtro-periodo">
+            <span class="filter-label"><svg><use href="#i-calendar"></use></svg>Período</span>
+            <select id="filtro-periodo"><option value="">Todos</option></select>
+          </label>
+        </div>
+
+        <button class="clear-button" id="limpar-filtros" type="button">
+          <svg><use href="#i-refresh"></use></svg>Limpar filtros
+        </button>
+      </aside>
+
+      <!-- A seta permanece visível quando o painel de filtros está fechado. -->
+      <button class="filters-toggle" id="alternar-filtros" type="button" aria-controls="painel-filtros" aria-expanded="false" title="Mostrar filtros">
+        <svg><use href="#i-chevron"></use></svg>
+        <span class="sr-only">Mostrar ou ocultar filtros</span>
+      </button>
+
+      <main class="dashboard">
+        <!-- Cabeçalho corporativo e horário enviado pelo dados.json. -->
+        <header class="page-header">
+          <div>
+            <h1>Dashboard Gerencial – Melhorias e Faturamento 2026</h1>
+            <p>Visão executiva para acompanhamento de ações e resultados</p>
+          </div>
+          <div class="header-meta">
+            <img src="img/images.png" alt="Columbia" class="company-logo" />
+            <div class="last-update"><svg><use href="#i-calendar"></use></svg><span>Última atualização:<strong id="ultima-atualizacao">Carregando...</strong></span></div>
+          </div>
+        </header>
+
+        <div id="mensagem-erro" class="error-banner" role="alert" hidden></div>
+
+        <!-- Indicadores calculados novamente sempre que os filtros mudam. -->
+        <section class="kpi-grid" aria-label="Indicadores principais">
+          <article class="kpi-card kpi-blue"><span class="kpi-icon"><svg><use href="#i-clipboard"></use></svg></span><div><span>Total de Ações</span><strong id="kpi-total">–</strong></div></article>
+          <article class="kpi-card kpi-green"><span class="kpi-icon"><svg><use href="#i-check"></use></svg></span><div><span>Implementadas</span><strong id="kpi-implementadas">–</strong></div></article>
+          <article class="kpi-card kpi-orange"><span class="kpi-icon"><svg><use href="#i-hourglass"></use></svg></span><div><span>Em Andamento</span><strong id="kpi-andamento">–</strong></div></article>
+          <article class="kpi-card kpi-red"><span class="kpi-icon"><svg><use href="#i-pause"></use></svg></span><div><span>Não Iniciadas</span><strong id="kpi-nao-iniciadas">–</strong></div></article>
+          <article class="kpi-card kpi-teal"><span class="kpi-icon"><svg><use href="#i-target"></use></svg></span><div><span>% Concluído</span><strong id="kpi-percentual">–</strong></div></article>
+        </section>
+
+        <!-- Primeira linha: status, responsáveis e comparação de faturamento. -->
+        <section class="content-grid top-grid">
+          <article class="panel status-panel">
+            <h2>Status das Ações</h2>
+            <div class="chart-box chart-status"><canvas id="grafico-status" aria-label="Distribuição dos status das ações"></canvas></div>
+          </article>
+
+          <article class="panel owners-panel">
+            <h2>Ações por Responsável</h2>
+            <div class="chart-box"><canvas id="grafico-responsaveis" aria-label="Ações por responsável"></canvas></div>
+          </article>
+
+          <article class="panel billing-panel">
+            <h2>Meta x Realizado <span id="mes-referencia"></span></h2>
+            <div class="billing-row"><span>Meta<br />mensal</span><div class="billing-track"><div class="billing-bar meta" id="barra-meta"></div></div><strong id="valor-meta">–</strong></div>
+            <div class="billing-row"><span id="rotulo-realizado">Realizado</span><div class="billing-track"><div class="billing-bar actual" id="barra-realizado"></div></div><strong id="valor-realizado">–</strong></div>
+            <div class="billing-row achievement"><span>Atingimento</span><div class="billing-track"><div class="billing-bar progress" id="barra-atingimento"></div></div><strong id="valor-atingimento">–</strong></div>
+            <p class="meta-note" id="aviso-meta" hidden>Configure as metas em <code>config.py</code>.</p>
+          </article>
+        </section>
+
+        <!-- Segunda linha: evolução mensal e ações que exigem atenção. -->
+        <section class="content-grid bottom-grid">
+          <article class="panel monthly-panel">
+            <h2>Faturamento Mensal <span id="ano-faturamento"></span></h2>
+            <div class="chart-box monthly-chart"><canvas id="grafico-faturamento" aria-label="Meta e faturamento realizado por mês"></canvas></div>
+          </article>
+
+          <article class="panel attention-panel">
+            <h2>Ações que Precisam de Atenção</h2>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr><th>Ação</th><th>Responsável</th><th>Prazo</th><th>Status</th></tr>
+                </thead>
+                <tbody id="tabela-atencao"></tbody>
+              </table>
+            </div>
+            <button class="link-button" id="ver-todas" type="button">Ver todas as ações <span>›</span></button>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal reutilizado para detalhar todas as ações ou uma seleção específica. -->
+    <dialog id="modal-acoes" class="actions-modal">
+      <div class="modal-header"><div><h2 id="modal-titulo">Todas as ações</h2><p id="modal-resumo"></p></div><button id="fechar-modal" type="button" aria-label="Fechar"><svg><use href="#i-close"></use></svg></button></div>
+      <div class="table-scroll modal-table"><table><thead><tr><th>Ação</th><th>Responsável</th><th>Prazo</th><th>Status</th><th>Observação</th><th>Conclusão</th></tr></thead><tbody id="tabela-todas"></tbody></table></div>
+    </dialog>
+  </body>
+</html>
