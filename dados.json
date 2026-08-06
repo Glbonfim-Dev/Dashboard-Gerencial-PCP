@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-05T15:24:08-03:00",
+  "ultima_atualizacao": "2026-08-06T13:20:23-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsm",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 54,
-    "implementadas": 18,
-    "em_andamento": 23,
-    "nao_iniciadas": 13,
+    "total": 55,
+    "implementadas": 22,
+    "em_andamento": 21,
+    "nao_iniciadas": 12,
     "outros": 0,
-    "atrasadas": 31,
-    "percentual_concluido": 33.33
+    "atrasadas": 27,
+    "percentual_concluido": 40.0
   },
   "responsaveis": [
     {
@@ -23,20 +23,16 @@
       "quantidade": 12
     },
     {
+      "nome": "ROGÉRIO",
+      "quantidade": 5
+    },
+    {
       "nome": "ANDERSON",
       "quantidade": 3
     },
     {
       "nome": "WILLIAM",
       "quantidade": 3
-    },
-    {
-      "nome": "RAFAEL",
-      "quantidade": 2
-    },
-    {
-      "nome": "ROGÉRIO",
-      "quantidade": 2
     },
     {
       "nome": "GABRIEL",
@@ -233,18 +229,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Procedimento para instalar as resistências nos moldes",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Procedimento setor pintura",
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
@@ -305,18 +289,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Fechamento da porta do refeitório após café da manhã",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-06-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Implementar 5s na produção - limpeza / organização geral",
       "responsavel": "EDEMIR",
       "prazo": "2026-06-30",
@@ -331,18 +303,6 @@
     {
       "acao": "Montar plano TPM exclusivo máquinas para cortes laser e peças de reposição",
       "responsavel": "WILLIAM",
-      "prazo": "2026-06-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Povidenciar um conjunto de maçarico e tochas exclusivo para desempeno/pintura",
-      "responsavel": "MILTON",
       "prazo": "2026-06-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -414,19 +374,7 @@
     },
     {
       "acao": "Colocar tomada no painel de teste resistência tipo cliente Grove/ CMI",
-      "responsavel": "RAFAEL",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Instalar placas de identificação em todos os equipamentos da produção",
-      "responsavel": "EDEMIR",
+      "responsavel": "ROGÉRIO",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -473,7 +421,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Procedimento para testar resistências nos moldes",
+      "acao": "Procedimento para instalar as resistências nos moldes",
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
       "prazo_texto": "",
@@ -485,8 +433,8 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Talha elétrica para ajustes de moldes",
-      "responsavel": "MILTON",
+      "acao": "Procedimento para testar resistências nos moldes",
+      "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -559,6 +507,18 @@
     {
       "acao": "Iniciar a construção do 2º turno nos centros usinagens",
       "responsavel": "EDEMIR",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
+      "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -935,11 +895,11 @@
       "responsavel": "MILTON",
       "prazo": "2026-06-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -947,7 +907,7 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -980,7 +940,7 @@
     },
     {
       "acao": "Consertar portão sala ajuste molde",
-      "responsavel": "RAFAEL",
+      "responsavel": "ROGÉRIO",
       "prazo": "2026-06-30",
       "prazo_texto": "",
       "status": "Implementada",
@@ -1019,11 +979,11 @@
       "responsavel": "MILTON",
       "prazo": "2026-07-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -1052,7 +1012,7 @@
     },
     {
       "acao": "Colocar tomada no painel de teste resistência tipo cliente Grove/ CMI",
-      "responsavel": "RAFAEL",
+      "responsavel": "ROGÉRIO",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -1079,11 +1039,11 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-06-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -1115,11 +1075,11 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -1212,6 +1172,18 @@
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
