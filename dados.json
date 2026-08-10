@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-10T11:28:54-03:00",
+  "ultima_atualizacao": "2026-08-10T16:14:24-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsm",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 56,
+    "total": 58,
     "implementadas": 22,
-    "em_andamento": 21,
+    "em_andamento": 23,
     "nao_iniciadas": 13,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 39.29
+    "percentual_concluido": 37.93
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 5
+      "quantidade": 6
     },
     {
       "nome": "ANDERSON",
@@ -32,7 +32,7 @@
     },
     {
       "nome": "WILLIAM",
-      "quantidade": 3
+      "quantidade": 4
     },
     {
       "nome": "GABRIEL",
@@ -181,18 +181,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Colocar as soldas Miller para funcionar.",
-      "responsavel": "MILTON",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Criar time de melhoria contínua com foco em produtividade",
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
@@ -231,6 +219,18 @@
     {
       "acao": "Procedimento setor pintura",
       "responsavel": "EDEMIR",
+      "prazo": "2026-07-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Vender as soldas Miller",
+      "responsavel": "MILTON",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -503,6 +503,30 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Adquirir cafeteira para horas extras aos finais de semana",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     },
     {
       "acao": "Colocar tambores de lixo reciclável nã produção",
@@ -855,7 +879,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Colocar as soldas Miller para funcionar.",
+      "acao": "Vender as soldas Miller",
       "responsavel": "MILTON",
       "prazo": "2026-07-30",
       "prazo_texto": "",
@@ -1208,6 +1232,30 @@
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir cafeteira para horas extras aos finais de semana",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
