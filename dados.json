@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-06T13:20:23-03:00",
+  "ultima_atualizacao": "2026-08-10T11:28:54-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsm",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 55,
+    "total": 56,
     "implementadas": 22,
     "em_andamento": 21,
-    "nao_iniciadas": 12,
+    "nao_iniciadas": 13,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 40.0
+    "percentual_concluido": 39.29
   },
   "responsaveis": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "nome": "ANDERSON",
-      "quantidade": 3
+      "quantidade": 4
     },
     {
       "nome": "WILLIAM",
@@ -459,6 +459,18 @@
     {
       "acao": "Instalar palcas de identificação em todos os setores da produção",
       "responsavel": "EDEMIR",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Preocedimento para enviar sapatas para tratamento térmico",
+      "responsavel": "ANDERSON",
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -1184,6 +1196,18 @@
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Preocedimento para enviar sapatas para tratamento térmico",
+      "responsavel": "ANDERSON",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
