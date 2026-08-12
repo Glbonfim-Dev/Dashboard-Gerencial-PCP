@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-12T15:41:43-03:00",
+  "ultima_atualizacao": "2026-08-12T15:43:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -505,7 +505,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Criar indicador de produção valor produzido x quantidade de equip. x GGF",
+      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
@@ -1323,7 +1323,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Criar indicador de produção valor produzido x quantidade de equip. x GGF",
+      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
