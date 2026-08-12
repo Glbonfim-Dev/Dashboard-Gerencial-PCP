@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-12T14:41:42-03:00",
+  "ultima_atualizacao": "2026-08-12T15:41:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 62,
+    "total": 61,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 15,
-    "outros": 2,
+    "nao_iniciadas": 16,
+    "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 35.48
+    "percentual_concluido": 36.07
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 8
+      "quantidade": 9
     },
     {
       "nome": "ANDERSON",
@@ -33,10 +33,6 @@
     {
       "nome": "WILLIAM",
       "quantidade": 4
-    },
-    {
-      "nome": "NÃO INFORMADO",
-      "quantidade": 2
     },
     {
       "nome": "GABRIEL",
@@ -498,6 +494,18 @@
     },
     {
       "acao": "Armazenagem de produtos em processo no porta pallete com identificação",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Criar indicador de produção valor produzido x quantidade de equip. x GGF",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
@@ -1315,23 +1323,11 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      "responsavel": "NÃO INFORMADO",
-      "prazo": null,
+      "acao": "Criar indicador de produção valor produzido x quantidade de equip. x GGF",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Informado",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-      "responsavel": "NÃO INFORMADO",
-      "prazo": null,
-      "prazo_texto": "",
-      "status": "Não Informado",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
