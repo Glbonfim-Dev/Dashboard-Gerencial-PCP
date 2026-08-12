@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-12T14:36:56-03:00",
+  "ultima_atualizacao": "2026-08-12T14:41:42-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 61,
+    "total": 62,
     "implementadas": 22,
     "em_andamento": 23,
     "nao_iniciadas": 15,
-    "outros": 1,
+    "outros": 2,
     "atrasadas": 27,
-    "percentual_concluido": 36.07
+    "percentual_concluido": 35.48
   },
   "responsaveis": [
     {
@@ -35,11 +35,11 @@
       "quantidade": 4
     },
     {
-      "nome": "GABRIEL",
-      "quantidade": 1
+      "nome": "NÃO INFORMADO",
+      "quantidade": 2
     },
     {
-      "nome": "NÃO INFORMADO",
+      "nome": "GABRIEL",
       "quantidade": 1
     },
     {
@@ -1316,6 +1316,18 @@
     },
     {
       "acao": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "responsavel": "NÃO INFORMADO",
+      "prazo": null,
+      "prazo_texto": "",
+      "status": "Não Informado",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
       "responsavel": "NÃO INFORMADO",
       "prazo": null,
       "prazo_texto": "",
