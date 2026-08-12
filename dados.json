@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-12T15:43:43-03:00",
+  "ultima_atualizacao": "2026-08-12T15:44:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -457,7 +457,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Instalar palcas de identificação em todos os setores da produção",
+      "acao": "Instalar placas de identificação em todos os setores da produção",
       "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
@@ -493,7 +493,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Armazenagem de produtos em processo no porta pallete com identificação",
+      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
@@ -505,7 +505,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
+      "acao": "Identificação do porta pallete dos produtos em processos",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
@@ -565,7 +565,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Colocar tambores de lixo reciclável nã produção",
+      "acao": "Colocar tambores de lixo reciclável na produção",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
@@ -1191,7 +1191,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Instalar palcas de identificação em todos os setores da produção",
+      "acao": "Instalar placas de identificação em todos os setores da produção",
       "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
@@ -1227,7 +1227,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Colocar tambores de lixo reciclável nã produção",
+      "acao": "Colocar tambores de lixo reciclável na produção",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
@@ -1311,7 +1311,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Armazenagem de produtos em processo no porta pallete com identificação",
+      "acao": "Identificação do porta pallete dos produtos em processos",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
