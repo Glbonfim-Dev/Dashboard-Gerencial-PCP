@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-10T16:14:24-03:00",
+  "ultima_atualizacao": "2026-08-12T10:39:01-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsm",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 58,
+    "total": 59,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 13,
+    "nao_iniciadas": 14,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 37.93
+    "percentual_concluido": 37.29
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 6
+      "quantidade": 7
     },
     {
       "nome": "ANDERSON",
@@ -491,6 +491,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     },
     {
       "acao": "Instalar exaustor no laser 30k",
@@ -1261,6 +1273,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     }
   ]
 }
