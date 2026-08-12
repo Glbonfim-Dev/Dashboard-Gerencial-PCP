@@ -2,6 +2,8 @@
 
 // Estado único da tela: dados carregados, filtros ativos e gráficos Chart.js.
 const estado = { dados: null, filtradas: [], charts: {}, mesFaturamentoSelecionado: null };
+const INTERVALO_ATUALIZACAO_MS = 60 * 1000;
+let atualizacaoEmAndamento = false;
 
 // Paleta compartilhada pelos gráficos para acompanhar as variáveis do CSS.
 const cores = { azul: "#1769d2", verde: "#13a36f", laranja: "#e99a16", vermelho: "#d83a3a", teal: "#00806f", grade: "#dfe7ee", texto: "#5d6b7c" };
@@ -24,12 +26,15 @@ function formatarAtualizacao(valor) {
 
 function preencherSelect(seletor, valores) {
   const select = $(seletor);
+  const valorAtual = select.value;
+  select.querySelectorAll("option:not(:first-child)").forEach((option) => option.remove());
   valores.forEach((valor) => {
     const option = document.createElement("option");
     option.value = String(valor);
     option.textContent = String(valor);
     select.append(option);
   });
+  if ([...select.options].some((option) => option.value === valorAtual)) select.value = valorAtual;
 }
 
 // Abre ou recolhe a barra lateral e memoriza a preferência do usuário.
@@ -248,22 +253,39 @@ function renderizarTudo() { renderizarKPIs(); renderizarStatus(); renderizarResp
 // Inicialização da página e eventos do usuário
 // ---------------------------------------------------------------------------
 
-async function iniciar() {
+async function atualizarDados() {
+  if (atualizacaoEmAndamento) return;
+  atualizacaoEmAndamento = true;
   try {
     const resposta = await fetch(`./dados.json?ts=${Date.now()}`, { cache: "no-store" });
     if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
-    estado.dados = await resposta.json();
-    if (!Array.isArray(estado.dados.lista_acoes)) throw new Error("dados.json não contém lista_acoes");
+    const novosDados = await resposta.json();
+    if (!Array.isArray(novosDados.lista_acoes)) throw new Error("dados.json não contém lista_acoes");
+    if (estado.dados?.ultima_atualizacao === novosDados.ultima_atualizacao) {
+      $("#mensagem-erro").hidden = true;
+      return;
+    }
+
+    const mesAnterior = estado.mesFaturamentoSelecionado === null
+      ? null
+      : estado.dados?.faturamento?.mensal?.[estado.mesFaturamentoSelecionado]?.mes;
+    estado.dados = novosDados;
     $("#ultima-atualizacao").textContent = formatarAtualizacao(estado.dados.ultima_atualizacao);
     preencherSelect("#filtro-responsavel", [...new Set(estado.dados.lista_acoes.map((a) => a.responsavel))].sort());
     preencherSelect("#filtro-status", [...new Set(estado.dados.lista_acoes.map((a) => a.status))].sort());
     preencherSelect("#filtro-periodo", estado.dados.periodos || []);
-    estado.mesFaturamentoSelecionado = estado.dados.faturamento.mensal.findIndex((item) => item.mes === estado.dados.faturamento.referencia_mensal?.mes);
+
+    const mesPreferido = mesAnterior || estado.dados.faturamento.referencia_mensal?.mes;
+    estado.mesFaturamentoSelecionado = estado.dados.faturamento.mensal.findIndex((item) => item.mes === mesPreferido);
     if (estado.mesFaturamentoSelecionado < 0) estado.mesFaturamentoSelecionado = null;
-    estado.filtradas = [...estado.dados.lista_acoes];
-    renderizarTudo();
+    $("#mensagem-erro").hidden = true;
+    aplicarFiltros();
   } catch (erro) {
-    const banner = $("#mensagem-erro"); banner.hidden = false; banner.textContent = `Não foi possível carregar dados.json: ${erro.message}. Abra o dashboard por um servidor HTTP.`;
+    const banner = $("#mensagem-erro");
+    banner.hidden = false;
+    banner.textContent = `Não foi possível atualizar os dados: ${erro.message}. Nova tentativa automática em 1 minuto.`;
+  } finally {
+    atualizacaoEmAndamento = false;
   }
 }
 
@@ -275,4 +297,5 @@ $("#ver-todas").addEventListener("click", () => abrirModalAcoes(estado.filtradas
 $("#fechar-modal").addEventListener("click", () => $("#modal-acoes").close());
 $("#modal-acoes").addEventListener("click", (evento) => { if (evento.target === $("#modal-acoes")) $("#modal-acoes").close(); });
 definirEstadoFiltros(localStorage.getItem("dashboard-filtros-abertos") === "true", false);
-iniciar();
+atualizarDados();
+window.setInterval(atualizarDados, INTERVALO_ATUALIZACAO_MS);
