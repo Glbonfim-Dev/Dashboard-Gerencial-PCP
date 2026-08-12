@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-12T14:00:45-03:00",
+  "ultima_atualizacao": "2026-08-12T14:12:23-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsm",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 59,
+    "total": 60,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 14,
+    "nao_iniciadas": 15,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 37.29
+    "percentual_concluido": 36.67
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 7
+      "quantidade": 8
     },
     {
       "nome": "ANDERSON",
@@ -491,6 +491,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Armazenagem de produtos em processo no porta pallete com identificação",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
@@ -1276,6 +1288,18 @@
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Armazenagem de produtos em processo no porta pallete com identificação",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
