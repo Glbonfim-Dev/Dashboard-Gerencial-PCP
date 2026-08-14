@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-14T11:34:43-03:00",
+  "ultima_atualizacao": "2026-08-14T11:45:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -8,8 +8,8 @@
     "total": 63,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 17,
-    "outros": 1,
+    "nao_iniciadas": 18,
+    "outros": 0,
     "atrasadas": 27,
     "percentual_concluido": 34.92
   },
@@ -28,7 +28,7 @@
     },
     {
       "nome": "ANDERSON",
-      "quantidade": 4
+      "quantidade": 5
     },
     {
       "nome": "WILLIAM",
@@ -36,10 +36,6 @@
     },
     {
       "nome": "GABRIEL",
-      "quantidade": 1
-    },
-    {
-      "nome": "NÃO INFORMADO",
       "quantidade": 1
     },
     {
@@ -495,6 +491,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Consertar braço de medição / orçar uma tridimensional manual",
+      "responsavel": "ANDERSON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     },
     {
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
@@ -1363,11 +1371,11 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "asdddddddddddddddddddddddddddddddddd",
-      "responsavel": "NÃO INFORMADO",
-      "prazo": null,
+      "acao": "Consertar braço de medição / orçar uma tridimensional manual",
+      "responsavel": "ANDERSON",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Informado",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
