@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-13T09:24:43-03:00",
+  "ultima_atualizacao": "2026-08-14T11:28:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 61,
+    "total": 62,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 16,
+    "nao_iniciadas": 17,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 36.07
+    "percentual_concluido": 35.48
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 9
+      "quantidade": 10
     },
     {
       "nome": "ANDERSON",
@@ -520,6 +520,18 @@
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Criar posto de controle para peças menores na produção",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1326,6 +1338,18 @@
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Criar posto de controle para peças menores na produção",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
