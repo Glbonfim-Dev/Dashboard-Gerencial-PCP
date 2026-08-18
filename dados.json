@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-18T11:39:43-03:00",
+  "ultima_atualizacao": "2026-08-18T12:03:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 65,
+    "total": 66,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 20,
+    "nao_iniciadas": 21,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 33.85
+    "percentual_concluido": 33.33
   },
   "responsaveis": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 10
+      "quantidade": 11
     },
     {
       "nome": "ANDERSON",
@@ -455,6 +455,18 @@
       "ano": 2026,
       "atrasada": true,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Fazer treinamento com soldadores para moldes com moldura",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar placas de identificação em todos os setores da produção",
@@ -1429,6 +1441,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Fazer treinamento com soldadores para moldes com moldura",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     }
   ]
 }
