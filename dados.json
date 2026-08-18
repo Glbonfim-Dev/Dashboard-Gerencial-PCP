@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-18T11:34:43-03:00",
+  "ultima_atualizacao": "2026-08-18T11:37:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 64,
+    "total": 65,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 19,
+    "nao_iniciadas": 20,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 34.38
+    "percentual_concluido": 33.85
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 13
+      "quantidade": 14
     },
     {
       "nome": "ROGÉRIO",
@@ -503,6 +503,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir rugosimetro",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     },
     {
       "acao": "Consertar braço de medição / orçar uma tridimensional manual",
@@ -1405,6 +1417,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir rugosimetro",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     }
   ]
 }
