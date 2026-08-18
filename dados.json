@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-18T10:42:43-03:00",
+  "ultima_atualizacao": "2026-08-18T11:34:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 63,
+    "total": 64,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 18,
+    "nao_iniciadas": 19,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 34.92
+    "percentual_concluido": 34.38
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 12
+      "quantidade": 13
     },
     {
       "nome": "ROGÉRIO",
@@ -484,6 +484,18 @@
       "acao": "Procedimento para fazer teste liquido penetrante",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Instalar furaderia sala serra",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-15",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1381,6 +1393,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar furaderia sala serra",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-15",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     }
   ]
 }
