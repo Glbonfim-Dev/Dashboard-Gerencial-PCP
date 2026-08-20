@@ -1,22 +1,22 @@
 {
-  "ultima_atualizacao": "2026-08-19T16:00:43-03:00",
+  "ultima_atualizacao": "2026-08-20T13:38:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 66,
+    "total": 67,
     "implementadas": 22,
     "em_andamento": 23,
-    "nao_iniciadas": 21,
+    "nao_iniciadas": 22,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 33.33
+    "percentual_concluido": 32.84
   },
   "responsaveis": [
     {
       "nome": "EDEMIR",
-      "quantidade": 29
+      "quantidade": 30
     },
     {
       "nome": "MILTON",
@@ -507,6 +507,18 @@
     {
       "acao": "Instalar furaderia sala serra",
       "responsavel": "MILTON",
+      "prazo": "2026-09-15",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
+      "responsavel": "EDEMIR",
       "prazo": "2026-09-15",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -1446,6 +1458,18 @@
       "acao": "Fazer treinamento com soldadores para moldes com moldura",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
+      "responsavel": "EDEMIR",
+      "prazo": "2026-09-15",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
