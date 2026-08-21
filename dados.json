@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-21T10:01:44-03:00",
+  "ultima_atualizacao": "2026-08-21T10:03:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 68,
-    "implementadas": 22,
-    "em_andamento": 25,
+    "implementadas": 23,
+    "em_andamento": 24,
     "nao_iniciadas": 21,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 32.35
+    "percentual_concluido": 33.82
   },
   "responsaveis": [
     {
@@ -599,18 +599,6 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
-    },
-    {
-      "acao": "Adquirir cafeteira para horas extras aos finais de semana",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
     },
     {
       "acao": "Adquirir óculos de segurança para máquinas corte a laser",
@@ -1351,12 +1339,12 @@
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": true
+      "proxima_vencimento": false
     },
     {
       "acao": "Adquirir óculos de segurança para máquinas corte a laser",
