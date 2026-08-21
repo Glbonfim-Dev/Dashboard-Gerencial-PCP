@@ -1,22 +1,22 @@
 {
-  "ultima_atualizacao": "2026-08-20T13:39:43-03:00",
+  "ultima_atualizacao": "2026-08-21T10:01:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 67,
+    "total": 68,
     "implementadas": 22,
-    "em_andamento": 23,
-    "nao_iniciadas": 22,
+    "em_andamento": 25,
+    "nao_iniciadas": 21,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 32.84
+    "percentual_concluido": 32.35
   },
   "responsaveis": [
     {
       "nome": "EDEMIR",
-      "quantidade": 30
+      "quantidade": 31
     },
     {
       "nome": "MILTON",
@@ -517,18 +517,6 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-09-15",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
       "acao": "Adquirir rugosimetro",
       "responsavel": "MILTON",
       "prazo": "2026-09-30",
@@ -664,6 +652,18 @@
       "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
+      "responsavel": "EDEMIR",
+      "prazo": "2026-09-15",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1471,12 +1471,24 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-09-15",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Criar sala de treinamento",
+      "responsavel": "EDEMIR",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
     }
   ]
 }
