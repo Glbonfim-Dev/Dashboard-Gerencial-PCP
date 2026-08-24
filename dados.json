@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-21T10:04:43-03:00",
+  "ultima_atualizacao": "2026-08-24T12:59:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 68,
-    "implementadas": 23,
+    "implementadas": 24,
     "em_andamento": 24,
-    "nao_iniciadas": 21,
+    "nao_iniciadas": 20,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 33.82
+    "percentual_concluido": 35.29
   },
   "responsaveis": [
     {
@@ -496,18 +496,6 @@
       "acao": "Procedimento para fazer teste liquido penetrante",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Instalar furaderia sala serra",
-      "responsavel": "MILTON",
-      "prazo": "2026-09-15",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1423,12 +1411,12 @@
       "responsavel": "MILTON",
       "prazo": "2026-09-15",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": true
+      "proxima_vencimento": false
     },
     {
       "acao": "Adquirir rugosimetro",
