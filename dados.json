@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-28T08:53:43-03:00",
+  "ultima_atualizacao": "2026-08-28T09:45:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 68,
-    "implementadas": 24,
+    "implementadas": 25,
     "em_andamento": 24,
-    "nao_iniciadas": 20,
+    "nao_iniciadas": 19,
     "outros": 0,
     "atrasadas": 27,
-    "percentual_concluido": 35.29
+    "percentual_concluido": 36.76
   },
   "responsaveis": [
     {
@@ -219,6 +219,18 @@
     {
       "acao": "Procedimento setor pintura",
       "responsavel": "EDEMIR",
+      "prazo": "2026-07-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Treinamento boas práticas setor de solda fornecedor \"ALUMAQ\" - CUSTO ZERO",
+      "responsavel": "MILTON",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -445,32 +457,8 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Treinamento boas práticas setor de solda fornecedor \"ALUMAQ\" - CUSTO ZERO",
-      "responsavel": "MILTON",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Fazer treinamento com soldadores para moldes com moldura",
       "responsavel": "ROGÉRIO",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Instalar placas de identificação em todos os setores da produção",
-      "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -519,18 +507,6 @@
     {
       "acao": "Consertar braço de medição / orçar uma tridimensional manual",
       "responsavel": "ANDERSON",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
-      "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -625,8 +601,8 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
-      "responsavel": "ROGÉRIO",
+      "acao": "Instalar placas de identificação em todos os setores da produção",
+      "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -637,9 +613,9 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-09-15",
+      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1219,7 +1195,7 @@
       "responsavel": "MILTON",
       "prazo": "2026-07-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1243,7 +1219,7 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1375,7 +1351,7 @@
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1447,12 +1423,12 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-09-15",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": true
+      "proxima_vencimento": false
     },
     {
       "acao": "Criar sala de treinamento",
