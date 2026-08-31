@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-31T10:46:43-03:00",
+  "ultima_atualizacao": "2026-08-31T10:49:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 68,
+    "total": 69,
     "implementadas": 25,
     "em_andamento": 24,
-    "nao_iniciadas": 19,
+    "nao_iniciadas": 20,
     "outros": 0,
     "atrasadas": 35,
-    "percentual_concluido": 36.76
+    "percentual_concluido": 36.23
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 14
+      "quantidade": 15
     },
     {
       "nome": "ROGÉRIO",
@@ -591,6 +591,18 @@
     {
       "acao": "Instalar exaustor no laser 30k",
       "responsavel": "WILLIAM",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Instalar monitor setor de solda - tela touch",
+      "responsavel": "MILTON",
       "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
@@ -1460,6 +1472,18 @@
       "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Instalar monitor setor de solda - tela touch",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
