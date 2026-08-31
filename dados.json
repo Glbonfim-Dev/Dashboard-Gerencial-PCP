@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-08-28T16:21:43-03:00",
+  "ultima_atualizacao": "2026-08-31T10:46:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10,7 +10,7 @@
     "em_andamento": 24,
     "nao_iniciadas": 19,
     "outros": 0,
-    "atrasadas": 27,
+    "atrasadas": 35,
     "percentual_concluido": 36.76
   },
   "responsaveis": [
@@ -253,6 +253,42 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Fazer treinamento com soldadores para moldes com moldura",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Preocedimento para enviar sapatas para tratamento térmico",
+      "responsavel": "ANDERSON",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Procedimento para fazer teste liquido penetrante",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Identificar gargálos",
       "responsavel": "EDEMIR",
       "prazo": "2026-06-10",
@@ -457,40 +493,64 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Fazer treinamento com soldadores para moldes com moldura",
+      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Colocar tambores de lixo reciclável na produção",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
-      "acao": "Preocedimento para enviar sapatas para tratamento térmico",
-      "responsavel": "ANDERSON",
+      "acao": "Iniciar a construção do 2º turno nos centros usinagens",
+      "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
-      "acao": "Procedimento para fazer teste liquido penetrante",
+      "acao": "Instalar placas de identificação em todos os setores da produção",
+      "responsavel": "EDEMIR",
+      "prazo": "2026-08-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Adquirir rugosimetro",
@@ -502,7 +562,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Consertar braço de medição / orçar uma tridimensional manual",
@@ -514,7 +574,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Identificação do porta pallete dos produtos em processos",
@@ -526,7 +586,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar exaustor no laser 30k",
@@ -538,7 +598,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
@@ -550,7 +610,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Criar posto de controle para peças menores na produção",
@@ -565,21 +625,9 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
-      "responsavel": "WILLIAM",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Colocar tambores de lixo reciclável na produção",
+      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
-      "prazo": "2026-08-30",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -589,33 +637,9 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Iniciar a construção do 2º turno nos centros usinagens",
+      "acao": "Criar sala de treinamento",
       "responsavel": "EDEMIR",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Instalar placas de identificação em todos os setores da produção",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-08-30",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1188,7 +1212,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Treinamento boas práticas setor de solda fornecedor \"ALUMAQ\" - CUSTO ZERO",
@@ -1223,8 +1247,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Terceirização faceamento das formas",
@@ -1247,8 +1271,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Colocar tambores de lixo reciclável na produção",
@@ -1259,8 +1283,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Procedimento para fazer teste liquido penetrante",
@@ -1271,8 +1295,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
@@ -1283,8 +1307,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Preocedimento para enviar sapatas para tratamento térmico",
@@ -1295,8 +1319,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Adquirir cafeteira para horas extras aos finais de semana",
@@ -1319,8 +1343,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
@@ -1332,7 +1356,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Identificação do porta pallete dos produtos em processos",
@@ -1344,7 +1368,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
@@ -1356,7 +1380,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Criar posto de controle para peças menores na produção",
@@ -1380,7 +1404,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar furaderia sala serra",
@@ -1404,7 +1428,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Fazer treinamento com soldadores para moldes com moldura",
@@ -1415,8 +1439,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Trazer qualidade para ao lado da sala supervisão fábrica",
@@ -1440,7 +1464,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     }
   ]
 }
