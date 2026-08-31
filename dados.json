@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-08-31T11:01:43-03:00",
+  "ultima_atualizacao": "2026-08-31T13:09:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 69,
-    "implementadas": 25,
-    "em_andamento": 24,
+    "implementadas": 26,
+    "em_andamento": 23,
     "nao_iniciadas": 20,
     "outros": 0,
-    "atrasadas": 35,
-    "percentual_concluido": 36.23
+    "atrasadas": 34,
+    "percentual_concluido": 37.68
   },
   "responsaveis": [
     {
@@ -531,18 +531,6 @@
     {
       "acao": "Instalar placas de identificação em todos os setores da produção",
       "responsavel": "EDEMIR",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Quadro branco pequeno mesmo padrão dos quadros de gestão - anotações gerais",
-      "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -1315,11 +1303,11 @@
       "responsavel": "ROGÉRIO",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
