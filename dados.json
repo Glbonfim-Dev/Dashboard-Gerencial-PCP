@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-09-11T10:24:44-03:00",
+  "ultima_atualizacao": "2026-09-11T10:25:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -589,7 +589,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Instalar monitor setor de solda - tela touch",
+      "acao": "Instalar monitor setor de solda - tela touch - gravadora laser",
       "responsavel": "MILTON",
       "prazo": "2026-09-30",
       "prazo_texto": "",
@@ -1491,7 +1491,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Instalar monitor setor de solda - tela touch",
+      "acao": "Instalar monitor setor de solda - tela touch - gravadora laser",
       "responsavel": "MILTON",
       "prazo": "2026-09-30",
       "prazo_texto": "",
