@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-10T09:02:43-03:00",
+  "ultima_atualizacao": "2026-09-11T10:24:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 70,
+    "total": 71,
     "implementadas": 26,
     "em_andamento": 23,
-    "nao_iniciadas": 21,
+    "nao_iniciadas": 22,
     "outros": 0,
     "atrasadas": 34,
-    "percentual_concluido": 37.14
+    "percentual_concluido": 36.62
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 16
+      "quantidade": 17
     },
     {
       "nome": "ROGÉRIO",
@@ -628,6 +628,18 @@
       "acao": "Criar posto de controle para peças menores na produção",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Mudar compressores de lugar para nova sala",
+      "responsavel": "MILTON",
+      "prazo": "2026-12-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1494,6 +1506,18 @@
       "acao": "Limpeza, organização, pintura sala dos compressores",
       "responsavel": "MILTON",
       "prazo": "2026-10-15",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Mudar compressores de lugar para nova sala",
+      "responsavel": "MILTON",
+      "prazo": "2026-12-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
