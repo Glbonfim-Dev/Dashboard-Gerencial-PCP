@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-11T14:37:47-03:00",
+  "ultima_atualizacao": "2026-09-15T15:49:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 71,
-    "implementadas": 26,
+    "implementadas": 27,
     "em_andamento": 23,
-    "nao_iniciadas": 22,
+    "nao_iniciadas": 21,
     "outros": 0,
     "atrasadas": 34,
-    "percentual_concluido": 36.62
+    "percentual_concluido": 38.03
   },
   "responsaveis": [
     {
@@ -589,18 +589,6 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Instalar monitor setor de solda - tela touch - gravadora laser",
-      "responsavel": "MILTON",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
@@ -622,7 +610,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Criar posto de controle para peças menores na produção",
@@ -1495,12 +1483,12 @@
       "responsavel": "MILTON",
       "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": true
+      "proxima_vencimento": false
     },
     {
       "acao": "Limpeza, organização, pintura sala dos compressores",
@@ -1512,7 +1500,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Mudar compressores de lugar para nova sala",
