@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-15T15:52:43-03:00",
+  "ultima_atualizacao": "2026-09-17T11:57:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 71,
-    "implementadas": 27,
-    "em_andamento": 23,
+    "implementadas": 28,
+    "em_andamento": 22,
     "nao_iniciadas": 21,
     "outros": 0,
-    "atrasadas": 34,
-    "percentual_concluido": 38.03
+    "atrasadas": 33,
+    "percentual_concluido": 39.44
   },
   "responsaveis": [
     {
@@ -411,18 +411,6 @@
     {
       "acao": "Colocar pórticos nos 2 centros de usinagem portal grandes",
       "responsavel": "MILTON",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Colocar tomada no painel de teste resistência tipo cliente Grove/ CMI",
-      "responsavel": "ROGÉRIO",
       "prazo": "2026-07-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -1147,11 +1135,11 @@
       "responsavel": "ROGÉRIO",
       "prazo": "2026-07-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
