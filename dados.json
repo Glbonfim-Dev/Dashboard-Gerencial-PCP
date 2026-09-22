@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-17T11:59:43-03:00",
+  "ultima_atualizacao": "2026-09-22T14:02:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 71,
+    "total": 73,
     "implementadas": 28,
     "em_andamento": 22,
-    "nao_iniciadas": 21,
+    "nao_iniciadas": 23,
     "outros": 0,
     "atrasadas": 33,
-    "percentual_concluido": 39.44
+    "percentual_concluido": 38.36
   },
   "responsaveis": [
     {
@@ -20,11 +20,11 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 17
+      "quantidade": 18
     },
     {
       "nome": "ROGÉRIO",
-      "quantidade": 11
+      "quantidade": 12
     },
     {
       "nome": "ANDERSON",
@@ -601,7 +601,31 @@
       "proxima_vencimento": true
     },
     {
+      "acao": "Sbstituir talha estação solda nº 2 por corrente",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-20",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
       "acao": "Criar posto de controle para peças menores na produção",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-10-30",
       "prazo_texto": "",
@@ -1494,6 +1518,30 @@
       "acao": "Mudar compressores de lugar para nova sala",
       "responsavel": "MILTON",
       "prazo": "2026-12-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Sbstituir talha estação solda nº 2 por corrente",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-20",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
