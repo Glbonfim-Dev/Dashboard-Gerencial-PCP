@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-09-23T13:29:43-03:00",
+  "ultima_atualizacao": "2026-09-24T13:02:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10,7 +10,7 @@
     "em_andamento": 22,
     "nao_iniciadas": 23,
     "outros": 0,
-    "atrasadas": 33,
+    "atrasadas": 31,
     "percentual_concluido": 38.36
   },
   "responsaveis": [
@@ -397,18 +397,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
-      "responsavel": "WILLIAM",
-      "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Colocar pórticos nos 2 centros de usinagem portal grandes",
       "responsavel": "MILTON",
       "prazo": "2026-07-30",
@@ -472,18 +460,6 @@
       "acao": "Procedimento para testar resistências nos moldes",
       "responsavel": "EDEMIR",
       "prazo": "2026-07-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
-      "responsavel": "WILLIAM",
-      "prazo": "2026-08-30",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -647,6 +623,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     },
     {
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
@@ -1145,14 +1133,14 @@
     {
       "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
       "responsavel": "WILLIAM",
-      "prazo": "2026-07-30",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
+      "atrasada": false,
+      "proxima_vencimento": true
     },
     {
       "acao": "Colocar tomada no painel de teste resistência tipo cliente Grove/ CMI",
@@ -1361,13 +1349,13 @@
     {
       "acao": "Adquirir óculos de segurança para máquinas corte a laser",
       "responsavel": "WILLIAM",
-      "prazo": "2026-08-30",
+      "prazo": "2026-11-10",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
