@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-25T09:40:43-03:00",
+  "ultima_atualizacao": "2026-09-25T15:14:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 75,
+    "total": 76,
     "implementadas": 28,
     "em_andamento": 22,
-    "nao_iniciadas": 25,
+    "nao_iniciadas": 26,
     "outros": 0,
     "atrasadas": 31,
-    "percentual_concluido": 37.33
+    "percentual_concluido": 36.84
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 20
+      "quantidade": 21
     },
     {
       "nome": "ROGÉRIO",
@@ -556,6 +556,18 @@
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Instalar morsa sala de ajuste",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-02",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1585,6 +1597,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar morsa sala de ajuste",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-02",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
     }
   ]
 }
