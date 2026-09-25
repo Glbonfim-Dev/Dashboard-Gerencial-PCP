@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-24T15:40:43-03:00",
+  "ultima_atualizacao": "2026-09-25T09:37:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 73,
+    "total": 74,
     "implementadas": 28,
     "em_andamento": 22,
-    "nao_iniciadas": 23,
+    "nao_iniciadas": 24,
     "outros": 0,
     "atrasadas": 31,
-    "percentual_concluido": 38.36
+    "percentual_concluido": 37.84
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 18
+      "quantidade": 19
     },
     {
       "nome": "ROGÉRIO",
@@ -577,7 +577,7 @@
       "proxima_vencimento": true
     },
     {
-      "acao": "Sbstituir talha estação solda nº 2 por corrente",
+      "acao": "Substituir talha estação solda nº 2 por corrente",
       "responsavel": "MILTON",
       "prazo": "2026-10-20",
       "prazo_texto": "",
@@ -604,6 +604,18 @@
       "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar na estação solda nº3 talha elétrica",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -1515,7 +1527,7 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Sbstituir talha estação solda nº 2 por corrente",
+      "acao": "Substituir talha estação solda nº 2 por corrente",
       "responsavel": "MILTON",
       "prazo": "2026-10-20",
       "prazo_texto": "",
@@ -1530,6 +1542,18 @@
       "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar na estação solda nº3 talha elétrica",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
