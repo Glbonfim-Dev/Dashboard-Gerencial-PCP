@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-09-29T10:58:44-03:00",
+  "ultima_atualizacao": "2026-10-05T13:34:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 76,
-    "implementadas": 28,
-    "em_andamento": 22,
-    "nao_iniciadas": 26,
+    "implementadas": 29,
+    "em_andamento": 24,
+    "nao_iniciadas": 23,
     "outros": 0,
-    "atrasadas": 31,
-    "percentual_concluido": 36.84
+    "atrasadas": 39,
+    "percentual_concluido": 38.16
   },
   "responsaveis": [
     {
@@ -50,11 +50,11 @@
     "percentual_atingimento": 53.47,
     "meta_disponivel": true,
     "referencia_mensal": {
-      "mes": "Set",
-      "mes_completo": "Setembro",
+      "mes": "Out",
+      "mes_completo": "Outubro",
       "meta": 1000000.0,
-      "realizado": 948000.0,
-      "percentual_atingimento": 94.8
+      "realizado": 0.0,
+      "percentual_atingimento": 0.0
     },
     "mensal": [
       {
@@ -289,6 +289,66 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Adquirir rugosimetro",
+      "responsavel": "MILTON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Consertar braço de medição / orçar uma tridimensional manual",
+      "responsavel": "ANDERSON",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Identificação do porta pallete dos produtos em processos",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar exaustor no laser 30k",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Identificar gargálos",
       "responsavel": "EDEMIR",
       "prazo": "2026-06-10",
@@ -505,93 +565,45 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Adquirir rugosimetro",
-      "responsavel": "MILTON",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Consertar braço de medição / orçar uma tridimensional manual",
-      "responsavel": "ANDERSON",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Identificação do porta pallete dos produtos em processos",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Instalar exaustor no laser 30k",
+      "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
       "responsavel": "WILLIAM",
       "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
-      "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
+      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
-      "acao": "Instalar morsa sala de ajuste",
-      "responsavel": "MILTON",
-      "prazo": "2026-10-02",
+      "acao": "Criar sala de treinamento",
+      "responsavel": "EDEMIR",
+      "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Limpeza, organização, pintura sala dos compressores",
       "responsavel": "MILTON",
       "prazo": "2026-10-15",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Substituir talha estação solda nº 2 por corrente",
-      "responsavel": "MILTON",
-      "prazo": "2026-10-20",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -610,7 +622,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
@@ -622,7 +634,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Avaliação do robô de solda - consertar - vender -",
@@ -649,45 +661,9 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Mudar compressores de lugar para nova sala",
+      "acao": "Substituir talha estação solda nº 2 por corrente",
       "responsavel": "MILTON",
-      "prazo": "2026-12-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
-      "responsavel": "WILLIAM",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Criar sala de treinamento",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-09-30",
+      "prazo": "2026-10-20",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1175,8 +1151,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Colocar tomada no painel de teste resistência tipo cliente Grove/ CMI",
@@ -1259,8 +1235,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Treinamento boas práticas setor de solda fornecedor \"ALUMAQ\" - CUSTO ZERO",
@@ -1403,8 +1379,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Identificação do porta pallete dos produtos em processos",
@@ -1415,8 +1391,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
@@ -1427,8 +1403,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Criar posto de controle para peças menores na produção",
@@ -1440,7 +1416,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Consertar braço de medição / orçar uma tridimensional manual",
@@ -1451,8 +1427,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Instalar furaderia sala serra",
@@ -1475,8 +1451,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Fazer treinamento com soldadores para moldes com moldura",
@@ -1511,8 +1487,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Instalar monitor setor de solda - tela touch - gravadora laser",
@@ -1543,7 +1519,7 @@
       "responsavel": "MILTON",
       "prazo": "2026-12-30",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1555,7 +1531,7 @@
       "responsavel": "MILTON",
       "prazo": "2026-10-20",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1572,7 +1548,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar na estação solda nº3 talha elétrica",
@@ -1603,12 +1579,12 @@
       "responsavel": "MILTON",
       "prazo": "2026-10-02",
       "prazo_texto": "",
-      "status": "Não Iniciada",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": true
+      "proxima_vencimento": false
     }
   ]
 }
