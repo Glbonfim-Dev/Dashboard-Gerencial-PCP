@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-10-09T11:47:43-03:00",
+  "ultima_atualizacao": "2026-10-14T13:05:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
     "total": 76,
-    "implementadas": 29,
-    "em_andamento": 24,
+    "implementadas": 31,
+    "em_andamento": 22,
     "nao_iniciadas": 23,
     "outros": 0,
-    "atrasadas": 39,
-    "percentual_concluido": 38.16
+    "atrasadas": 37,
+    "percentual_concluido": 40.79
   },
   "responsaveis": [
     {
@@ -553,18 +553,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Instalar placas de identificação em todos os setores da produção",
-      "responsavel": "EDEMIR",
-      "prazo": "2026-08-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
       "acao": "Colocar acrílico nas portas das máquinas lasers e refletor iluminação",
       "responsavel": "WILLIAM",
       "prazo": "2026-09-30",
@@ -579,18 +567,6 @@
     {
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
-      "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Criar sala de treinamento",
-      "responsavel": "EDEMIR",
       "prazo": "2026-09-30",
       "prazo_texto": "",
       "status": "Em Andamento",
@@ -664,6 +640,18 @@
       "acao": "Substituir talha estação solda nº 2 por corrente",
       "responsavel": "MILTON",
       "prazo": "2026-10-20",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-11-10",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1267,11 +1255,11 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-08-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -1368,7 +1356,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
@@ -1483,11 +1471,11 @@
       "responsavel": "EDEMIR",
       "prazo": "2026-09-30",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
