@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-15T16:54:43-03:00",
+  "ultima_atualizacao": "2026-10-16T15:29:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10,7 +10,7 @@
     "em_andamento": 22,
     "nao_iniciadas": 23,
     "outros": 0,
-    "atrasadas": 37,
+    "atrasadas": 38,
     "percentual_concluido": 40.79
   },
   "responsaveis": [
@@ -46,15 +46,15 @@
   "faturamento": {
     "ano": 2026,
     "meta_total": 12000000.0,
-    "realizado_total": 6772749.41,
-    "percentual_atingimento": 56.44,
+    "realizado_total": 6842749.41,
+    "percentual_atingimento": 57.02,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Out",
       "mes_completo": "Outubro",
       "meta": 1000000.0,
-      "realizado": 356000.0,
-      "percentual_atingimento": 35.6
+      "realizado": 426000.0,
+      "percentual_atingimento": 42.6
     },
     "mensal": [
       {
@@ -115,7 +115,7 @@
         "mes": "Out",
         "mes_completo": "Outubro",
         "meta": 1000000.0,
-        "realizado": 356000.0
+        "realizado": 426000.0
       },
       {
         "mes": "Nov",
@@ -340,6 +340,18 @@
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Limpeza, organização, pintura sala dos compressores",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-15",
       "prazo_texto": "",
       "status": "Não Iniciada",
       "observacao": "",
@@ -575,18 +587,6 @@
       "ano": 2026,
       "atrasada": true,
       "proxima_vencimento": false
-    },
-    {
-      "acao": "Limpeza, organização, pintura sala dos compressores",
-      "responsavel": "MILTON",
-      "prazo": "2026-10-15",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
     },
     {
       "acao": "Criar posto de controle para peças menores na produção",
@@ -1499,8 +1499,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Mudar compressores de lugar para nova sala",
