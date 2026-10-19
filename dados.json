@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-16T15:29:43-03:00",
+  "ultima_atualizacao": "2026-10-19T09:16:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -46,15 +46,15 @@
   "faturamento": {
     "ano": 2026,
     "meta_total": 12000000.0,
-    "realizado_total": 6842749.41,
-    "percentual_atingimento": 57.02,
+    "realizado_total": 6877749.41,
+    "percentual_atingimento": 57.31,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Out",
       "mes_completo": "Outubro",
       "meta": 1000000.0,
-      "realizado": 426000.0,
-      "percentual_atingimento": 42.6
+      "realizado": 461000.0,
+      "percentual_atingimento": 46.1
     },
     "mensal": [
       {
@@ -115,7 +115,7 @@
         "mes": "Out",
         "mes_completo": "Outubro",
         "meta": 1000000.0,
-        "realizado": 426000.0
+        "realizado": 461000.0
       },
       {
         "mes": "Nov",
