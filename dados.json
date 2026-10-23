@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-20T16:40:44-03:00",
+  "ultima_atualizacao": "2026-10-23T15:01:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10,7 +10,7 @@
     "em_andamento": 22,
     "nao_iniciadas": 23,
     "outros": 0,
-    "atrasadas": 38,
+    "atrasadas": 39,
     "percentual_concluido": 40.79
   },
   "responsaveis": [
@@ -46,15 +46,15 @@
   "faturamento": {
     "ano": 2026,
     "meta_total": 12000000.0,
-    "realizado_total": 6924749.41,
-    "percentual_atingimento": 57.71,
+    "realizado_total": 7056749.41,
+    "percentual_atingimento": 58.81,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Out",
       "mes_completo": "Outubro",
       "meta": 1000000.0,
-      "realizado": 508000.0,
-      "percentual_atingimento": 50.8
+      "realizado": 640000.0,
+      "percentual_atingimento": 64.0
     },
     "mensal": [
       {
@@ -115,7 +115,7 @@
         "mes": "Out",
         "mes_completo": "Outubro",
         "meta": 1000000.0,
-        "realizado": 508000.0
+        "realizado": 640000.0
       },
       {
         "mes": "Nov",
@@ -589,6 +589,18 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Substituir talha estação solda nº 2 por corrente",
+      "responsavel": "MILTON",
+      "prazo": "2026-10-20",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Criar posto de controle para peças menores na produção",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-10-30",
@@ -635,18 +647,6 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": false
-    },
-    {
-      "acao": "Substituir talha estação solda nº 2 por corrente",
-      "responsavel": "MILTON",
-      "prazo": "2026-10-20",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
     },
     {
       "acao": "Adquirir óculos de segurança para máquinas corte a laser",
@@ -1523,8 +1523,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
