@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-10-23T15:01:44-03:00",
+  "ultima_atualizacao": "2026-10-26T08:44:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 76,
+    "total": 77,
     "implementadas": 31,
     "em_andamento": 22,
-    "nao_iniciadas": 23,
+    "nao_iniciadas": 24,
     "outros": 0,
     "atrasadas": 39,
-    "percentual_concluido": 40.79
+    "percentual_concluido": 40.26
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 21
+      "quantidade": 22
     },
     {
       "nome": "ROGÉRIO",
@@ -638,6 +638,18 @@
     },
     {
       "acao": "Instalar na estação solda nº3 talha elétrica",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar tomadas para máquina de lavar VAP",
       "responsavel": "MILTON",
       "prazo": "2026-11-30",
       "prazo_texto": "",
@@ -1568,6 +1580,18 @@
       "prazo": "2026-10-02",
       "prazo_texto": "",
       "status": "Implementada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Instalar tomadas para máquina de lavar VAP",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
