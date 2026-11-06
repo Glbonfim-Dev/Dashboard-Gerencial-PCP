@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-10-29T16:04:43-03:00",
+  "ultima_atualizacao": "2026-11-06T13:54:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10,7 +10,7 @@
     "em_andamento": 22,
     "nao_iniciadas": 24,
     "outros": 0,
-    "atrasadas": 39,
+    "atrasadas": 41,
     "percentual_concluido": 40.26
   },
   "responsaveis": [
@@ -50,11 +50,11 @@
     "percentual_atingimento": 61.82,
     "meta_disponivel": true,
     "referencia_mensal": {
-      "mes": "Out",
-      "mes_completo": "Outubro",
+      "mes": "Nov",
+      "mes_completo": "Novembro",
       "meta": 1000000.0,
-      "realizado": 1000000.0,
-      "percentual_atingimento": 100.0
+      "realizado": 0.0,
+      "percentual_atingimento": 0.0
     },
     "mensal": [
       {
@@ -361,6 +361,30 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Criar posto de controle para peças menores na produção",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
+      "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
+      "responsavel": "ROGÉRIO",
+      "prazo": "2026-10-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Identificar gargálos",
       "responsavel": "EDEMIR",
       "prazo": "2026-06-10",
@@ -601,30 +625,6 @@
       "proxima_vencimento": false
     },
     {
-      "acao": "Criar posto de controle para peças menores na produção",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-10-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Fazer uma mesa mais robusta para estação solda 1 e 2",
-      "responsavel": "ROGÉRIO",
-      "prazo": "2026-10-30",
-      "prazo_texto": "",
-      "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
       "acao": "Avaliação do robô de solda - consertar - vender -",
       "responsavel": "MILTON",
       "prazo": "2026-11-30",
@@ -634,7 +634,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar na estação solda nº3 talha elétrica",
@@ -646,7 +646,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar tomadas para máquina de lavar VAP",
@@ -658,7 +658,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Adquirir óculos de segurança para máquinas corte a laser",
@@ -1415,8 +1415,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Consertar braço de medição / orçar uma tridimensional manual",
@@ -1547,8 +1547,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Instalar na estação solda nº3 talha elétrica",
@@ -1560,7 +1560,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Avaliação do robô de solda - consertar - vender -",
@@ -1572,7 +1572,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     },
     {
       "acao": "Instalar morsa sala de ajuste",
@@ -1596,7 +1596,7 @@
       "data_conclusao": null,
       "ano": 2026,
       "atrasada": false,
-      "proxima_vencimento": false
+      "proxima_vencimento": true
     }
   ]
 }
