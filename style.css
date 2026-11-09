@@ -147,7 +147,7 @@ select:focus, button:focus-visible { outline: 3px solid color-mix(in srgb, var(-
 .meta-note { margin: -11px 20px 0 135px; color: #a86100; font-size: 11px; }
 
 /* Tabelas de atenção e detalhamento. */
-.monthly-chart { height: 338px; padding: 9px 18px 17px; }
+.monthly-chart { height: 338px; padding: 14px 18px 17px; }
 .attention-panel { display: flex; flex-direction: column; }
 .attention-panel .table-scroll { max-height: 306px; padding: 8px 12px 0; overflow: auto; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
 table { width: 100%; border-collapse: collapse; color: #263b54; font-size: 12px; }

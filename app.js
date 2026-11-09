@@ -160,18 +160,30 @@ function renderizarMeta() {
   $("#aviso-meta").hidden = fat.meta_disponivel;
 }
 
+// A legenda ocupa uma faixa propria; o padding dos itens separa o eixo Y.
 // O clique em um ponto mensal atualiza o quadro Meta x Realizado.
 function renderizarFaturamento() {
   destruirChart("faturamento");
   const fat = faturamentoDoFiltro();
   $("#ano-faturamento").textContent = fat.ano;
   estado.charts.faturamento = new Chart($("#grafico-faturamento"), {
+    // Reserva espa?o no layout nativo, inclusive quando a legenda quebra linha.
+    plugins: [{
+      id: "espacoLegendaFaturamento",
+      beforeInit(chart) {
+        const ajustarLegenda = chart.legend.fit;
+        chart.legend.fit = function () {
+          ajustarLegenda.call(this);
+          this.height += 20;
+        };
+      }
+    }],
     type: "line",
     data: { labels: fat.mensal.map((m) => m.mes), datasets: [
       { label: "Meta (R$)", data: fat.mensal.map((m) => m.meta), borderColor: cores.azul, backgroundColor: cores.azul, borderWidth: 2, pointRadius: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 7 : 4, pointBorderWidth: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 3 : 0, pointBorderColor: "#ffffff", tension: 0.22 },
       { label: "Realizado (R$)", data: fat.mensal.map((m) => m.realizado), borderColor: cores.teal, backgroundColor: cores.teal, borderWidth: 2, pointRadius: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 7 : 4, pointBorderWidth: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 3 : 0, pointBorderColor: "#ffffff", tension: 0.22 }
     ] },
-    options: { responsive: true, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, onClick(evento, elementos, chart) { if (!elementos.length) return; estado.mesFaturamentoSelecionado = elementos[0].index; renderizarMeta(); chart.update("none"); }, onHover(evento, elementos, chart) { chart.canvas.style.cursor = elementos.length ? "pointer" : "default"; }, plugins: { legend: { align: "start", labels: { usePointStyle: true, pointStyle: "circle" } }, tooltip: { callbacks: { afterBody: () => "Clique para comparar este mês", label: (ctx) => `${ctx.dataset.label}: ${moedaBR.format(ctx.raw)}` } } }, scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: cores.grade }, ticks: { callback: (v) => moedaBR.format(v).replace("R$ ", "R$ ") } } } }
+    options: { responsive: true, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, onClick(evento, elementos, chart) { if (!elementos.length) return; estado.mesFaturamentoSelecionado = elementos[0].index; renderizarMeta(); chart.update("none"); }, onHover(evento, elementos, chart) { chart.canvas.style.cursor = elementos.length ? "pointer" : "default"; }, layout: { padding: { top: 4, bottom: 4 } }, plugins: { legend: { position: "top", align: "start", fullSize: true, labels: { usePointStyle: true, pointStyle: "circle", boxWidth: 12, boxHeight: 12, padding: 24 } }, tooltip: { callbacks: { afterBody: () => "Clique para comparar este mês", label: (ctx) => `${ctx.dataset.label}: ${moedaBR.format(ctx.raw)}` } } }, scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: cores.grade }, ticks: { callback: (v) => moedaBR.format(v).replace("R$ ", "R$ ") } } } }
   });
 }
 
