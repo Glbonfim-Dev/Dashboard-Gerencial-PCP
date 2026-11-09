@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+logs/
+dashboard.lock
+dados.json.tmp
+*.xlsm
+tests/_runtime_*
+automation/estado_monitor.json
+automation/estado_monitor.json.tmp
