@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-09T18:48:37-03:00",
+  "ultima_atualizacao": "2026-11-09T18:58:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -1706,7 +1706,7 @@
             "ano": 2026,
             "mes": 11,
             "valores": {
-              "qtd_rnc": null,
+              "qtd_rnc": 22.0,
               "meta_<": 0.0
             }
           },
