@@ -69,3 +69,14 @@ class FaturamentoConfig:
 # Instâncias compartilhadas pelos módulos de leitura e cálculo.
 ACOES_CONFIG = AcoesConfig()
 FATURAMENTO_CONFIG = FaturamentoConfig()
+
+
+@dataclass(frozen=True)
+class QualidadeConfig:
+    """A leitura da qualidade identifica os blocos pelos cabeçalhos, não por células."""
+
+    aba: str = "Qualidade KPI 2026"
+    ano: int = 2026
+
+
+QUALIDADE_CONFIG = QualidadeConfig()

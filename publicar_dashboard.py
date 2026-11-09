@@ -156,8 +156,8 @@ def main(argv: list[str] | None = None) -> int:
         with ExecucaoLock(LOCK_PATH):
             logger.info("Lock de execucao adquirido")
             aguardar_arquivo_disponivel(caminho_excel, logger)
-            acoes, faturamento = carregar_dados_excel(caminho_excel, logger)
-            dados = calcular_indicadores(acoes, faturamento, caminho_excel.name)
+            acoes, faturamento, qualidade = carregar_dados_excel(caminho_excel, logger)
+            dados = calcular_indicadores(acoes, faturamento, caminho_excel.name, qualidade)
             logger.info(
                 "Indicadores calculados: %d acoes, %d atrasadas",
                 dados["acoes"]["total"],

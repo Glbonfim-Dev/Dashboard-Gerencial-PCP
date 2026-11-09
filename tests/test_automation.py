@@ -4,18 +4,22 @@ import base64
 import json
 import logging
 import unittest
-from datetime import date, timedelta
+from datetime import date, time, timedelta
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from unittest.mock import patch
 
 import requests
 from openpyxl import Workbook
 
-from config import ACOES_CONFIG, FATURAMENTO_CONFIG
+from config import ACOES_CONFIG, FATURAMENTO_CONFIG, QUALIDADE_CONFIG
 from excel_reader import (
     calcular_indicadores,
     carregar_dados_excel,
     normalizar_status,
     numero,
+    ler_qualidade,
+    ExcelReaderError,
 )
 from github_client import GitHubClient, GitHubConfig
 from monitorar_excel import assinatura_arquivo, ler_estado, monitorar_uma_vez
@@ -24,6 +28,7 @@ from publicar_dashboard import (
     ExecucaoLock,
     escrever_json_atomico,
     validar_caminho,
+    main as publicar,
 )
 
 
@@ -86,7 +91,7 @@ class AutomationTests(unittest.TestCase):
         wb.save(caminho)
 
         logger = logging.getLogger("teste_excel_reader")
-        acoes, mensal = carregar_dados_excel(caminho, logger)
+        acoes, mensal, qualidade = carregar_dados_excel(caminho, logger)
         dados = calcular_indicadores(acoes, mensal, caminho.name)
 
         self.assertEqual(dados["acoes"]["total"], 2)
@@ -94,6 +99,7 @@ class AutomationTests(unittest.TestCase):
         self.assertEqual(dados["acoes"]["atrasadas"], 1)
         self.assertEqual(dados["faturamento"]["realizado_total"], 2500.0)
         self.assertIn("referencia_mensal", dados["faturamento"])
+        self.assertFalse(qualidade["disponivel"])
 
     def test_json_atomico_preserva_unicode_e_tipos(self) -> None:
         destino = Path(__file__).parent / "_runtime_dados.json"
@@ -105,6 +111,117 @@ class AutomationTests(unittest.TestCase):
         self.assertIn("Revisão", texto)
         self.assertIsInstance(json.loads(texto)["valor"], float)
         self.assertFalse(temporario.exists())
+
+    def test_qualidade_reconhece_colunas_movidas_e_novos_campos(self) -> None:
+        wb = Workbook()
+        self.addCleanup(wb.close)
+        ws = wb.active
+        ws.append(["RNC INTERNA POR ÁREA"])
+        ws.append(["Mês", "ENGENHARIA", "OPERAÇÃO"])
+        ws.append([date(2026, 1, 1), 2, 28])
+        ws.append([date(2026, 2, 1), 12, 32])
+        ws.append(["TOTAL", 14, 60])
+        original = ler_qualidade(ws)
+        ws.insert_rows(1, 5)
+        ws.insert_cols(1, 3)
+        movido = ler_qualidade(ws)
+        self.assertEqual(movido, original)
+        ws.insert_cols(5)
+        ws["E7"] = "INSPEÇÃO"
+        ws["E8"] = 3
+        ws["E9"] = 0
+        campos = ler_qualidade(ws)["indicadores"][0]
+        self.assertIn("INSPEÇÃO", [c["rotulo"] for c in campos["campos"]])
+        self.assertEqual(campos["mensal"][0]["valores"]["inspecao"], 3)
+        self.assertEqual(campos["mensal"][1]["valores"]["inspecao"], 0)
+
+    def test_qualidade_distingue_vazios_zero_erros_percentuais_e_anos(self) -> None:
+        wb = Workbook()
+        self.addCleanup(wb.close)
+        ws = wb.active
+        for row in [
+            ["RECLAMAÇÃO DE CLIENTE (ORIGEM)"],
+            ["Mês", "QTD RNC", "CLIENTE", "%", "META <"],
+            [date(2025, 1, 1), 20, 2, 0.1, 0],
+            [date(2026, 1, 1), 10, 0, 0, 0],
+            [date(2026, 2, 1), None, None, "#DIV/0!", 0],
+            ["TOTAL", 30, 2],
+        ]:
+            ws.append(row)
+        resultado = ler_qualidade(ws)
+        bloco = resultado["indicadores"][0]
+        self.assertEqual(bloco["tipo"], "clientes")
+        self.assertEqual([r["ano"] for r in bloco["mensal"]], [2025, 2026, 2026])
+        self.assertEqual(bloco["mensal"][0]["valores"]["%"], 10)
+        self.assertEqual(bloco["mensal"][1]["valores"]["cliente"], 0)
+        self.assertIsNone(bloco["mensal"][2]["valores"]["cliente"])
+        self.assertIsNone(bloco["mensal"][2]["valores"]["%"])
+        self.assertEqual(len(resultado["avisos"]), 1)
+
+    def test_qualidade_converte_horas_acima_de_24_e_mantem_custos(self) -> None:
+        wb = Workbook()
+        self.addCleanup(wb.close)
+        ws = wb.active
+        for row in [
+            ["Mês", "Hrs Gastas"],
+            [date(2026, 1, 1), timedelta(days=2, hours=3, minutes=30)],
+            [date(2026, 2, 1), time(6, 30)],
+            ["TOTAL"],
+            ["Mês", "CUSTO R$"],
+            [date(2026, 1, 1), 1234.56],
+            ["TOTAL"],
+        ]:
+            ws.append(row)
+        blocos = ler_qualidade(ws)["indicadores"]
+        self.assertEqual(blocos[0]["mensal"][0]["valores"]["hrs_gastas"], 51.5)
+        self.assertEqual(blocos[0]["mensal"][1]["valores"]["hrs_gastas"], 6.5)
+        self.assertEqual(blocos[1]["mensal"][0]["valores"]["custo_r$"], 1234.56)
+
+    def test_qualidade_detecta_mes_duplicado_e_estrutura_invalida(self) -> None:
+        wb = Workbook()
+        self.addCleanup(wb.close)
+        ws = wb.active
+        ws.append(["Dados sem cabeçalhos"])
+        with self.assertRaises(ExcelReaderError):
+            ler_qualidade(ws)
+        ws.append(["Mês", "QTD RNC"])
+        ws.append([date(2026, 1, 1), 3])
+        ws.append([date(2026, 1, 1), 4])
+        with self.assertRaisesRegex(ExcelReaderError, "duplicado"):
+            ler_qualidade(ws)
+
+    def test_salvamento_qualidade_chega_ao_json_sem_upload(self) -> None:
+        with TemporaryDirectory(dir=Path(__file__).parent, prefix="_runtime_") as pasta:
+            raiz = Path(pasta)
+            excel, destino, estado = raiz / "fonte.xlsx", raiz / "dados.json", raiz / "estado.json"
+            wb = Workbook()
+            self.addCleanup(wb.close)
+            wb.active.title = ACOES_CONFIG.aba
+            wb.active["F8"] = "Ação preservada"
+            fat = wb.create_sheet(FATURAMENTO_CONFIG.aba)
+            fat["D15"], fat["H15"] = "JANEIRO", 2500
+            ws = wb.create_sheet(QUALIDADE_CONFIG.aba)
+            ws.append(["RNC TOTAL"])
+            ws.append(["Mês", "QTD RNC", "META <"])
+            ws.append([date(2026, 1, 1), 38, 0])
+            wb.save(excel)
+
+            with patch("publicar_dashboard.JSON_OUTPUT_PATH", destino), patch("publicar_dashboard.LOCK_PATH", raiz / "lock"), patch.object(GitHubClient, "publicar_json") as upload:
+                def publicador(caminho: Path) -> int:
+                    return publicar([str(caminho), "--no-upload"])
+
+                self.assertEqual(monitorar_uma_vez(excel, estado, espera_estabilidade=0, publicador=publicador), 0)
+                antes = json.loads(destino.read_text(encoding="utf-8"))
+                self.assertEqual(antes["qualidade"]["indicadores"][0]["mensal"][0]["valores"]["qtd_rnc"], 38)
+                ws.insert_cols(2)
+                ws["C3"] = 45
+                wb.save(excel)
+                self.assertEqual(monitorar_uma_vez(excel, estado, espera_estabilidade=0, publicador=publicador), 0)
+                depois = json.loads(destino.read_text(encoding="utf-8"))
+                self.assertEqual(depois["qualidade"]["indicadores"][0]["mensal"][0]["valores"]["qtd_rnc"], 45)
+                self.assertEqual(antes["faturamento"], depois["faturamento"])
+                self.assertEqual(antes["acoes"], depois["acoes"])
+                upload.assert_not_called()
 
     def test_validacao_de_extensao(self) -> None:
         with self.assertRaisesRegex(ValueError, "extensao"):

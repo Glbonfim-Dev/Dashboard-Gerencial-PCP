@@ -1,7 +1,7 @@
 "use strict";
 
 // Estado único da tela: dados carregados, filtros ativos e gráficos Chart.js.
-const estado = { dados: null, filtradas: [], charts: {}, mesFaturamentoSelecionado: null };
+const estado = { dados: null, filtradas: [], charts: {}, mesFaturamentoSelecionado: null, abaAtiva: "gerencial" };
 const INTERVALO_ATUALIZACAO_MS = 60 * 1000;
 let atualizacaoEmAndamento = false;
 
@@ -64,6 +64,7 @@ function resumirAcoes(acoes) {
 }
 
 function aplicarFiltros() {
+  if (!estado.dados) return;
   const responsavel = $("#filtro-responsavel").value;
   const status = $("#filtro-status").value;
   const periodo = $("#filtro-periodo").value;
@@ -259,7 +260,221 @@ function abrirAcoesPorStatus(indiceStatus) {
 }
 
 // Atualiza todos os componentes depois de qualquer mudança nos filtros gerais.
-function renderizarTudo() { renderizarKPIs(); renderizarStatus(); renderizarResponsaveis(); renderizarMeta(); renderizarFaturamento(); renderizarAtencao(); renderizarTabelaCompleta(); }
+function renderizarTudo() {
+  if (estado.abaAtiva === "qualidade") { renderizarQualidade(); return; }
+  renderizarKPIs(); renderizarStatus(); renderizarResponsaveis(); renderizarMeta(); renderizarFaturamento(); renderizarAtencao(); renderizarTabelaCompleta();
+}
+
+// ---------------------------------------------------------------------------
+// Qualidade: os blocos e campos vêm do Excel, com filtros próprios por ano/mês.
+// ---------------------------------------------------------------------------
+
+const mesesQualidade = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+const moedaQualidade = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
+const chaveQualidade = (texto) => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+const temNumero = (valor) => typeof valor === "number" && Number.isFinite(valor);
+
+function formatarValorQualidade(valor, unidade) {
+  if (!temNumero(valor)) return "Sem dados";
+  if (unidade === "moeda") return moedaQualidade.format(valor);
+  if (unidade === "horas") {
+    const segundos = Math.round(valor * 3600);
+    return `${Math.floor(segundos / 3600)}:${String(Math.floor(segundos / 60) % 60).padStart(2, "0")}:${String(segundos % 60).padStart(2, "0")}`;
+  }
+  return `${valor.toLocaleString("pt-BR", { maximumFractionDigits: 2 })}${unidade === "percentual" ? "%" : ""}`;
+}
+
+function blocoQualidade(tipo) {
+  return estado.dados?.qualidade?.indicadores?.find((bloco) => bloco.tipo === tipo);
+}
+
+function linhasQualidade(bloco) {
+  const ano = Number($("#qualidade-ano").value);
+  const mes = Number($("#qualidade-mes").value);
+  return (bloco?.mensal || []).filter((linha) => linha.ano === ano && (!mes || linha.mes === mes));
+}
+
+function campoPrincipalQualidade(bloco) {
+  const rotulo = { clientes: "CLIENTE", fornecedores: "FORNECEDOR", internas: "INTERNA" }[bloco?.tipo];
+  return bloco?.campos.find((campo) => rotulo && chaveQualidade(campo.rotulo) === rotulo)
+    || bloco?.campos.find((campo) => !campo.meta && campo.unidade !== "percentual");
+}
+
+function totalQualidade(bloco, campo = campoPrincipalQualidade(bloco)) {
+  if (!campo) return null;
+  const valores = linhasQualidade(bloco).map((linha) => linha.valores[campo.chave]).filter(temNumero);
+  return valores.length ? valores.reduce((soma, valor) => soma + valor, 0) : null;
+}
+
+function prepararFiltrosQualidade() {
+  const blocos = estado.dados?.qualidade?.indicadores || [];
+  const anos = [...new Set([estado.dados?.qualidade?.ano || 2026, ...blocos.flatMap((bloco) => bloco.mensal.map((linha) => linha.ano))])].sort();
+  const selectAno = $("#qualidade-ano");
+  const anoAnterior = Number(selectAno.value);
+  selectAno.replaceChildren();
+  (anos.length ? anos : [2026]).forEach((ano) => selectAno.add(new Option(String(ano), String(ano))));
+  selectAno.value = String(anos.includes(anoAnterior) ? anoAnterior : estado.dados?.qualidade?.ano || 2026);
+  const selectBloco = $("#qualidade-indicador");
+  const blocoAnterior = selectBloco.value;
+  selectBloco.replaceChildren();
+  blocos.forEach((bloco) => selectBloco.add(new Option(bloco.titulo, bloco.id)));
+  if (blocos.some((bloco) => bloco.id === blocoAnterior)) selectBloco.value = blocoAnterior;
+}
+
+// Usa o mesmo layout nativo de legenda que separa o eixo Y no faturamento.
+const layoutLegendaQualidade = {
+  id: "layoutLegendaQualidade",
+  beforeInit(chart) {
+    const ajustar = chart.legend.fit;
+    chart.legend.fit = function () {
+      ajustar.call(this);
+      if (this.options.display) this.height += 18;
+    };
+  },
+  afterDraw(chart) {
+    const preenchido = chart.data.datasets.some((serie) => serie.data.some(temNumero));
+    if (preenchido) return;
+    const { ctx, chartArea } = chart;
+    ctx.save(); ctx.fillStyle = cores.texto; ctx.textAlign = "center";
+    ctx.font = "13px Segoe UI";
+    ctx.fillText("Sem dados no período", (chartArea.left + chartArea.right) / 2, (chartArea.top + chartArea.bottom) / 2);
+    ctx.restore();
+  }
+};
+
+function criarGraficoQualidade(nome, canvas, labels, datasets, { horizontal = false, moeda = false, horas = false, linha = false } = {}) {
+  destruirChart(nome);
+  const unidade = moeda ? "moeda" : horas ? "horas" : "quantidade";
+  const eixoValor = {
+    beginAtZero: true, grid: { color: cores.grade },
+    ticks: { color: cores.texto, padding: 8, ...(horizontal && moeda ? { maxTicksLimit: 4 } : {}), ...(moeda || horas ? {} : { precision: 0 }),
+      callback: (v) => horas ? `${numeroBR.format(v)} h` : formatarValorQualidade(v, unidade) }
+  };
+  estado.charts[nome] = new Chart($(canvas), {
+    type: linha ? "line" : "bar", plugins: [layoutLegendaQualidade],
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? "y" : "x",
+      layout: { padding: { top: 4, right: 8 } },
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: datasets.length > 1, position: "top", align: "start", labels: { usePointStyle: true, boxWidth: 10, boxHeight: 10, padding: 18 } },
+        tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${formatarValorQualidade(ctx.raw, unidade)}` } }
+      },
+      scales: {
+        x: horizontal ? eixoValor : { grid: { display: false }, ticks: { color: cores.texto, maxRotation: 45 } },
+        y: horizontal ? { grid: { display: false }, ticks: { color: cores.texto, autoSkip: false } } : eixoValor
+      }
+    }
+  });
+}
+
+function graficoMensalQualidade(tipo, canvas, cor) {
+  const bloco = blocoQualidade(tipo);
+  const principal = campoPrincipalQualidade(bloco);
+  const mes = Number($("#qualidade-mes").value);
+  const meses = mes ? [mes] : mesesQualidade.map((_, i) => i + 1);
+  const linhas = linhasQualidade(bloco);
+  const campos = principal ? [principal, ...bloco.campos.filter((c) => c.meta && c.unidade === principal.unidade)] : [];
+  const datasets = campos.map((campo) => ({
+    label: campo.meta ? campo.rotulo : bloco.titulo,
+    data: meses.map((numero) => linhas.find((l) => l.mes === numero)?.valores[campo.chave] ?? null),
+    borderColor: campo.meta ? cores.laranja : cor, backgroundColor: campo.meta ? cores.laranja : cor,
+    borderDash: campo.meta ? [5, 4] : [], borderWidth: 2, borderRadius: 4,
+    pointRadius: 4, tension: 0.22, spanGaps: false, maxBarThickness: 44
+  }));
+  criarGraficoQualidade(`qualidade-${tipo}`, canvas, meses.map((m) => mesesQualidade[m - 1]), datasets,
+    { linha: tipo === "rnc_total", moeda: principal?.unidade === "moeda", horas: principal?.unidade === "horas" });
+  descreverCoberturaQualidade(bloco, canvas);
+}
+
+function graficoCategoriasQualidade(tipo, canvas, cor) {
+  const bloco = blocoQualidade(tipo);
+  const campos = (bloco?.campos || []).filter((c) => !c.meta && !chaveQualidade(c.rotulo).includes("TOTAL"));
+  criarGraficoQualidade(`qualidade-${tipo}`, canvas, campos.map((c) => c.rotulo), [{
+    label: bloco?.titulo || "Indicador", data: campos.map((c) => totalQualidade(bloco, c)),
+    backgroundColor: cor, borderRadius: 4, maxBarThickness: 34
+  }], { horizontal: true, moeda: tipo === "custos_categoria" });
+  descreverCoberturaQualidade(bloco, canvas);
+}
+
+function descreverCoberturaQualidade(bloco, canvas) {
+  const campos = (bloco?.campos || []).filter((c) => !c.meta);
+  const linhas = linhasQualidade(bloco).filter((linha) => campos.some((c) => temNumero(linha.valores[c.chave])));
+  const painel = $(canvas).closest(".panel");
+  let nota = painel.querySelector(".quality-note");
+  if (!nota) { nota = document.createElement("p"); nota.className = "quality-note"; painel.append(nota); }
+  nota.textContent = linhas.length
+    ? `${linhas.length} ${linhas.length === 1 ? "mês com dados" : "meses com dados"} · ${linhas.map((l) => mesesQualidade[l.mes - 1]).join(", ")}/${$("#qualidade-ano").value}`
+    : "Sem preenchimento no período selecionado.";
+}
+
+function renderizarDetalheQualidade() {
+  const bloco = estado.dados?.qualidade?.indicadores.find((b) => b.id === $("#qualidade-indicador").value);
+  const thead = $("#qualidade-tabela-cabecalho");
+  const tbody = $("#qualidade-tabela-corpo");
+  thead.replaceChildren(); tbody.replaceChildren();
+  if (!bloco) return;
+  const tr = document.createElement("tr");
+  ["Mês", ...bloco.campos.map((c) => c.rotulo)].forEach((texto) => { const th = document.createElement("th"); th.scope = "col"; th.textContent = texto; tr.append(th); });
+  thead.append(tr);
+  const linhas = linhasQualidade(bloco);
+  linhas.forEach((linha) => {
+    const row = document.createElement("tr");
+    adicionarCelula(row, `${mesesQualidade[linha.mes - 1]}/${linha.ano}`);
+    bloco.campos.forEach((campo) => adicionarCelula(row, formatarValorQualidade(linha.valores[campo.chave], campo.unidade)));
+    tbody.append(row);
+  });
+  if (!linhas.length) {
+    const row = document.createElement("tr");
+    adicionarCelula(row, "Sem dados no período selecionado", "empty-row").colSpan = bloco.campos.length + 1;
+    tbody.append(row);
+  } else {
+    const total = document.createElement("tr"); adicionarCelula(total, "Total preenchido");
+    bloco.campos.forEach((campo) => adicionarCelula(total, campo.meta || campo.unidade === "percentual" ? "—" : formatarValorQualidade(totalQualidade(bloco, campo), campo.unidade)));
+    tbody.append(total);
+  }
+  $("#qualidade-detalhe-nota").textContent = "Valores da planilha no período selecionado. Percentuais e limites de meta não são somados. Durações no formato horas:minutos:segundos.";
+}
+
+function renderizarQualidade() {
+  const qualidade = estado.dados?.qualidade;
+  const disponivel = Boolean(qualidade?.disponivel && qualidade.indicadores?.length);
+  $("#qualidade-indisponivel").hidden = disponivel;
+  $("#qualidade-conteudo").hidden = !disponivel;
+  $("#qualidade-contexto").textContent = `${$("#qualidade-ano").value} · ${$("#qualidade-mes").selectedOptions[0].textContent} · Indicadores da planilha Qualidade KPI 2026`;
+  if (!disponivel) return;
+  [["rnc_total", "total"], ["clientes", "clientes"], ["fornecedores", "fornecedores"], ["internas", "internas"], ["custo", "custo"]].forEach(([tipo, id]) => {
+    const valor = totalQualidade(blocoQualidade(tipo));
+    $(`#qualidade-${id}`).textContent = temNumero(valor) ? formatarValorQualidade(valor, tipo === "custo" ? "moeda" : "quantidade") : "—";
+  });
+  const horas = totalQualidade(blocoQualidade("horas"));
+  $("#qualidade-horas").textContent = temNumero(horas) ? `– ${formatarValorQualidade(horas, "horas")}` : "";
+  graficoMensalQualidade("rnc_total", "#grafico-qualidade-rnc", cores.azul);
+  graficoMensalQualidade("custo", "#grafico-qualidade-custo", cores.teal);
+  graficoMensalQualidade("horas", "#grafico-qualidade-horas", cores.azul);
+  graficoCategoriasQualidade("areas", "#grafico-qualidade-areas", cores.azul);
+  graficoCategoriasQualidade("maquinas", "#grafico-qualidade-maquinas", cores.azul);
+  graficoCategoriasQualidade("custos_categoria", "#grafico-qualidade-categorias", cores.teal);
+  renderizarDetalheQualidade();
+  const lista = $("#qualidade-avisos"); lista.replaceChildren();
+  (qualidade.avisos || []).forEach((texto) => { const li = document.createElement("li"); li.textContent = texto; lista.append(li); });
+  $("#qualidade-observacoes").hidden = !lista.children.length;
+}
+
+function selecionarAba(aba) {
+  estado.abaAtiva = aba;
+  ["gerencial", "qualidade"].forEach((nome) => {
+    const ativa = nome === aba;
+    $(`#aba-${nome}`).setAttribute("aria-selected", String(ativa));
+    $(`#aba-${nome}`).tabIndex = ativa ? 0 : -1;
+    $(`#painel-${nome}`).hidden = !ativa;
+  });
+  $("#filtro-responsavel").closest(".filter-grid").hidden = aba === "qualidade";
+  $("#filtros-qualidade").hidden = aba !== "qualidade";
+  $(".page-header h1").textContent = aba === "qualidade" ? "Dashboard Gerencial – Qualidade KPI 2026" : "Dashboard Gerencial – Melhorias e Faturamento 2026";
+  if (estado.dados) aplicarFiltros();
+}
 
 // ---------------------------------------------------------------------------
 // Inicialização da página e eventos do usuário
@@ -282,6 +497,7 @@ async function atualizarDados() {
       ? null
       : estado.dados?.faturamento?.mensal?.[estado.mesFaturamentoSelecionado]?.mes;
     estado.dados = novosDados;
+    prepararFiltrosQualidade();
     $("#ultima-atualizacao").textContent = formatarAtualizacao(estado.dados.ultima_atualizacao);
     preencherSelect("#filtro-responsavel", [...new Set(estado.dados.lista_acoes.map((a) => a.responsavel))].sort());
     preencherSelect("#filtro-status", [...new Set(estado.dados.lista_acoes.map((a) => a.status))].sort());
@@ -303,7 +519,27 @@ async function atualizarDados() {
 
 // Liga os controles do HTML às funções de filtragem, modal e painel lateral.
 ["#filtro-responsavel", "#filtro-status", "#filtro-periodo"].forEach((id) => $(id).addEventListener("change", aplicarFiltros));
-$("#limpar-filtros").addEventListener("click", () => { $("#filtro-responsavel").value = ""; $("#filtro-status").value = ""; $("#filtro-periodo").value = ""; aplicarFiltros(); });
+$("#limpar-filtros").addEventListener("click", () => {
+  if (estado.abaAtiva === "qualidade") {
+    $("#qualidade-ano").value = String(estado.dados?.qualidade?.ano || 2026);
+    $("#qualidade-mes").value = "";
+  } else {
+    $("#filtro-responsavel").value = ""; $("#filtro-status").value = ""; $("#filtro-periodo").value = "";
+  }
+  aplicarFiltros();
+});
+mesesQualidade.forEach((mes, i) => $("#qualidade-mes").add(new Option(mes, String(i + 1))));
+["#qualidade-ano", "#qualidade-mes"].forEach((id) => $(id).addEventListener("change", renderizarQualidade));
+$("#qualidade-indicador").addEventListener("change", renderizarDetalheQualidade);
+["gerencial", "qualidade"].forEach((aba) => {
+  $(`#aba-${aba}`).addEventListener("click", () => selecionarAba(aba));
+  $(`#aba-${aba}`).addEventListener("keydown", (event) => {
+    if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const proxima = event.key === "Home" ? "gerencial" : event.key === "End" ? "qualidade" : aba === "gerencial" ? "qualidade" : "gerencial";
+    selecionarAba(proxima); $(`#aba-${proxima}`).focus();
+  });
+});
 $("#alternar-filtros").addEventListener("click", () => definirEstadoFiltros($("#app-shell").classList.contains("filters-collapsed")));
 $("#ver-todas").addEventListener("click", () => abrirModalAcoes(estado.filtradas, "Todas as ações"));
 $("#fechar-modal").addEventListener("click", () => $("#modal-acoes").close());

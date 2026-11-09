@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-09T18:05:43-03:00",
+  "ultima_atualizacao": "2026-11-09T18:35:31-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -45,16 +45,16 @@
   ],
   "faturamento": {
     "ano": 2026,
-    "meta_total": 12400000.0,
+    "meta_total": 12000000.0,
     "realizado_total": 7795749.41,
-    "percentual_atingimento": 62.87,
+    "percentual_atingimento": 64.96,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Nov",
       "mes_completo": "Novembro",
-      "meta": 1200000.0,
+      "meta": 1000000.0,
       "realizado": 377000.0,
-      "percentual_atingimento": 31.42
+      "percentual_atingimento": 37.7
     },
     "mensal": [
       {
@@ -120,13 +120,13 @@
       {
         "mes": "Nov",
         "mes_completo": "Novembro",
-        "meta": 1200000.0,
+        "meta": 1000000.0,
         "realizado": 377000.0
       },
       {
         "mes": "Dez",
         "mes_completo": "Dezembro",
-        "meta": 1200000.0,
+        "meta": 1000000.0,
         "realizado": 0.0
       }
     ]
@@ -1598,5 +1598,1420 @@
       "atrasada": false,
       "proxima_vencimento": true
     }
-  ]
+  ],
+  "qualidade": {
+    "disponivel": true,
+    "ano": 2026,
+    "indicadores": [
+      {
+        "id": "rnc_total",
+        "tipo": "rnc_total",
+        "titulo": "RNC TOTAL",
+        "campos": [
+          {
+            "chave": "qtd_rnc",
+            "rotulo": "QTD RNC",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "meta_<",
+            "rotulo": "META <",
+            "unidade": "quantidade",
+            "meta": true
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "qtd_rnc": 68.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "qtd_rnc": 13.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "qtd_rnc": 9.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "qtd_rnc": 18.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "qtd_rnc": 14.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "qtd_rnc": 21.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "qtd_rnc": null,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "qtd_rnc": null,
+              "meta_<": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "clientes",
+        "tipo": "clientes",
+        "titulo": "RECLAMAÇÃO DE CLIENTE (ORIGEM)",
+        "campos": [
+          {
+            "chave": "qtd_rnc",
+            "rotulo": "QTD RNC",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "cliente",
+            "rotulo": "CLIENTE",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "%",
+            "rotulo": "%",
+            "unidade": "percentual",
+            "meta": false
+          },
+          {
+            "chave": "meta_<",
+            "rotulo": "META <",
+            "unidade": "percentual",
+            "meta": true
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "cliente": 1.0,
+              "%": 2.631578947368421,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "qtd_rnc": 68.0,
+              "cliente": 7.0,
+              "%": 10.294117647058822,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "cliente": 2.0,
+              "%": 5.263157894736842,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "qtd_rnc": 13.0,
+              "cliente": 0.0,
+              "%": 0.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "cliente": 3.0,
+              "%": 17.647058823529413,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "qtd_rnc": 9.0,
+              "cliente": 0.0,
+              "%": 0.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "cliente": 5.0,
+              "%": 29.411764705882355,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "qtd_rnc": 18.0,
+              "cliente": 1.0,
+              "%": 5.555555555555555,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "qtd_rnc": 14.0,
+              "cliente": 3.0,
+              "%": 21.428571428571427,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "qtd_rnc": 21.0,
+              "cliente": 0.0,
+              "%": 0.0,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "qtd_rnc": null,
+              "cliente": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "qtd_rnc": null,
+              "cliente": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "fornecedores",
+        "tipo": "fornecedores",
+        "titulo": "RNC FORNECEDOR (ORIGEM)",
+        "campos": [
+          {
+            "chave": "qtd_rnc",
+            "rotulo": "QTD RNC",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "fornecedor",
+            "rotulo": "FORNECEDOR",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "%",
+            "rotulo": "%",
+            "unidade": "percentual",
+            "meta": false
+          },
+          {
+            "chave": "meta_<",
+            "rotulo": "META <",
+            "unidade": "percentual",
+            "meta": true
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "fornecedor": 6.0,
+              "%": 15.789473684210526,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "qtd_rnc": 68.0,
+              "fornecedor": 12.0,
+              "%": 17.647058823529413,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "fornecedor": 5.0,
+              "%": 13.157894736842104,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "qtd_rnc": 13.0,
+              "fornecedor": 2.0,
+              "%": 15.384615384615385,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "fornecedor": 1.0,
+              "%": 5.88235294117647,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "qtd_rnc": 9.0,
+              "fornecedor": 3.0,
+              "%": 33.33333333333333,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "fornecedor": 1.0,
+              "%": 5.88235294117647,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "qtd_rnc": 18.0,
+              "fornecedor": 1.0,
+              "%": 5.555555555555555,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "qtd_rnc": 14.0,
+              "fornecedor": 5.0,
+              "%": 35.714285714285715,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "qtd_rnc": 21.0,
+              "fornecedor": 3.0,
+              "%": 14.285714285714285,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "qtd_rnc": null,
+              "fornecedor": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "qtd_rnc": null,
+              "fornecedor": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "internas",
+        "tipo": "internas",
+        "titulo": "TOTAL RNC INTERNA (ORIGEM)",
+        "campos": [
+          {
+            "chave": "qtd_rnc",
+            "rotulo": "QTD RNC",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "interna",
+            "rotulo": "INTERNA",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "%",
+            "rotulo": "%",
+            "unidade": "percentual",
+            "meta": false
+          },
+          {
+            "chave": "meta_<",
+            "rotulo": "META <",
+            "unidade": "percentual",
+            "meta": true
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "interna": 31.0,
+              "%": 81.57894736842105,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "qtd_rnc": 68.0,
+              "interna": 49.0,
+              "%": 72.05882352941177,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "qtd_rnc": 38.0,
+              "interna": 31.0,
+              "%": 81.57894736842105,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "qtd_rnc": 13.0,
+              "interna": 11.0,
+              "%": 84.61538461538461,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "interna": 14.0,
+              "%": 82.35294117647058,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "qtd_rnc": 9.0,
+              "interna": 6.0,
+              "%": 66.66666666666666,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "qtd_rnc": 17.0,
+              "interna": 11.0,
+              "%": 64.70588235294117,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "qtd_rnc": 18.0,
+              "interna": 16.0,
+              "%": 88.88888888888889,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "qtd_rnc": 14.0,
+              "interna": 6.0,
+              "%": 42.857142857142854,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "qtd_rnc": 21.0,
+              "interna": 18.0,
+              "%": 85.71428571428571,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "qtd_rnc": null,
+              "interna": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "qtd_rnc": null,
+              "interna": null,
+              "%": null,
+              "meta_<": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "id": "areas",
+        "tipo": "areas",
+        "titulo": "RNC INTERNA POR ÁREA",
+        "campos": [
+          {
+            "chave": "engenharia",
+            "rotulo": "ENGENHARIA",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "operacao",
+            "rotulo": "OPERAÇÃO",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "programacao",
+            "rotulo": "PROGRAMAÇÃO",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "expedicao",
+            "rotulo": "EXPEDIÇÃO",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "fornecedor",
+            "rotulo": "FORNECEDOR",
+            "unidade": "quantidade",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "engenharia": 2.0,
+              "operacao": 28.0,
+              "programacao": 1.0,
+              "expedicao": 0.0,
+              "fornecedor": 6.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "engenharia": 12.0,
+              "operacao": 32.0,
+              "programacao": 4.0,
+              "expedicao": 0.0,
+              "fornecedor": 12.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "engenharia": 8.0,
+              "operacao": 19.0,
+              "programacao": 2.0,
+              "expedicao": 1.0,
+              "fornecedor": 5.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "engenharia": 2.0,
+              "operacao": 6.0,
+              "programacao": 1.0,
+              "expedicao": 0.0,
+              "fornecedor": 2.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "engenharia": 3.0,
+              "operacao": 6.0,
+              "programacao": 4.0,
+              "expedicao": 0.0,
+              "fornecedor": 1.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "engenharia": 3.0,
+              "operacao": 3.0,
+              "programacao": 0.0,
+              "expedicao": 0.0,
+              "fornecedor": 3.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "engenharia": 7.0,
+              "operacao": 2.0,
+              "programacao": 2.0,
+              "expedicao": 0.0,
+              "fornecedor": 1.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "engenharia": 4.0,
+              "operacao": 12.0,
+              "programacao": 0.0,
+              "expedicao": 1.0,
+              "fornecedor": 1.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "engenharia": 1.0,
+              "operacao": 4.0,
+              "programacao": 1.0,
+              "expedicao": 0.0,
+              "fornecedor": 5.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "engenharia": 2.0,
+              "operacao": 8.0,
+              "programacao": 5.0,
+              "expedicao": 3.0,
+              "fornecedor": 3.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "engenharia": null,
+              "operacao": null,
+              "programacao": null,
+              "expedicao": null,
+              "fornecedor": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "engenharia": null,
+              "operacao": null,
+              "programacao": null,
+              "expedicao": null,
+              "fornecedor": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "maquinas",
+        "tipo": "maquinas",
+        "titulo": "RNC PRODUÇÃO - MÁQUINAS",
+        "campos": [
+          {
+            "chave": "dobra",
+            "rotulo": "DOBRA",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "laser_3k",
+            "rotulo": "LASER 3K",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "laser_6k",
+            "rotulo": "LASER 6K",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "laser_30k",
+            "rotulo": "LASER 30K",
+            "unidade": "quantidade",
+            "meta": false
+          },
+          {
+            "chave": "laser_total",
+            "rotulo": "LASER TOTAL",
+            "unidade": "quantidade",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "dobra": 7.0,
+              "laser_3k": 0.0,
+              "laser_6k": 2.0,
+              "laser_30k": 6.0,
+              "laser_total": 8.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "dobra": 5.0,
+              "laser_3k": 0.0,
+              "laser_6k": 5.0,
+              "laser_30k": 1.0,
+              "laser_total": 6.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "dobra": 1.0,
+              "laser_3k": 0.0,
+              "laser_6k": 4.0,
+              "laser_30k": 0.0,
+              "laser_total": 4.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "dobra": 1.0,
+              "laser_3k": 0.0,
+              "laser_6k": 2.0,
+              "laser_30k": 0.0,
+              "laser_total": 2.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "dobra": 1.0,
+              "laser_3k": 0.0,
+              "laser_6k": 1.0,
+              "laser_30k": 0.0,
+              "laser_total": 1.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "dobra": 0.0,
+              "laser_3k": 0.0,
+              "laser_6k": 0.0,
+              "laser_30k": 0.0,
+              "laser_total": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "dobra": null,
+              "laser_3k": null,
+              "laser_6k": null,
+              "laser_30k": null,
+              "laser_total": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "horas_custos_maquinas",
+        "tipo": "horas_custos_maquinas",
+        "titulo": "Horas e custos por máquina",
+        "campos": [
+          {
+            "chave": "dobra_·_hrs_gastas",
+            "rotulo": "DOBRA · Hrs Gastas",
+            "unidade": "horas",
+            "meta": false
+          },
+          {
+            "chave": "dobra_·_r$",
+            "rotulo": "DOBRA · R$",
+            "unidade": "moeda",
+            "meta": false
+          },
+          {
+            "chave": "laser_·_hrs_gastas",
+            "rotulo": "LASER · Hrs Gastas",
+            "unidade": "horas",
+            "meta": false
+          },
+          {
+            "chave": "laser_·_r$",
+            "rotulo": "LASER · R$",
+            "unidade": "moeda",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2025,
+            "mes": 1,
+            "valores": {
+              "dobra_·_hrs_gastas": 0.845833,
+              "dobra_·_r$": 149.57,
+              "laser_·_hrs_gastas": 0.0,
+              "laser_·_r$": 0.0
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 2,
+            "valores": {
+              "dobra_·_hrs_gastas": 1.493889,
+              "dobra_·_r$": 7518.54,
+              "laser_·_hrs_gastas": 6.644722,
+              "laser_·_r$": 11694.01
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 3,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 4,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 5,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 6,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 7,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 8,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 9,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 10,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 11,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          },
+          {
+            "ano": 2025,
+            "mes": 12,
+            "valores": {
+              "dobra_·_hrs_gastas": null,
+              "dobra_·_r$": null,
+              "laser_·_hrs_gastas": null,
+              "laser_·_r$": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "horas",
+        "tipo": "horas",
+        "titulo": "Horas gastas",
+        "campos": [
+          {
+            "chave": "hrs_gastas",
+            "rotulo": "Hrs Gastas",
+            "unidade": "horas",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "hrs_gastas": 31.581111
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "hrs_gastas": 277.479722
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "hrs_gastas": 60.828056
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "hrs_gastas": 24.485833
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "hrs_gastas": 29.154444
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "hrs_gastas": 364.426389
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "hrs_gastas": 12.018611
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "hrs_gastas": 47.682778
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "hrs_gastas": 129.666667
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "hrs_gastas": 13.117778
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "hrs_gastas": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "hrs_gastas": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "custo",
+        "tipo": "custo",
+        "titulo": "Custo da qualidade",
+        "campos": [
+          {
+            "chave": "custo_r$",
+            "rotulo": "CUSTO R$",
+            "unidade": "moeda",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "custo_r$": 3446.06
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "custo_r$": 367408.06
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "custo_r$": 8472.35
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "custo_r$": 4848.14
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "custo_r$": 5784.59
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "custo_r$": 82214.78
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "custo_r$": 2129.67
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "custo_r$": 9187.28
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "custo_r$": 78446.82
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "custo_r$": 3484.17
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "custo_r$": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "custo_r$": null
+            }
+          }
+        ]
+      },
+      {
+        "id": "custos_categoria",
+        "tipo": "custos_categoria",
+        "titulo": "CUSTO R$ POR CATEGORIA",
+        "campos": [
+          {
+            "chave": "cmb",
+            "rotulo": "CMB",
+            "unidade": "moeda",
+            "meta": false
+          },
+          {
+            "chave": "fornecedor",
+            "rotulo": "FORNECEDOR",
+            "unidade": "moeda",
+            "meta": false
+          },
+          {
+            "chave": "cliente",
+            "rotulo": "CLIENTE",
+            "unidade": "moeda",
+            "meta": false
+          }
+        ],
+        "mensal": [
+          {
+            "ano": 2026,
+            "mes": 1,
+            "valores": {
+              "cmb": 2322.12,
+              "fornecedor": 732.94,
+              "cliente": 391.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 2,
+            "valores": {
+              "cmb": 323952.14,
+              "fornecedor": 35674.02,
+              "cliente": 7781.9
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 3,
+            "valores": {
+              "cmb": 6366.93,
+              "fornecedor": 2254.24,
+              "cliente": 2.57
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 4,
+            "valores": {
+              "cmb": 4332.43,
+              "fornecedor": 515.71,
+              "cliente": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 5,
+            "valores": {
+              "cmb": 5784.59,
+              "fornecedor": 0.0,
+              "cliente": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 6,
+            "valores": {
+              "cmb": 79049.27,
+              "fornecedor": 3165.51,
+              "cliente": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 7,
+            "valores": {
+              "cmb": 9187.28,
+              "fornecedor": 0.0,
+              "cliente": 0.0
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 8,
+            "valores": {
+              "cmb": null,
+              "fornecedor": null,
+              "cliente": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 9,
+            "valores": {
+              "cmb": null,
+              "fornecedor": null,
+              "cliente": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 10,
+            "valores": {
+              "cmb": null,
+              "fornecedor": null,
+              "cliente": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 11,
+            "valores": {
+              "cmb": null,
+              "fornecedor": null,
+              "cliente": null
+            }
+          },
+          {
+            "ano": 2026,
+            "mes": 12,
+            "valores": {
+              "cmb": null,
+              "fornecedor": null,
+              "cliente": null
+            }
+          }
+        ]
+      }
+    ],
+    "avisos": [
+      "RECLAMAÇÃO DE CLIENTE (ORIGEM): 2 células sem resultado válido no Excel; exibidas como sem dados.",
+      "RNC FORNECEDOR (ORIGEM): 2 células sem resultado válido no Excel; exibidas como sem dados.",
+      "TOTAL RNC INTERNA (ORIGEM): 2 células sem resultado válido no Excel; exibidas como sem dados."
+    ]
+  }
 }

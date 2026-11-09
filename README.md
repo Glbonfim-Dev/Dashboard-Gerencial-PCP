@@ -76,6 +76,46 @@ responsável está selecionado, mostra somente as ações dele.
 
 ## 3. Testar localmente sem GitHub
 
+### Aba Qualidade KPI 2026
+
+O dashboard possui duas abas de navegação: **Melhorias e Faturamento** e
+**Qualidade KPI 2026**, com o mesmo cabeçalho, cartões, painéis e filtros laterais.
+A aba de qualidade já existe no Excel compartilhado; não é necessário criá-la
+ou instalar macros. O nome fica em `QUALIDADE_CONFIG` de `config.py`.
+
+O Python identifica as tabelas da qualidade pelo cabeçalho **Mês** e pelos nomes
+dos indicadores. Inserções de linhas e deslocamentos de colunas são aceitos
+enquanto os cabeçalhos forem mantidos. Novas colunas à direita de **Mês** entram
+no detalhamento; novas áreas/máquinas entram também nos gráficos respectivos.
+Novos blocos com cabeçalho **Mês**, campos e datas aparecem no seletor de
+detalhamento. Renomear os cabeçalhos que identificam os indicadores ou mudar o
+formato das tabelas exige revisar o reconhecimento em `ler_qualidade`.
+
+São lidos RNC total, cliente, fornecedor, interna, áreas, máquinas, horas gastas,
+custos da qualidade, custos por categoria e horas/custos por máquina. Os dados
+ficam no campo adicional `qualidade` de `dados.json`; os campos anteriores são
+preservados. O painel antigo também funciona com JSON sem esse novo campo.
+
+Os filtros de ano e mês da qualidade são independentes dos filtros de ações.
+As tabelas históricas de 2025 ficam separadas das de 2026 pelo filtro de ano.
+Cada gráfico informa quais meses têm dados. Campos vazios e erros de fórmula
+(por exemplo `#DIV/0!`) aparecem como **Sem dados**, sem gerar zeros artificiais;
+zeros preenchidos são mantidos. Os erros encontrados ficam nas observações da
+aba. Durações acima de 24 horas são preservadas. Percentuais e limites de meta
+não são somados. Os totais são calculados com os meses preenchidos de cada
+bloco, sem forçar conciliação entre tabelas distintas da planilha.
+
+A tarefa existente detecta o salvamento de qualquer aba do arquivo a cada
+minuto, aguarda sua estabilidade e publica todos os indicadores no mesmo JSON.
+O navegador consulta o JSON a cada minuto e mantém a aba e os filtros ativos.
+A atualização depende também do tempo de publicação do GitHub Pages; não é
+instantânea. O Excel precisa recalcular e salvar os resultados das fórmulas.
+
+Para disponibilizar a nova interface, envie `index.html`, `app.js`, `style.css`
+e o JSON atualizado ao repositório existente. Mantenha `config.py`,
+`excel_reader.py` e `publicar_dashboard.py` atualizados no computador da
+automação. Para testar sem publicação use `--no-upload`, conforme abaixo.
+
 ```powershell
 & "$env:LOCALAPPDATA\Programs\Python\Launcher\py.exe" -3 .\publicar_dashboard.py "Z:\PUBLICO\PCP\CONTROLE GRID - PRAZOS\EDEMIR\Melhorias - Faturamento moldes 2026.xlsm" --no-upload
 ```

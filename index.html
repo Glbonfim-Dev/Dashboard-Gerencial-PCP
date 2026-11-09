@@ -50,6 +50,17 @@
           </label>
         </div>
 
+        <div class="filter-grid" id="filtros-qualidade" hidden>
+          <label class="filter-group" for="qualidade-ano">
+            <span class="filter-label"><svg><use href="#i-calendar"></use></svg>Ano</span>
+            <select id="qualidade-ano"><option value="2026">2026</option></select>
+          </label>
+          <label class="filter-group" for="qualidade-mes">
+            <span class="filter-label"><svg><use href="#i-calendar"></use></svg>Mês</span>
+            <select id="qualidade-mes"><option value="">Todos</option></select>
+          </label>
+        </div>
+
         <button class="clear-button" id="limpar-filtros" type="button">
           <svg><use href="#i-refresh"></use></svg>Limpar filtros
         </button>
@@ -76,6 +87,12 @@
 
         <div id="mensagem-erro" class="error-banner" role="alert" hidden></div>
 
+        <div class="dashboard-tabs" role="tablist" aria-label="Painéis gerenciais">
+          <button id="aba-gerencial" class="dashboard-tab" type="button" role="tab" aria-selected="true" aria-controls="painel-gerencial">Melhorias e Faturamento</button>
+          <button id="aba-qualidade" class="dashboard-tab" type="button" role="tab" aria-selected="false" aria-controls="painel-qualidade" tabindex="-1">Qualidade KPI 2026</button>
+        </div>
+
+        <div id="painel-gerencial" role="tabpanel" aria-labelledby="aba-gerencial">
         <!-- Indicadores calculados novamente sempre que os filtros mudam. -->
         <section class="kpi-grid" aria-label="Indicadores principais">
           <article class="kpi-card kpi-blue"><span class="kpi-icon"><svg><use href="#i-clipboard"></use></svg></span><div><span>Total de Ações</span><strong id="kpi-total">–</strong></div></article>
@@ -126,6 +143,39 @@
             <button class="link-button" id="ver-todas" type="button">Ver todas as ações <span>›</span></button>
           </article>
         </section>
+        </div>
+
+        <div id="painel-qualidade" role="tabpanel" aria-labelledby="aba-qualidade" hidden>
+          <p class="quality-context" id="qualidade-contexto" aria-live="polite"></p>
+          <p class="quality-notice" id="qualidade-indisponivel" hidden>Os dados de qualidade ainda não estão disponíveis. Salve a planilha e aguarde a atualização da automação.</p>
+          <div id="qualidade-conteudo">
+            <section class="kpi-grid quality-kpis" aria-label="Indicadores de qualidade">
+              <article class="kpi-card kpi-blue"><span class="kpi-icon"><svg><use href="#i-clipboard"></use></svg></span><div><span>Total de RNCs</span><strong id="qualidade-total">–</strong></div></article>
+              <article class="kpi-card kpi-green"><span class="kpi-icon"><svg><use href="#i-user"></use></svg></span><div><span>Reclamações de clientes</span><strong id="qualidade-clientes">–</strong></div></article>
+              <article class="kpi-card kpi-orange"><span class="kpi-icon"><svg><use href="#i-list"></use></svg></span><div><span>RNCs de fornecedores</span><strong id="qualidade-fornecedores">–</strong></div></article>
+              <article class="kpi-card kpi-red"><span class="kpi-icon"><svg><use href="#i-target"></use></svg></span><div><span>RNCs internas</span><strong id="qualidade-internas">–</strong></div></article>
+              <article class="kpi-card kpi-teal quality-money"><span class="kpi-icon"><svg><use href="#i-target"></use></svg></span><div><span>Custo da qualidade</span><strong id="qualidade-custo">–</strong></div></article>
+            </section>
+            <div class="content-grid quality-grid">
+              <article class="panel"><h2>Evolução mensal de RNCs</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-rnc" aria-label="RNCs e meta por mês"></canvas></div></article>
+              <article class="panel"><h2>RNCs por área</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-areas" aria-label="Quantidade de RNCs por área"></canvas></div></article>
+              <article class="panel"><h2>Custo mensal da qualidade</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-custo" aria-label="Custo da qualidade por mês"></canvas></div></article>
+              <article class="panel"><h2>RNCs por máquina</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-maquinas" aria-label="Quantidade de RNCs por máquina"></canvas></div></article>
+              <article class="panel"><h2>Horas gastas <span id="qualidade-horas"></span></h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-horas" aria-label="Horas gastas por mês"></canvas></div></article>
+              <article class="panel"><h2>Custo por categoria</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-categorias" aria-label="Custo por categoria"></canvas></div></article>
+            </div>
+            <article class="panel quality-detail">
+              <div class="quality-detail-header">
+                <h2>Detalhamento dos indicadores</h2>
+                <label for="qualidade-indicador"><span class="sr-only">Indicador a detalhar</span><select id="qualidade-indicador"></select></label>
+              </div>
+              <p class="quality-note" id="qualidade-detalhe-nota"></p>
+              <div class="table-scroll"><table><thead id="qualidade-tabela-cabecalho"></thead><tbody id="qualidade-tabela-corpo"></tbody></table></div>
+            </article>
+            <details class="quality-notes" id="qualidade-observacoes" hidden><summary>Observações dos dados da planilha</summary><ul id="qualidade-avisos"></ul></details>
+            <p class="quality-note">Meses sem preenchimento aparecem como “Sem dados”. Os totais de cada indicador são calculados separadamente; as origens e áreas podem não conciliar entre si.</p>
+          </div>
+        </div>
       </main>
     </div>
 
