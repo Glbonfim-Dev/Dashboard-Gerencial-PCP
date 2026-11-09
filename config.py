@@ -60,8 +60,8 @@ class FaturamentoConfig:
             "AGOSTO": 1_000_000.0,
             "SETEMBRO": 1_000_000.0,
             "OUTUBRO": 1_000_000.0,
-            "NOVEMBRO": 1_000_000.0,
-            "DEZEMBRO": 1_000_000.0,
+            "NOVEMBRO": 1_200_000.0,
+            "DEZEMBRO": 1_200_000.0,
         }
     )
 

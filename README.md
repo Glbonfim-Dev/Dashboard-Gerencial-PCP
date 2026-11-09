@@ -56,11 +56,12 @@ Essas colunas estão configuradas como opcionais. Quando forem adicionadas,
 preencha `coluna_observacao`, `coluna_data_conclusao` e `coluna_meta`.
 
 Enquanto não houver uma coluna de meta, os valores oficiais ficam no dicionário
-`metas_mensais` de `config.py`. A configuração atual utiliza a meta mensal de
-R$ 1.000.000, totalizando R$ 12.000.000 no ano.
+`metas_mensais` de `config.py`. Para 2026, a meta é de R$ 1.000.000 por mês de
+janeiro a outubro e R$ 1.200.000 em novembro e dezembro, totalizando
+R$ 12.400.000 no ano.
 
-O quadro “Meta x Realizado” compara a meta de R$ 1.000.000 somente com o
-realizado no mês corrente. O gráfico mensal continua exibindo o ano completo.
+O quadro “Meta x Realizado” compara a meta configurada para o mês corrente com
+o realizado desse mês. O gráfico mensal continua exibindo o ano completo.
 Ao clicar em qualquer ponto do gráfico mensal, o quadro passa a comparar a meta,
 o realizado e o atingimento do mês selecionado.
 
@@ -115,6 +116,12 @@ Para disponibilizar a nova interface, envie `index.html`, `app.js`, `style.css`
 e o JSON atualizado ao repositório existente. Mantenha `config.py`,
 `excel_reader.py` e `publicar_dashboard.py` atualizados no computador da
 automação. Para testar sem publicação use `--no-upload`, conforme abaixo.
+
+Ao publicar mudanças na interface, atualize também o parâmetro `v` dos links
+de `style.css` e `app.js` em `index.html`, mantendo a mesma versão nos dois.
+Isso impede que o navegador reutilize CSS/JavaScript de uma versão anterior
+com o HTML novo. Publique os três arquivos juntos. O GitHub Pages pode levar
+alguns minutos para disponibilizar a nova publicação.
 
 ```powershell
 & "$env:LOCALAPPDATA\Programs\Python\Launcher\py.exe" -3 .\publicar_dashboard.py "Z:\PUBLICO\PCP\CONTROLE GRID - PRAZOS\EDEMIR\Melhorias - Faturamento moldes 2026.xlsm" --no-upload

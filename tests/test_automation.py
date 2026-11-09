@@ -4,7 +4,7 @@ import base64
 import json
 import logging
 import unittest
-from datetime import date, time, timedelta
+from datetime import date, datetime, time, timedelta
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
@@ -19,6 +19,7 @@ from excel_reader import (
     normalizar_status,
     numero,
     ler_qualidade,
+    ler_faturamento,
     ExcelReaderError,
 )
 from github_client import GitHubClient, GitHubConfig
@@ -100,6 +101,29 @@ class AutomationTests(unittest.TestCase):
         self.assertEqual(dados["faturamento"]["realizado_total"], 2500.0)
         self.assertIn("referencia_mensal", dados["faturamento"])
         self.assertFalse(qualidade["disponivel"])
+
+    def test_metas_2026_aumentam_em_novembro_sem_alterar_realizado(self) -> None:
+        wb = Workbook()
+        self.addCleanup(wb.close)
+        realizados = [500000.0] * 10 + [377000.0, 600000.0]
+        meses = ["JANEIRO", "FEVEREIRO", "MARÇO", "ABRIL", "MAIO", "JUNHO",
+                 "JULHO", "AGOSTO", "SETEMBRO", "OUTUBRO", "NOVEMBRO", "DEZEMBRO"]
+        for linha, (mes, realizado) in enumerate(zip(meses, realizados), start=15):
+            wb.active[f"D{linha}"] = mes
+            wb.active[f"H{linha}"] = realizado
+        mensal = ler_faturamento(wb.active)
+        self.assertEqual([m["meta"] for m in mensal], [1000000.0] * 10 + [1200000.0] * 2)
+        self.assertEqual([m["realizado"] for m in mensal], realizados)
+        for mes in (10, 11, 12):
+            with self.subTest(mes=mes), patch("excel_reader.datetime") as relogio:
+                relogio.now.return_value = datetime(2026, mes, 9)
+                fat = calcular_indicadores([], mensal, "teste.xlsx")["faturamento"]
+                self.assertEqual(fat["meta_total"], 12400000.0)
+                self.assertEqual(fat["realizado_total"], sum(realizados))
+                self.assertEqual(fat["percentual_atingimento"], round(sum(realizados) / 12400000 * 100, 2))
+                meta = 1000000.0 if mes == 10 else 1200000.0
+                self.assertEqual(fat["referencia_mensal"]["meta"], meta)
+                self.assertEqual(fat["referencia_mensal"]["percentual_atingimento"], round(realizados[mes - 1] / meta * 100, 2))
 
     def test_json_atomico_preserva_unicode_e_tipos(self) -> None:
         destino = Path(__file__).parent / "_runtime_dados.json"
