@@ -356,7 +356,8 @@ function criarGraficoQualidade(nome, canvas, labels, datasets, { horizontal = fa
     options: {
       responsive: true, maintainAspectRatio: false, indexAxis: horizontal ? "y" : "x",
       layout: { padding: { top: 4, right: 8 } },
-      interaction: { mode: "index", intersect: false },
+      // Nas barras horizontais, a linha sob o mouse define a categoria.
+      interaction: { mode: "index", axis: horizontal ? "y" : "x", intersect: false },
       plugins: {
         legend: { display: datasets.length > 1, position: "top", align: "start", labels: { usePointStyle: true, boxWidth: 10, boxHeight: 10, padding: 18 } },
         tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${formatarValorQualidade(ctx.raw, unidade)}` } }
