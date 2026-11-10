@@ -191,7 +191,6 @@ td:first-child { color: #17263c; line-height: 1.35; }
 .dashboard-tab { min-height: 44px; padding: 11px 18px; border: 1px solid transparent; border-radius: 6px; color: var(--muted); background: transparent; font: inherit; font-weight: 750; cursor: pointer; }
 .dashboard-tab[aria-selected="true"] { color: var(--blue); border-color: var(--line-strong); background: var(--surface-strong); }
 .dashboard-tab:hover { color: var(--blue); background: var(--surface-soft); }
-.quality-context { margin: 0 0 16px; color: var(--muted); }
 .quality-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .quality-chart { height: 300px; padding-top: 18px; }
 .quality-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }

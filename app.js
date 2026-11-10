@@ -87,6 +87,7 @@ function renderizarKPIs() {
 
 function destruirChart(nome) {
   if (estado.charts[nome]) estado.charts[nome].destroy();
+  delete estado.charts[nome];
 }
 
 // Plugin simples que escreve o total no centro do gráfico de rosca.
@@ -372,6 +373,8 @@ function criarGraficoQualidade(nome, canvas, labels, datasets, { horizontal = fa
 
 function graficoMensalQualidade(tipo, canvas, cor) {
   const bloco = blocoQualidade(tipo);
+  $(canvas).closest(".panel").hidden = !bloco;
+  if (!bloco) { destruirChart(`qualidade-${tipo}`); return; }
   const principal = campoPrincipalQualidade(bloco);
   const mes = Number($("#qualidade-mes").value);
   const meses = mes ? [mes] : mesesQualidade.map((_, i) => i + 1);
@@ -386,28 +389,17 @@ function graficoMensalQualidade(tipo, canvas, cor) {
   }));
   criarGraficoQualidade(`qualidade-${tipo}`, canvas, meses.map((m) => mesesQualidade[m - 1]), datasets,
     { linha: tipo === "rnc_total", moeda: principal?.unidade === "moeda", horas: principal?.unidade === "horas" });
-  descreverCoberturaQualidade(bloco, canvas);
 }
 
 function graficoCategoriasQualidade(tipo, canvas, cor) {
   const bloco = blocoQualidade(tipo);
+  $(canvas).closest(".panel").hidden = !bloco;
+  if (!bloco) { destruirChart(`qualidade-${tipo}`); return; }
   const campos = (bloco?.campos || []).filter((c) => !c.meta && !chaveQualidade(c.rotulo).includes("TOTAL"));
   criarGraficoQualidade(`qualidade-${tipo}`, canvas, campos.map((c) => c.rotulo), [{
     label: bloco?.titulo || "Indicador", data: campos.map((c) => totalQualidade(bloco, c)),
     backgroundColor: cor, borderRadius: 4, maxBarThickness: 34
   }], { horizontal: true, moeda: tipo === "custos_categoria" });
-  descreverCoberturaQualidade(bloco, canvas);
-}
-
-function descreverCoberturaQualidade(bloco, canvas) {
-  const campos = (bloco?.campos || []).filter((c) => !c.meta);
-  const linhas = linhasQualidade(bloco).filter((linha) => campos.some((c) => temNumero(linha.valores[c.chave])));
-  const painel = $(canvas).closest(".panel");
-  let nota = painel.querySelector(".quality-note");
-  if (!nota) { nota = document.createElement("p"); nota.className = "quality-note"; painel.append(nota); }
-  nota.textContent = linhas.length
-    ? `${linhas.length} ${linhas.length === 1 ? "mês com dados" : "meses com dados"} · ${linhas.map((l) => mesesQualidade[l.mes - 1]).join(", ")}/${$("#qualidade-ano").value}`
-    : "Sem preenchimento no período selecionado.";
 }
 
 function renderizarDetalheQualidade() {
@@ -443,10 +435,11 @@ function renderizarQualidade() {
   const disponivel = Boolean(qualidade?.disponivel && qualidade.indicadores?.length);
   $("#qualidade-indisponivel").hidden = disponivel;
   $("#qualidade-conteudo").hidden = !disponivel;
-  $("#qualidade-contexto").textContent = `${$("#qualidade-ano").value} · ${$("#qualidade-mes").selectedOptions[0].textContent} · Indicadores da planilha Qualidade KPI 2026`;
   if (!disponivel) return;
   [["rnc_total", "total"], ["clientes", "clientes"], ["fornecedores", "fornecedores"], ["internas", "internas"], ["custo", "custo"]].forEach(([tipo, id]) => {
-    const valor = totalQualidade(blocoQualidade(tipo));
+    const bloco = blocoQualidade(tipo);
+    $(`#qualidade-${id}`).closest(".kpi-card").hidden = !bloco;
+    const valor = totalQualidade(bloco);
     $(`#qualidade-${id}`).textContent = temNumero(valor) ? formatarValorQualidade(valor, tipo === "custo" ? "moeda" : "quantidade") : "—";
   });
   const horas = totalQualidade(blocoQualidade("horas"));
@@ -455,8 +448,6 @@ function renderizarQualidade() {
   graficoMensalQualidade("custo", "#grafico-qualidade-custo", cores.teal);
   graficoMensalQualidade("horas", "#grafico-qualidade-horas", cores.azul);
   graficoCategoriasQualidade("areas", "#grafico-qualidade-areas", cores.azul);
-  graficoCategoriasQualidade("maquinas", "#grafico-qualidade-maquinas", cores.azul);
-  graficoCategoriasQualidade("custos_categoria", "#grafico-qualidade-categorias", cores.teal);
   renderizarDetalheQualidade();
   const lista = $("#qualidade-avisos"); lista.replaceChildren();
   (qualidade.avisos || []).forEach((texto) => { const li = document.createElement("li"); li.textContent = texto; lista.append(li); });

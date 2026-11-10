@@ -6,9 +6,9 @@
     <meta name="description" content="Dashboard gerencial de melhorias e faturamento 2026" />
     <title>Dashboard Gerencial – Melhorias e Faturamento 2026</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="style.css?v=20261109-qualidade-3" />
+    <link rel="stylesheet" href="style.css?v=20261110-qualidade-4" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
-    <script src="app.js?v=20261109-qualidade-3" defer></script>
+    <script src="app.js?v=20261110-qualidade-4" defer></script>
   </head>
   <body>
     <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
@@ -146,7 +146,6 @@
         </div>
 
         <div id="painel-qualidade" role="tabpanel" aria-labelledby="aba-qualidade" hidden>
-          <p class="quality-context" id="qualidade-contexto" aria-live="polite"></p>
           <p class="quality-notice" id="qualidade-indisponivel" hidden>Os dados de qualidade ainda não estão disponíveis. Salve a planilha e aguarde a atualização da automação.</p>
           <div id="qualidade-conteudo">
             <section class="kpi-grid quality-kpis" aria-label="Indicadores de qualidade">
@@ -160,9 +159,7 @@
               <article class="panel"><h2>Evolução mensal de RNCs</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-rnc" aria-label="RNCs e meta por mês"></canvas></div></article>
               <article class="panel"><h2>RNCs por área</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-areas" aria-label="Quantidade de RNCs por área"></canvas></div></article>
               <article class="panel"><h2>Custo mensal da qualidade</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-custo" aria-label="Custo da qualidade por mês"></canvas></div></article>
-              <article class="panel"><h2>RNCs por máquina</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-maquinas" aria-label="Quantidade de RNCs por máquina"></canvas></div></article>
               <article class="panel"><h2>Horas gastas <span id="qualidade-horas"></span></h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-horas" aria-label="Horas gastas por mês"></canvas></div></article>
-              <article class="panel"><h2>Custo por categoria</h2><div class="chart-box quality-chart"><canvas id="grafico-qualidade-categorias" aria-label="Custo por categoria"></canvas></div></article>
             </div>
             <article class="panel quality-detail">
               <div class="quality-detail-header">

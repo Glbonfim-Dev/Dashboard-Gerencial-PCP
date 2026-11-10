@@ -99,7 +99,8 @@ preservados. O painel antigo também funciona com JSON sem esse novo campo.
 
 Os filtros de ano e mês da qualidade são independentes dos filtros de ações.
 As tabelas históricas de 2025 ficam separadas das de 2026 pelo filtro de ano.
-Cada gráfico informa quais meses têm dados. Campos vazios e erros de fórmula
+Painéis de indicadores removidos da planilha são ocultados automaticamente.
+Campos vazios e erros de fórmula
 (por exemplo `#DIV/0!`) aparecem como **Sem dados**, sem gerar zeros artificiais;
 zeros preenchidos são mantidos. Os erros encontrados ficam nas observações da
 aba. Durações acima de 24 horas são preservadas. Percentuais e limites de meta
