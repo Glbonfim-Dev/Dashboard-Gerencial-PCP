@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-11-10T12:34:44-03:00",
+  "ultima_atualizacao": "2026-11-11T14:00:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 77,
+    "total": 78,
     "implementadas": 31,
     "em_andamento": 22,
-    "nao_iniciadas": 24,
+    "nao_iniciadas": 25,
     "outros": 0,
-    "atrasadas": 41,
-    "percentual_concluido": 40.26
+    "atrasadas": 42,
+    "percentual_concluido": 39.74
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 22
+      "quantidade": 23
     },
     {
       "nome": "ROGÉRIO",
@@ -625,7 +625,31 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
+      "responsavel": "WILLIAM",
+      "prazo": "2026-11-10",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Avaliação do robô de solda - consertar - vender -",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Fazer suporte para computadores setor de solda",
       "responsavel": "MILTON",
       "prazo": "2026-11-30",
       "prazo_texto": "",
@@ -654,18 +678,6 @@
       "prazo": "2026-11-30",
       "prazo_texto": "",
       "status": "Não Iniciada",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
-    },
-    {
-      "acao": "Adquirir óculos de segurança para máquinas corte a laser",
-      "responsavel": "WILLIAM",
-      "prazo": "2026-11-10",
-      "prazo_texto": "",
-      "status": "Em Andamento",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
@@ -1367,8 +1379,8 @@
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": false,
-      "proxima_vencimento": true
+      "atrasada": true,
+      "proxima_vencimento": false
     },
     {
       "acao": "Mesa / suporte para área da qualidade amarela verificar peças vindo de tratamento",
@@ -1588,6 +1600,18 @@
     },
     {
       "acao": "Instalar tomadas para máquina de lavar VAP",
+      "responsavel": "MILTON",
+      "prazo": "2026-11-30",
+      "prazo_texto": "",
+      "status": "Não Iniciada",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": false,
+      "proxima_vencimento": true
+    },
+    {
+      "acao": "Fazer suporte para computadores setor de solda",
       "responsavel": "MILTON",
       "prazo": "2026-11-30",
       "prazo_texto": "",
