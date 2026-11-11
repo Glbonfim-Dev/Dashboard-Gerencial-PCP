@@ -6,7 +6,14 @@ const INTERVALO_ATUALIZACAO_MS = 60 * 1000;
 let atualizacaoEmAndamento = false;
 
 // Paleta compartilhada pelos gráficos para acompanhar as variáveis do CSS.
-const cores = { azul: "#1769d2", verde: "#13a36f", laranja: "#e99a16", vermelho: "#d83a3a", teal: "#00806f", grade: "#dfe7ee", texto: "#5d6b7c" };
+const cores = { azul: "#737373", verde: "#0a0a0a", laranja: "#737373", vermelho: "#d4d4d4", teal: "#0a0a0a", grade: "#e5e5e5", texto: "#737373" };
+
+// Aparencia global dos graficos; calculos e interacoes permanecem nos componentes.
+Chart.defaults.font.family = "Geist, Inter, Segoe UI, Arial, sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = cores.texto;
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) Chart.defaults.animation = false;
+document.fonts.ready.then(() => Object.values(estado.charts).forEach((chart) => chart.update("none")));
 
 // Atalhos de DOM e formatadores brasileiros reutilizados em toda a página.
 const $ = (seletor) => document.querySelector(seletor);
@@ -93,6 +100,13 @@ function destruirChart(nome) {
 // Plugin simples que escreve o total no centro do gráfico de rosca.
 const textoCentral = {
   id: "textoCentral",
+  beforeUpdate(chart) {
+    // Usa o layout nativo para manter a legenda legivel em paineis estreitos.
+    const position = chart.width < 420 ? "bottom" : "right";
+    chart.options.plugins.legend.position = position;
+    chart.legend.options.position = position;
+    chart.legend.position = position;
+  },
   afterDraw(chart) {
     if (chart.config.type !== "doughnut") return;
     const { ctx, chartArea } = chart;
@@ -101,9 +115,9 @@ const textoCentral = {
     const x = (chartArea.left + chartArea.right) / 2;
     const y = (chartArea.top + chartArea.bottom) / 2;
     ctx.save();
-    ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = "#082552";
-    ctx.font = "700 25px Segoe UI"; ctx.fillText(total, x, y - 7);
-    ctx.fillStyle = "#68778d"; ctx.font = "12px Segoe UI"; ctx.fillText("Total", x, y + 16);
+    ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = "#0a0a0a";
+    ctx.font = "600 40px Geist"; ctx.fillText(total, x, y - 10);
+    ctx.fillStyle = "#737373"; ctx.font = "12px Geist"; ctx.fillText("Total", x, y + 23);
     ctx.restore();
   }
 };
@@ -115,7 +129,7 @@ function renderizarStatus() {
   estado.charts.status = new Chart($("#grafico-status"), {
     type: "doughnut",
     data: { labels: ["Implementadas", "Em Andamento", "Não Iniciadas"], datasets: [{ data: [r.implementadas, r.andamento, r.naoIniciadas], backgroundColor: [cores.verde, cores.laranja, cores.vermelho], borderColor: "#fff", borderWidth: 2 }] },
-    options: { responsive: true, maintainAspectRatio: false, cutout: "57%", onClick(evento, elementos) { if (elementos.length) abrirAcoesPorStatus(elementos[0].index); }, onHover(evento, elementos, chart) { chart.canvas.style.cursor = elementos.length ? "pointer" : "default"; }, plugins: { legend: { position: "right", onClick(evento, item) { abrirAcoesPorStatus(item.index); }, labels: { usePointStyle: true, pointStyle: "circle", boxWidth: 9, padding: 18, color: "#243147", generateLabels(chart) { const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0); return chart.data.labels.map((label, i) => { const valor = chart.data.datasets[0].data[i]; const pct = total ? (valor / total * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) : "0"; return { text: `${label}\n${valor} (${pct}%)`, fillStyle: chart.data.datasets[0].backgroundColor[i], strokeStyle: "transparent", hidden: false, index: i, pointStyle: "circle" }; }); } } }, tooltip: { callbacks: { afterBody: () => "Clique para abrir estas ações", label(ctx) { const total = ctx.dataset.data.reduce((a, b) => a + b, 0); const pct = total ? ctx.raw / total * 100 : 0; return ` ${ctx.label}: ${ctx.raw} (${pct.toLocaleString("pt-BR", { maximumFractionDigits: 1 })}%)`; } } } } },
+    options: { responsive: true, maintainAspectRatio: false, cutout: "67%", onClick(evento, elementos) { if (elementos.length) abrirAcoesPorStatus(elementos[0].index); }, onHover(evento, elementos, chart) { chart.canvas.style.cursor = elementos.length ? "pointer" : "default"; }, plugins: { legend: { position: "right", onClick(evento, item) { abrirAcoesPorStatus(item.index); }, labels: { usePointStyle: true, pointStyle: "circle", boxWidth: 9, padding: 18, color: "#0a0a0a", generateLabels(chart) { const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0); return chart.data.labels.map((label, i) => { const valor = chart.data.datasets[0].data[i]; const pct = total ? (valor / total * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) : "0"; return { text: `${label} ${valor} (${pct}%)`, fillStyle: chart.data.datasets[0].backgroundColor[i], strokeStyle: "transparent", hidden: false, index: i, pointStyle: "circle" }; }); } } }, tooltip: { callbacks: { afterBody: () => "Clique para abrir estas ações", label(ctx) { const total = ctx.dataset.data.reduce((a, b) => a + b, 0); const pct = total ? ctx.raw / total * 100 : 0; return ` ${ctx.label}: ${ctx.raw} (${pct.toLocaleString("pt-BR", { maximumFractionDigits: 1 })}%)`; } } } } },
     plugins: [textoCentral]
   });
 }
@@ -128,7 +142,7 @@ function renderizarResponsaveis() {
   const itens = [...contagem.entries()].sort((a, b) => b[1] - a[1]);
   estado.charts.responsaveis = new Chart($("#grafico-responsaveis"), {
     type: "bar",
-    data: { labels: itens.map(([nome]) => nome), datasets: [{ data: itens.map(([, qtd]) => qtd), backgroundColor: cores.azul, borderRadius: 4, maxBarThickness: 46 }] },
+    data: { labels: itens.map(([nome]) => nome), datasets: [{ data: itens.map(([, qtd]) => qtd), backgroundColor: cores.teal, borderRadius: 4, maxBarThickness: 46 }] },
     options: { responsive: true, maintainAspectRatio: false, onClick(evento, elementos, chart) { let indice = elementos[0]?.index; if (!Number.isInteger(indice)) { const escala = chart.scales.x; if (evento.y >= escala.top && evento.y <= escala.bottom) { const distancias = itens.map((_, i) => Math.abs(evento.x - escala.getPixelForTick(i))); const menor = Math.min(...distancias); const limite = itens.length > 1 ? Math.abs(escala.getPixelForTick(1) - escala.getPixelForTick(0)) / 2 : 40; if (menor <= limite) indice = distancias.indexOf(menor); } } if (Number.isInteger(indice) && itens[indice]) abrirAcoesResponsavel(itens[indice][0]); }, onHover(evento, elementos, chart) { const escala = chart.scales.x; const sobreRotulos = evento.y >= escala.top && evento.y <= escala.bottom; chart.canvas.style.cursor = elementos.length || sobreRotulos ? "pointer" : "default"; }, plugins: { legend: { display: false }, tooltip: { callbacks: { afterBody: () => "Clique para ver todas as ações" } } }, scales: { x: { grid: { display: false }, ticks: { color: cores.texto, maxRotation: 45, minRotation: 0 } }, y: { beginAtZero: true, ticks: { precision: 0, color: cores.texto }, grid: { color: cores.grade }, title: { display: true, text: "Quantidade de Ações" } } } }
   });
 }
@@ -182,7 +196,7 @@ function renderizarFaturamento() {
     }],
     type: "line",
     data: { labels: fat.mensal.map((m) => m.mes), datasets: [
-      { label: "Meta (R$)", data: fat.mensal.map((m) => m.meta), borderColor: cores.azul, backgroundColor: cores.azul, borderWidth: 2, pointRadius: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 7 : 4, pointBorderWidth: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 3 : 0, pointBorderColor: "#ffffff", tension: 0.22 },
+      { label: "Meta (R$)", data: fat.mensal.map((m) => m.meta), borderDash: [6, 5], borderColor: cores.azul, backgroundColor: cores.azul, borderWidth: 2, pointRadius: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 7 : 4, pointBorderWidth: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 3 : 0, pointBorderColor: "#ffffff", tension: 0.22 },
       { label: "Realizado (R$)", data: fat.mensal.map((m) => m.realizado), borderColor: cores.teal, backgroundColor: cores.teal, borderWidth: 2, pointRadius: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 7 : 4, pointBorderWidth: (ctx) => ctx.dataIndex === estado.mesFaturamentoSelecionado ? 3 : 0, pointBorderColor: "#ffffff", tension: 0.22 }
     ] },
     options: { responsive: true, maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, onClick(evento, elementos, chart) { if (!elementos.length) return; estado.mesFaturamentoSelecionado = elementos[0].index; renderizarMeta(); chart.update("none"); }, onHover(evento, elementos, chart) { chart.canvas.style.cursor = elementos.length ? "pointer" : "default"; }, layout: { padding: { top: 4, bottom: 4 } }, plugins: { legend: { position: "top", align: "start", fullSize: true, labels: { usePointStyle: true, pointStyle: "circle", boxWidth: 12, boxHeight: 12, padding: 24 } }, tooltip: { callbacks: { afterBody: () => "Clique para comparar este mês", label: (ctx) => `${ctx.dataset.label}: ${moedaBR.format(ctx.raw)}` } } }, scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: cores.grade }, ticks: { callback: (v) => moedaBR.format(v).replace("R$ ", "R$ ") } } } }
@@ -337,7 +351,7 @@ const layoutLegendaQualidade = {
     if (preenchido) return;
     const { ctx, chartArea } = chart;
     ctx.save(); ctx.fillStyle = cores.texto; ctx.textAlign = "center";
-    ctx.font = "13px Segoe UI";
+    ctx.font = "13px Geist";
     ctx.fillText("Sem dados no período", (chartArea.left + chartArea.right) / 2, (chartArea.top + chartArea.bottom) / 2);
     ctx.restore();
   }
@@ -444,10 +458,10 @@ function renderizarQualidade() {
   });
   const horas = totalQualidade(blocoQualidade("horas"));
   $("#qualidade-horas").textContent = temNumero(horas) ? `– ${formatarValorQualidade(horas, "horas")}` : "";
-  graficoMensalQualidade("rnc_total", "#grafico-qualidade-rnc", cores.azul);
+  graficoMensalQualidade("rnc_total", "#grafico-qualidade-rnc", cores.teal);
   graficoMensalQualidade("custo", "#grafico-qualidade-custo", cores.teal);
-  graficoMensalQualidade("horas", "#grafico-qualidade-horas", cores.azul);
-  graficoCategoriasQualidade("areas", "#grafico-qualidade-areas", cores.azul);
+  graficoMensalQualidade("horas", "#grafico-qualidade-horas", cores.teal);
+  graficoCategoriasQualidade("areas", "#grafico-qualidade-areas", cores.teal);
   renderizarDetalheQualidade();
   const lista = $("#qualidade-avisos"); lista.replaceChildren();
   (qualidade.avisos || []).forEach((texto) => { const li = document.createElement("li"); li.textContent = texto; lista.append(li); });
@@ -464,7 +478,8 @@ function selecionarAba(aba) {
   });
   $("#filtro-responsavel").closest(".filter-grid").hidden = aba === "qualidade";
   $("#filtros-qualidade").hidden = aba !== "qualidade";
-  $(".page-header h1").textContent = aba === "qualidade" ? "Dashboard Gerencial – Qualidade KPI 2026" : "Dashboard Gerencial – Melhorias e Faturamento 2026";
+  $(".page-header h1").textContent = aba === "qualidade" ? "Qualidade 2026" : "Dashboard gerencial";
+  $(".page-header p").textContent = aba === "qualidade" ? "Indicadores de qualidade / Columbia" : "Melhorias e faturamento / 2026";
   if (estado.dados) aplicarFiltros();
 }
 
