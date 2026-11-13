@@ -155,3 +155,12 @@ test('identificacoes antigas fora do dominio sao removidas dos dois armazenament
     assert.equal(local.getItem(ENTRY),null);assert.equal(session.getItem(ENTRY),null);
   }
 });
+
+test('mensagens são curtas e não repetem o valor digitado', () => {
+  const missingAt = browser(); missingAt.submit('gu');
+  assert.equal(missingAt.error.textContent, 'Inclua um "@" no endereço de e-mail.');
+  const wrongDomain = browser(); wrongDomain.submit('nome@gmail.com');
+  assert.equal(wrongDomain.error.textContent, 'Use o domínio @colmac.com.');
+  const malformed = browser(); malformed.submit('nome..sobrenome@colmac.com');
+  assert.equal(malformed.error.textContent, 'Informe um e-mail válido.');
+});

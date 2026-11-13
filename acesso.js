@@ -17,6 +17,13 @@
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@colmac\.com$/i.test(email);
   }
 
+  function mensagemEmail(email) {
+    if (!email) return "Informe seu e-mail corporativo.";
+    if (!email.includes("@")) return 'Inclua um "@" no endereço de e-mail.';
+    if (!/@colmac\.com$/i.test(email)) return "Use o domínio @colmac.com.";
+    return "Informe um e-mail válido.";
+  }
+
   function limparIdentificacao() {
     stores().forEach((name) => {
       try { window[name].removeItem(ENTRY_KEY); } catch (_) { /* Navegador pode bloquear armazenamento. */ }
@@ -61,14 +68,27 @@
       window.location.replace(destination("index.html"));
       return;
     }
+    const emailInput = document.querySelector("#usuario");
+    emailInput.addEventListener?.("input", () => {
+      emailInput.setCustomValidity?.("");
+      document.querySelector("#login-error").hidden = true;
+    });
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const input = document.querySelector("#usuario");
       const usuario = input.value.trim().toLowerCase();
       const error = document.querySelector("#login-error");
+      input.setCustomValidity?.("");
       if (!emailCorporativoValido(usuario)) {
-        error.textContent = "Informe um e-mail válido terminado em @colmac.com.";
-        error.hidden = false;
+        const message = mensagemEmail(usuario);
+        if (input.setCustomValidity && input.reportValidity) {
+          error.hidden = true;
+          input.setCustomValidity(message);
+          input.reportValidity();
+        } else {
+          error.textContent = message;
+          error.hidden = false;
+        }
         input.focus();
         return;
       }
