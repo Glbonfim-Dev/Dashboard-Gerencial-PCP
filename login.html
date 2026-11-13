@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="login.css?v=20261113-1" />
-    <script src="acesso.js?v=20261113-1" defer></script>
+    <script src="acesso.js?v=20261113-colmac-2" defer></script>
   </head>
   <body class="login-page">
     <header class="login-header">
@@ -22,14 +22,14 @@
         <div class="login-heading">
           <span class="login-badge">Identificação de acesso</span>
           <h1 id="titulo-login">Acessar o Dashboard</h1>
-          <p>Informe seu usuário corporativo para registrar sua entrada e acompanhar os indicadores.</p>
+          <p>Informe seu e-mail @colmac.com para registrar sua entrada e acompanhar os indicadores.</p>
         </div>
         <form id="login-form">
           <div class="login-field">
-            <label for="usuario">Usuário ou e-mail</label>
+            <label for="usuario">E-mail corporativo</label>
             <div class="login-input">
               <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
-              <input id="usuario" name="usuario" type="text" placeholder="Seu usuário corporativo" autocomplete="username" minlength="2" maxlength="100" required />
+              <input id="usuario" name="usuario" type="email" placeholder="nome@colmac.com" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="254" required />
             </div>
           </div>
           <label class="login-remember"><input id="manter-conectado" name="manter-conectado" type="checkbox" />Manter conectado</label>

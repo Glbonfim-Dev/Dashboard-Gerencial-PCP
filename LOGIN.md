@@ -8,7 +8,10 @@ atual, inclusive no GitHub Pages. Não há novas dependências.
 
 1. Abra o endereço do dashboard. Sem uma identificação válida neste navegador,
    a interface abre `login.html`.
-2. Informe seu usuário corporativo ou e-mail e clique em **Entrar**.
+2. Informe um e-mail válido com domínio exato **@colmac.com** e clique em **Entrar**.
+   Nomes sem e-mail, outros domínios e subdomínios não são aceitos. Letras maiúsculas
+   e espaços antes/depois são normalizados. Identificações antigas sem esse domínio
+   voltam à tela de entrada.
 3. O navegador registra usuário, data e hora e abre o dashboard original.
 4. **Sair** remove a identificação, mas preserva os registros anteriores.
 
@@ -25,8 +28,8 @@ Nenhuma senha é solicitada, transmitida ou armazenada.
 - Com a opção ativada, fica no `localStorage`, por até 30 dias.
 - Esses prazos são conveniência de navegação, não validade de autenticação.
 - Dados inválidos ou expirados levam novamente à entrada.
-- Se o navegador bloquear toda forma de armazenamento, a entrada é permitida
-  sem persistência. Uma nova visita exigirá identificação novamente.
+- Se o navegador bloquear toda forma de armazenamento, é necessário permitir
+  o armazenamento do site para continuar. Não há entrada por fragmento de URL.
 
 ## Registro dos acessos
 
@@ -45,8 +48,9 @@ desenvolvedor → Application/Aplicativo → Local Storage → endereço do dash
 
 ## Limites desta solução
 
-**É uma tela de identificação, não autenticação nem proteção de dados.** O nome é
-autodeclarado, não é conferido com um cadastro corporativo. O armazenamento pode
+**É uma tela de identificação, não autenticação nem proteção de dados.** O e-mail é
+autodeclarado: a validação confere formato e domínio, sem verificar a existência
+da caixa postal ou sua titularidade. O armazenamento pode
 ser editado e o fluxo pode ser contornado. Os arquivos do dashboard e `dados.json`
 continuam públicos na hospedagem atual. Repositório e histórico públicos também
 continuam acessíveis. O redirecionamento da interface não muda isso.

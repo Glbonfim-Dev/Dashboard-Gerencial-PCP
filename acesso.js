@@ -12,6 +12,11 @@
   const destination = (file) => new URL(file, document.baseURI).href;
   const stores = () => ["localStorage", "sessionStorage"];
 
+  function emailCorporativoValido(email) {
+    return typeof email === "string" && email.length <= 254 && email.split("@")[0].length <= 64 &&
+      /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@colmac\.com$/i.test(email);
+  }
+
   function limparIdentificacao() {
     stores().forEach((name) => {
       try { window[name].removeItem(ENTRY_KEY); } catch (_) { /* Navegador pode bloquear armazenamento. */ }
@@ -22,7 +27,7 @@
     for (const name of stores()) {
       try {
         const saved = JSON.parse(window[name].getItem(ENTRY_KEY) || "null");
-        if (saved && typeof saved.usuario === "string" && saved.usuario.trim().length >= 2 &&
+        if (saved && emailCorporativoValido(saved.usuario) &&
             typeof saved.expiraEm === "number" && saved.expiraEm > Date.now()) return saved;
         window[name].removeItem(ENTRY_KEY);
       } catch (_) { /* Registro ausente, inválido ou armazenamento bloqueado. */ }
@@ -59,28 +64,29 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const input = document.querySelector("#usuario");
-      const usuario = input.value.trim();
+      const usuario = input.value.trim().toLowerCase();
       const error = document.querySelector("#login-error");
-      if (usuario.length < 2 || usuario.length > 100 || /[\u0000-\u001f]/.test(usuario)) {
-        error.textContent = "Informe seu usuário corporativo ou e-mail.";
+      if (!emailCorporativoValido(usuario)) {
+        error.textContent = "Informe um e-mail válido terminado em @colmac.com.";
         error.hidden = false;
         input.focus();
         return;
       }
       error.hidden = true;
       const saved = salvarIdentificacao(usuario, document.querySelector("#manter-conectado").checked);
+      if (!saved) {
+        error.textContent = "Permita o armazenamento deste site no navegador e tente novamente.";
+        error.hidden = false;
+        return;
+      }
       registrarAcesso(usuario);
-      // Sem qualquer armazenamento, permite uma entrada sem persistência.
-      // O fragmento não contém nome nem senha e não é mecanismo de segurança.
-      window.location.assign(destination("index.html") + (saved ? "" : "#entrada-sem-persistencia"));
+      window.location.assign(destination("index.html"));
     });
     return;
   }
 
-  const withoutStorage = window.location.hash === "#entrada-sem-persistencia";
-  if (withoutStorage) history.replaceState(null, "", location.pathname + location.search);
   const entry = restaurarIdentificacao();
-  window.dashboardAccessGranted = Boolean(entry || withoutStorage);
+  window.dashboardAccessGranted = Boolean(entry);
   if (!window.dashboardAccessGranted) {
     window.location.replace(destination("login.html"));
     return;

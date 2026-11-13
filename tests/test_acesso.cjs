@@ -51,18 +51,18 @@ test('sem identificação abre a entrada no mesmo subdiretório', () => {
 });
 
 test('identifica, registra somente usuário/data/hora e usa sessão da aba', () => {
-  const page = browser(); page.submit('  Teste Corporativo  ');
+  const page = browser(); page.submit('  Teste.Corporativo@COLMAC.COM  ');
   const record = JSON.parse(page.local.getItem(LOG))[0];
   assert.deepEqual(Object.keys(record).sort(), ['data', 'hora', 'usuario']);
-  assert.equal(record.usuario, 'Teste Corporativo');
+  assert.equal(record.usuario, 'teste.corporativo@colmac.com');
   assert(record.data && record.hora);
   assert.equal(page.local.getItem(ENTRY), null);
-  assert.equal(JSON.parse(page.session.getItem(ENTRY)).usuario, 'Teste Corporativo');
+  assert.equal(JSON.parse(page.session.getItem(ENTRY)).usuario, 'teste.corporativo@colmac.com');
   assert.equal(page.targets.at(-1), 'https://empresa.test/dashboard/index.html');
 });
 
 test('manter conectado persiste entre visitas, sem solicitar credenciais', () => {
-  const page = browser(); page.submit('teste.corporativo', true);
+  const page = browser(); page.submit('teste.corporativo@colmac.com', true);
   assert.equal(page.session.getItem(ENTRY), null);
   const saved = JSON.parse(page.local.getItem(ENTRY));
   assert(saved.expiraEm > Date.now() + 29 * 86400000);
@@ -88,7 +88,7 @@ test('identificação expirada ou armazenamento corrompido volta à entrada', ()
 });
 
 test('sair limpa as identificações e preserva o histórico', () => {
-  const page = browser(); page.submit('Teste', true);
+  const page = browser(); page.submit('teste@colmac.com', true);
   const visit = browser({ login: false, local: page.local, session: page.session });
   assert.equal(visit.context.dashboardAccessGranted, true);
   visit.events.logout();
@@ -99,30 +99,59 @@ test('sair limpa as identificações e preserva o histórico', () => {
 
 test('falha no registro não impede abrir o dashboard', () => {
   const page = browser({ local: storage({}, (action, key) => action === 'set' && key === LOG) });
-  page.submit('Teste');
+  page.submit('teste@colmac.com');
   assert(page.targets.at(-1).endsWith('/index.html'));
   assert(page.session.getItem(ENTRY));
 });
 
 test('armazenamento persistente bloqueado usa a sessão como alternativa', () => {
-  const page = browser({ local: storage({}, () => true) }); page.submit('Teste', true);
+  const page = browser({ local: storage({}, () => true) }); page.submit('teste@colmac.com', true);
   assert(page.session.getItem(ENTRY)); assert(page.targets.at(-1).endsWith('/index.html'));
 });
 
-test('sem armazenamento permite uma entrada sem persistência', () => {
+test('sem armazenamento não libera entrada, nem aceita o fragmento antigo', () => {
   const page = browser({ local: storage({}, () => true), session: storage({}, () => true) });
-  page.submit('Teste');
-  assert(page.targets.at(-1).endsWith('#entrada-sem-persistencia'));
+  page.submit('teste@colmac.com');
+  assert.equal(page.targets.length, 0); assert.equal(page.error.hidden, false);
   const dashboard = browser({ login: false, hash: '#entrada-sem-persistencia',
     local: page.local, session: page.session });
-  assert.equal(dashboard.context.dashboardAccessGranted, true);
+  assert.equal(dashboard.context.dashboardAccessGranted, false);
 });
 
 test('histórico mantém somente os últimos cem registros', () => {
   const records = Array.from({ length: 100 }, (_, i) => ({ usuario: 'Teste ' + i, data: '01/01/2026', hora: '12:00:00' }));
   const page = browser({ local: storage({ [LOG]: JSON.stringify(records) }) });
-  page.submit('Nova entrada');
+  page.submit('nova.entrada@colmac.com');
   const saved = JSON.parse(page.local.getItem(LOG));
   assert.equal(saved.length, 100); assert.equal(saved[0].usuario, 'Teste 1');
-  assert.equal(saved.at(-1).usuario, 'Nova entrada');
+  assert.equal(saved.at(-1).usuario, 'nova.entrada@colmac.com');
+});
+
+
+test('exige e-mail com dominio exato colmac.com e prefixo valido', () => {
+  for (const email of ['nome','@colmac.com','nome@gmail.com','nome@colmac.com.br',
+      'nome@sub.colmac.com','nome@colmac.com.evil','nome@@colmac.com',
+      'nome@colmac.com@evil.com','nome sobrenome@colmac.com','.nome@colmac.com',
+      'nome.@colmac.com','nome..sobrenome@colmac.com','nome@colmac.com/',
+      'a'.repeat(65)+'@colmac.com']) {
+    const page=browser();page.submit(email);
+    assert.equal(page.targets.length,0,email);assert.equal(page.error.hidden,false,email);
+    assert.equal(page.session.getItem(ENTRY),null,email);
+    assert.equal(page.local.getItem(LOG),null,email);
+  }
+  for (const email of ['a@colmac.com','nome.sobrenome@colmac.com','abreviacao@colmac.com',
+      'nome+setor@colmac.com','  NOME@COLMAC.COM  ']) {
+    const page=browser();page.submit(email);
+    assert(page.targets.at(-1).endsWith('/index.html'),email);
+  }
+});
+
+test('identificacoes antigas fora do dominio sao removidas dos dois armazenamentos', () => {
+  for(const usuario of ['Nome antigo','nome@gmail.com','nome@colmac.com.br']) {
+    const saved=JSON.stringify({usuario,expiraEm:Date.now()+3600000});
+    const local=storage({[ENTRY]:saved}),session=storage({[ENTRY]:saved});
+    const page=browser({login:false,local,session});
+    assert.equal(page.context.dashboardAccessGranted,false);
+    assert.equal(local.getItem(ENTRY),null);assert.equal(session.getItem(ENTRY),null);
+  }
 });
