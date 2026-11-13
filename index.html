@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="identificacao-pendente">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css?v=20261111-operacao-1" />
+    <link rel="stylesheet" href="acesso.css?v=20261113-1" />
+    <script src="acesso.js?v=20261113-1" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
-    <script src="app.js?v=20261111-operacao-1" defer></script>
+    <script src="app.js?v=20261113-acesso-1" defer></script>
   </head>
   <body>
     <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
@@ -86,6 +88,7 @@
           <div class="header-meta">
             <img src="img/images.png" alt="Columbia" class="company-logo" />
             <div class="last-update"><svg><use href="#i-calendar"></use></svg><span>Última atualização:<strong id="ultima-atualizacao">Carregando...</strong></span></div>
+            <button class="access-button" id="sair-dashboard" type="button">Sair</button>
           </div>
         </header>
 

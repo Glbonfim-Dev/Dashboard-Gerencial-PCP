@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Identificação de acesso ao Dashboard Gerencial Columbia Red Molds" />
+    <title>Acessar o Dashboard — Columbia Red Molds</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png?v=20261111" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css?v=20261113-1" />
+    <script src="acesso.js?v=20261113-1" defer></script>
+  </head>
+  <body class="login-page">
+    <header class="login-header">
+      <p>Bloco · Piso · Meio-fio</p>
+      <p>Tecnologia de ponta. <strong>Resistência de chão de fábrica.</strong></p>
+    </header>
+    <main class="login-main">
+      <section class="login-card" aria-labelledby="titulo-login">
+        <img class="login-logo" src="img/login-logo.png" alt="Columbia Red Molds" width="504" height="202" />
+        <div class="login-heading">
+          <span class="login-badge">Identificação de acesso</span>
+          <h1 id="titulo-login">Acessar o Dashboard</h1>
+          <p>Informe seu usuário corporativo para registrar sua entrada e acompanhar os indicadores.</p>
+        </div>
+        <form id="login-form">
+          <div class="login-field">
+            <label for="usuario">Usuário ou e-mail</label>
+            <div class="login-input">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
+              <input id="usuario" name="usuario" type="text" placeholder="Seu usuário corporativo" autocomplete="username" minlength="2" maxlength="100" required />
+            </div>
+          </div>
+          <label class="login-remember"><input id="manter-conectado" name="manter-conectado" type="checkbox" />Manter conectado</label>
+          <p id="login-error" class="login-error" role="alert" hidden></p>
+          <button class="login-submit" type="submit">Entrar<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+        </form>
+        <p class="login-note">Identificação local, sem senha. Os registros ficam somente neste navegador.</p>
+        <p class="login-copyright">© 2026 Columbia Red Molds · Dashboard Gerencial</p>
+      </section>
+    </main>
+    <footer class="login-footer" aria-label="Soluções Columbia Red Molds">Moldes para blocos <span>◆</span> Pisos intertravados <span>◆</span> Meio-fio <span>◆</span> Exclusivo para máquinas automáticas <span>◆</span> Projeto sob medida</footer>
+  </body>
+</html>

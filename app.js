@@ -51,7 +51,9 @@ function definirEstadoFiltros(aberto, salvar = true) {
   shell.classList.toggle("filters-collapsed", !aberto);
   botao.setAttribute("aria-expanded", String(aberto));
   botao.title = aberto ? "Ocultar filtros" : "Mostrar filtros";
-  if (salvar) localStorage.setItem("dashboard-filtros-abertos", String(aberto));
+  if (salvar) {
+    try { localStorage.setItem("dashboard-filtros-abertos", String(aberto)); } catch (_) { /* Preferência opcional. */ }
+  }
   window.setTimeout(() => Object.values(estado.charts).forEach((chart) => chart.resize()), 320);
 }
 
@@ -551,6 +553,10 @@ $("#alternar-filtros").addEventListener("click", () => definirEstadoFiltros($("#
 $("#ver-todas").addEventListener("click", () => abrirModalAcoes(estado.filtradas, "Todas as ações"));
 $("#fechar-modal").addEventListener("click", () => $("#modal-acoes").close());
 $("#modal-acoes").addEventListener("click", (evento) => { if (evento.target === $("#modal-acoes")) $("#modal-acoes").close(); });
-definirEstadoFiltros(localStorage.getItem("dashboard-filtros-abertos") === "true", false);
-atualizarDados();
-window.setInterval(atualizarDados, INTERVALO_ATUALIZACAO_MS);
+if (window.dashboardAccessGranted) {
+  let filtrosAbertos = false;
+  try { filtrosAbertos = localStorage.getItem("dashboard-filtros-abertos") === "true"; } catch (_) { /* Navegador sem armazenamento. */ }
+  definirEstadoFiltros(filtrosAbertos, false);
+  atualizarDados();
+  window.setInterval(atualizarDados, INTERVALO_ATUALIZACAO_MS);
+}

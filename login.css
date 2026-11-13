@@ -1,0 +1,46 @@
+:root { color-scheme: light; --login-red: #be1523; --login-ink: #18181b; font-family: Barlow, system-ui, sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+.login-page { position: relative; display: flex; flex-direction: column; min-height: 100vh; min-height: 100svh; background: var(--login-red); color: #fff; }
+.login-page::before { content: ""; position: absolute; inset: 0; background: url("img/login-grid.svg") center / cover; opacity: .5; pointer-events: none; }
+.login-page::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 620px 540px at 50% 52%, #3c000838, transparent), linear-gradient(150deg, #ffffff1a, transparent 45%, #0000004d); pointer-events: none; }
+.login-header, .login-main, .login-footer { position: relative; z-index: 1; }
+.login-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding: 32px 56px; }
+.login-header p { margin: 0; font: 600 16px/1.4 "Barlow Condensed", sans-serif; text-transform: uppercase; letter-spacing: .18em; }
+.login-header p:last-child { font-size: 18px; letter-spacing: .12em; text-align: right; }
+.login-main { flex: 1; display: flex; justify-content: center; align-items: center; padding: 12px 24px 36px; }
+.login-card { display: flex; flex-direction: column; gap: 22px; width: 100%; max-width: 460px; padding: 40px 40px 30px; border-radius: 20px; background: #fff; color: var(--login-ink); box-shadow: 0 40px 90px #3c000873; }
+.login-logo { display: block; align-self: center; width: auto; height: 72px; max-width: 100%; object-fit: contain; }
+.login-heading { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.login-badge { padding: 6px 12px; border: 1px solid #be152366; border-radius: 999px; background: #be15230f; color: var(--login-red); font: 600 13px/1.4 "Barlow Condensed", sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 0; color: #141416; font-size: 34px; line-height: 1.1; font-weight: 700; }
+.login-heading p { margin: 0; max-width: 340px; color: #52525b; font-size: 16px; line-height: 1.5; }
+form { display: flex; flex-direction: column; gap: 20px; }
+.login-field { display: grid; gap: 8px; }
+.login-field label { font-size: 14px; font-weight: 600; }
+.login-input { position: relative; }
+svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.login-input svg { position: absolute; left: 16px; top: 16px; color: #6b6b74; pointer-events: none; }
+.login-input input { width: 100%; height: 52px; padding: 0 16px 0 48px; border: 1px solid #d4d4d8; border-radius: 10px; background: #f6f6f7; color: var(--login-ink); font: 16px Barlow, system-ui, sans-serif; }
+.login-input input::placeholder { color: #6b6b74; }
+.login-remember { display: flex; align-items: center; gap: 10px; min-height: 28px; color: #3f3f46; font-size: 14px; cursor: pointer; }
+.login-remember input { width: 18px; height: 18px; margin: 0; accent-color: var(--login-red); }
+.login-submit { display: flex; justify-content: center; align-items: center; gap: 10px; min-height: 56px; border: 0; border-radius: 10px; background: var(--login-red); color: #fff; font: 700 17px Barlow, system-ui, sans-serif; letter-spacing: .02em; box-shadow: 0 12px 28px #be152347; cursor: pointer; }
+.login-submit:hover { background: #8e0e1c; }
+.login-submit:disabled { cursor: wait; opacity: .7; }
+input:focus-visible, button:focus-visible { outline: 3px solid #be152380; outline-offset: 3px; }
+.login-error { margin: 0; padding: 10px 12px; border: 1px solid #be152355; border-radius: 10px; background: #fff3f4; color: #9e0f1e; font-size: 14px; line-height: 1.4; }
+.login-note, .login-copyright { margin: 0; color: #6b6b74; font-size: 13px; line-height: 1.5; text-align: center; }
+.login-footer { padding: 14px 24px; background: #fff; color: var(--login-red); font: 700 17px/1.5 "Barlow Condensed", sans-serif; text-align: center; letter-spacing: .12em; text-transform: uppercase; }
+.login-footer span { padding-inline: 8px; }
+@media (max-width: 700px) {
+  .login-header { padding: 24px; gap: 12px; }
+  .login-header p { font-size: 14px; }
+  .login-header p:last-child { font-size: 15px; text-align: left; }
+  .login-main { padding: 12px 16px 28px; }
+  .login-card { padding: 30px 24px 24px; }
+  h1 { font-size: 30px; }
+  .login-footer { font-size: 14px; padding: 12px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

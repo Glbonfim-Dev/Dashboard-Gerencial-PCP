@@ -7,6 +7,10 @@ dashboard sem depender do computador de quem editou a planilha.
 
 ## Estrutura
 
+A entrada do dashboard usa identificação local, sem senha ou banco de dados,
+conforme o fluxo simples solicitado. Ela registra acessos no próprio navegador
+e não restringe os arquivos públicos. Consulte [LOGIN.md](LOGIN.md).
+
 ```text
 publicar_dashboard.py  fluxo principal, validação e lock
 monitorar_excel.py      detector de alterações no Excel compartilhado
