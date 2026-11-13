@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-11T14:00:44-03:00",
+  "ultima_atualizacao": "2026-11-13T10:16:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -2483,6 +2483,12 @@
             "rotulo": "CUSTO R$",
             "unidade": "moeda",
             "meta": false
+          },
+          {
+            "chave": "meta_<5k",
+            "rotulo": "META <5K",
+            "unidade": "quantidade",
+            "meta": true
           }
         ],
         "mensal": [
@@ -2490,84 +2496,96 @@
             "ano": 2026,
             "mes": 1,
             "valores": {
-              "custo_r$": 3446.06
+              "custo_r$": 3446.06,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 2,
             "valores": {
-              "custo_r$": 367408.06
+              "custo_r$": 7532.57,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 3,
             "valores": {
-              "custo_r$": 8472.35
+              "custo_r$": 8472.35,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 4,
             "valores": {
-              "custo_r$": 4848.14
+              "custo_r$": 4848.14,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 5,
             "valores": {
-              "custo_r$": 5784.59
+              "custo_r$": 5784.59,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 6,
             "valores": {
-              "custo_r$": 82214.78
+              "custo_r$": 2154.43,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 7,
             "valores": {
-              "custo_r$": 2129.67
+              "custo_r$": 2129.67,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 8,
             "valores": {
-              "custo_r$": 9187.28
+              "custo_r$": 9187.28,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 9,
             "valores": {
-              "custo_r$": 78446.82
+              "custo_r$": 873.13,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 10,
             "valores": {
-              "custo_r$": 3484.17
+              "custo_r$": 3484.17,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 11,
             "valores": {
-              "custo_r$": null
+              "custo_r$": null,
+              "meta_<5k": 5000.0
             }
           },
           {
             "ano": 2026,
             "mes": 12,
             "valores": {
-              "custo_r$": null
+              "custo_r$": null,
+              "meta_<5k": 5000.0
             }
           }
         ]
