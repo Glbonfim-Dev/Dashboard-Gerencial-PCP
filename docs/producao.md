@@ -7,7 +7,35 @@ Somente registros de **2026** entram no painel.
 
 ## Fonte e atualização
 
-O formato atual da aba é uma matriz: `mes_ref` na primeira coluna, tipos de
+### Preenchimento manual atual
+
+O usuário localiza, valida e insere os dados manualmente. O formato atual usa
+`nota_fiscal`, `emissao_nf`, `descricao_nf`, `os_principal`, `cod_produto_proprio`,
+`produto_proprio`, `qtde_utilizada`, `os_fabricacao` e campos de materiais de
+fabricação. As quantidades do painel vêm de `qtde_utilizada`, por produto próprio;
+`qtde_utilizada_fabricacao` não é somada aos componentes.
+
+Somente linhas de emissão de 2026 entram. Produto repetido apenas por materiais
+distintos é contado uma vez quando seus demais dados são idênticos. Utilizações
+sem materiais são preservadas por linha, assim como notas distintas. A classificação
+de componente usa a descrição do produto próprio (CAST/CASTELO, GRID/P/B, SHOE/SPT,
+etc.); descrições sem correspondência permanecem em OUTROS COMPONENTES.
+
+O cartão **OS de moldes completos** conta OS principais distintas com descrição
+fiscal explicitamente completa. Não infere quantidades fiscais dos conjuntos a
+partir de suas estruturas. O cartão **Castelos na estrutura** inclui os castelos
+informados como produtos próprios, inclusive os vinculados a conjuntos completos.
+
+Após salvar o Excel, a tarefa Windows existente verifica alterações a cada minuto,
+aguarda o arquivo estabilizar e executa `publicar_dashboard.py`. O site consulta
+o JSON a cada minuto e atualiza cartões, gráficos e tabelas mantendo os filtros.
+O computador da automação deve estar ligado, com sessão ativa e acesso à rede e
+ao GitHub. Fórmulas precisam estar calculadas e salvas no Excel. A publicação do
+GitHub Pages também pode acrescentar tempo ao ciclo.
+
+### Formatos anteriores compatíveis
+
+O leitor também aceita a matriz: `mes_ref` na primeira coluna, tipos de
 componente nas demais colunas e `periodo_parcial` indicando `S` ou `N`.
 Exemplo:
 
@@ -17,8 +45,8 @@ Exemplo:
 
 `producao_reader.py` abre o arquivo **somente para leitura**. Não atualiza
 nenhuma planilha, não consulta o ERP e não usa a planilha mensal histórica
-como fonte alternativa. A gravação de informações na planilha principal
-deve ocorrer **somente quando o usuário solicitar**. A automação existente
+como fonte alternativa. O preenchimento da planilha principal é feito
+**manualmente pelo usuário**. A automação existente
 continua lendo os dados salvos e publicando o JSON para o dashboard.
 
 A coluna sem título presente na matriz é exibida como **SEM CLASSIFICAÇÃO**
@@ -42,8 +70,10 @@ O filtro de operação aparece apenas quando todos os registros têm CFOP.
 Não misture totais mensais e itens fiscais na mesma tabela: isso duplicaria
 as quantidades.
 
-As quantidades são faturadas, não produção concluída. Castelos incorporados
-a moldes completos não são contados separadamente. Eficiência, produtividade
+No formato de estrutura, as quantidades representam componentes utilizados
+nas OS vinculadas às notas, incluindo castelos incorporados quando informados.
+Nos formatos mensais anteriores, os números são os totais já consolidados na
+fonte. Nenhum formato comprova a produção concluída. Eficiência, produtividade
 e metas de fabricação não são inferidas desses números.
 
 ## Organização do repositório

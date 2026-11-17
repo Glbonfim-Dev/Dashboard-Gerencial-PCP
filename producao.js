@@ -22,11 +22,13 @@
     opcoes("componente", [...new Set(fonte.registros.map((r) => r.componente))].sort(), "Todos os componentes");
     if (!preparado) { el("ano").value = anos.at(-1) || ""; preparado = true; }
     const consolidado = fonte.granularidade === "componente";
+    el("moldes-rotulo").textContent = fonte.formato === "estrutura_nf" ? "OS de moldes completos" : "Moldes completos";
+    el("castelos-rotulo").textContent = fonte.formato === "estrutura_nf" ? "Castelos na estrutura" : "Castelos · linha própria";
     el("operacao-grupo").hidden = !fonte.operacao_disponivel;
     if (!fonte.operacao_disponivel) el("operacao").value = "";
     el("itens-rotulo").textContent = consolidado ? "Componentes distintos" : "Itens distintos";
-    el("ranking-titulo").textContent = consolidado ? "Componentes mais faturados" : "Itens mais faturados";
-    el("recorrencia-titulo").textContent = consolidado ? "Recorrência dos componentes" : "Recorrência dos itens";
+    el("ranking-titulo").textContent = fonte.formato === "estrutura_nf" ? "Produtos próprios mais utilizados" : consolidado ? "Componentes mais faturados" : "Itens mais faturados";
+    el("recorrencia-titulo").textContent = fonte.formato === "estrutura_nf" ? "Recorrência dos produtos próprios" : consolidado ? "Recorrência dos componentes" : "Recorrência dos itens";
     el("avisos").replaceChildren(...(fonte.avisos || []).map((v) => { const li = document.createElement("li"); li.textContent = v; return li; }));
   }
   function limpar() {
@@ -51,6 +53,7 @@
     el("conteudo").hidden = selecao.length === 0;
     if (!selecao.length) { ["producao-mensal", "producao-ranking"].forEach(destruirChart); return; }
     componentes.forEach((c, i) => { el(["moldes", "castelos", "grades", "sapatas"][i]).textContent = nf.format(selecao.filter((r) => r.componente === c).reduce((s, r) => s + r.quantidade, 0)); });
+    if (fonte.formato === "estrutura_nf") el("moldes").textContent = nf.format(new Set(selecao.map((r) => r.os_molde_completo).filter(Boolean)).size);
     const grupos = new Map();
     selecao.forEach((r) => {
       const key = `${r.chave_molde}|${r.componente}`;
@@ -72,14 +75,14 @@
     }
     const cats = comp ? [comp] : [...new Set(selecao.map((r) => r.componente))].sort();
     grafico("producao-mensal", "grafico-producao-mensal", "bar", meses, cats.map((c, i) => ({ label: c, backgroundColor: paleta[i % paleta.length], data: meses.map((m) => selecao.filter((r) => r.mes_ref === m && r.componente === c).reduce((s, r) => s + r.quantidade, 0)), borderRadius: 4 })));
-    grafico("producao-ranking", "grafico-producao-ranking", "bar", ranking.slice(0, 10).map((g) => g.descricao.length > 38 ? `${g.descricao.slice(0, 37)}…` : g.descricao), [{ label: "Unidades faturadas", data: ranking.slice(0, 10).map((g) => g.quantidade), backgroundColor: "#1769d2", borderRadius: 4 }], true);
+    grafico("producao-ranking", "grafico-producao-ranking", "bar", ranking.slice(0, 10).map((g) => g.descricao.length > 38 ? `${g.descricao.slice(0, 37)}…` : g.descricao), [{ label: fonte.formato === "estrutura_nf" ? "Quantidade utilizada" : "Unidades faturadas", data: ranking.slice(0, 10).map((g) => g.quantidade), backgroundColor: "#1769d2", borderRadius: 4 }], true);
   }
   for (let m = 1; m <= 12; m++) el("mes").add(new Option(mesesQualidade[m - 1], String(m).padStart(2, "0")));
   ["ano", "mes", "componente", "operacao"].forEach((id) => el(id).addEventListener("change", renderizar));
   el("limpar").addEventListener("click", limpar);
   el("exportar").addEventListener("click", () => {
     const quote = (v) => `"${String(v).replace(/^[=+@-]/, "'$&").replaceAll('"', '""')}"`;
-    const linhas = [["Mês", "Descrição", "Componente", "Quantidade", "CFOP"], ...selecao.map((r) => [r.mes_ref, r.descricao, r.componente, r.quantidade.toLocaleString("pt-BR", { useGrouping: false }), r.cfop])];
+    const linhas = [["Mês", "Descrição", "Componente", "Quantidade", "CFOP", "NF", "OS principal", "OS fabricação", "Unidade"], ...selecao.map((r) => [r.mes_ref, r.descricao, r.componente, r.quantidade.toLocaleString("pt-BR", { useGrouping: false }), r.cfop, r.nf || "", r.os_principal || "", r.os_fabricacao || "", r.unidade || ""])];
     const url = URL.createObjectURL(new Blob(["\ufeff" + linhas.map((r) => r.map(quote).join(";")).join("\r\n")], { type: "text/csv;charset=utf-8" }));
     const a = document.createElement("a"); a.href = url; a.download = "producao-kpi.csv"; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

@@ -8,6 +8,29 @@ class ProducaoTests(unittest.TestCase):
         for row in rows: ws.append(row)
         return ws
 
+    def test_base_manual_componentes_e_materiais(self):
+        headers = ['nota_fiscal','emissao_nf','descricao_nf','os_principal',
+                   'cod_produto_proprio','produto_proprio','qtde_utilizada','os_fabricacao',
+                   'cod_material_fabricacao']
+        ws = self.sheet([headers,
+            [10,'22/01/2026','MOLDE COMPLETO',100,'C1','MOLD HTX700 CAST. C/PORT.SP',1,101,'M1'],
+            [10,'22/01/2026','MOLDE COMPLETO',100,'C1','MOLD HTX700 CAST. C/PORT.SP',1,101,'M2'],
+            [10,'22/01/2026','MOLDE COMPLETO',100,'S1','MOLD HTX700 SPT',10,102,None],
+            [11,'23/01/2026','MOLDE COMPLETO',100,'S1','MOLD HTX700 SPT',10,102,None],
+            [12,'23/01/2025','MOLDE COMPLETO',100,'S1','MOLD HTX700 SPT',10,102,None]])
+        rows = ler_linhas(ws)
+        self.assertEqual(len(rows),3)
+        self.assertEqual(sum(r['quantidade'] for r in rows if r['componente']=='CASTELO'),1)
+        self.assertEqual(sum(r['quantidade'] for r in rows if r['componente']=='SAPATA'),20)
+        self.assertEqual({r['os_molde_completo'] for r in rows},{'100'})
+
+    def test_utilizacoes_distintas_sem_material_preservadas(self):
+        ws = self.sheet([['nota_fiscal','emissao_nf','produto_proprio','qtde_utilizada'],
+                         [45,'27/05/2026','GROMMET',20],
+                         [45,'27/05/2026','GROMMET',30],
+                         [45,'27/05/2026','GROMMET',18]])
+        self.assertEqual(sum(r['quantidade'] for r in ler_linhas(ws)),68)
+
     def test_quantidade_e_cfop_preservados(self):
         ws = self.sheet([['mes_ref','tipo_componente','quantidade','cfop','descricao_original'],
                          ['2026-10','SAPATA',40,6101,'SHOE ASSY'],
