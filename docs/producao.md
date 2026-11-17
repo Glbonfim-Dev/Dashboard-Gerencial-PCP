@@ -63,11 +63,11 @@ gerais. O CSV respeita também essa seleção da tabela. O botão de limpeza da
 tabela preserva os filtros gerais e os gráficos.
 
 Filtros por ano, mês e componente; cartões de moldes completos, castelos,
-grades e sapatas; evolução mensal, ranking de componentes, recorrência em
+grades e sapatas; evolução mensal em largura completa, recorrência em
 meses e exportação CSV da seleção. Meses parciais são identificados pela fonte.
 
 A matriz mensal não identifica modelos, notas ou CFOP. Por isso o painel
-apresenta ranking por componente e não oferece filtro de operação nesse
+apresenta recorrência por componente e não oferece filtro de operação nesse
 formato. Não se deve reconstituir esse detalhe por suposição.
 
 O leitor também aceita uma tabela com `mes_ref`, `tipo_componente` e
