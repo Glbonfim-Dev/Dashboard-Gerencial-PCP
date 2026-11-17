@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261117-producao-simples-4" />
+    <link rel="stylesheet" href="style.css?v=20261117-producao-molde-6" />
     <link rel="stylesheet" href="acesso.css?v=20261113-1" />
     <script src="acesso.js?v=20261113-colmac-3" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
     <script src="app.js?v=20261117-producao-1" defer></script>
-    <script src="producao.js?v=20261117-simples-4" defer></script>
+    <script src="producao.js?v=20261117-molde-6" defer></script>
   </head>
   <body>
     <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
@@ -106,19 +106,29 @@
             <label>Ano<select id="producao-ano" aria-label="Ano da produção"></select></label>
             <label>Mês<select id="producao-mes" aria-label="Mês da produção"><option value="">Todos os meses</option></select></label>
             <label>Componente<select id="producao-componente"><option value="">Todos os componentes</option></select></label>
+            <label>Nota fiscal<select id="producao-nf"><option value="">Todas as notas</option></select></label>
+            <label>Molde completo<select id="producao-molde"><option value="">Todos os moldes</option></select></label>
             <label id="producao-operacao-grupo">Operação<select id="producao-operacao"><option value="">Todas</option><option value="regular">Sem entrega futura</option><option value="futura">Entrega futura (5922/6922)</option></select></label>
             <button type="button" id="producao-limpar" class="link-button">Limpar filtros</button>
           </div>
           <p class="quality-notice" id="producao-vazio" hidden>Não há dados de quantidades disponíveis para esse período.</p>
           <div id="producao-conteudo">
-            <section class="kpi-grid" aria-label="Quantidades faturadas no período">
+            <section id="producao-visao-geral" class="kpi-grid" aria-label="Quantidades faturadas no período">
               <article class="kpi-card kpi-blue"><span class="kpi-icon"><svg><use href="#i-clipboard"></use></svg></span><div><span id="producao-moldes-rotulo">Moldes completos</span><strong id="producao-moldes">—</strong></div></article>
-              <article class="kpi-card kpi-teal"><span class="kpi-icon"><svg><use href="#i-target"></use></svg></span><div><span id="producao-castelos-rotulo">Castelos · linha própria</span><strong id="producao-castelos">—</strong></div></article>
-              <article class="kpi-card kpi-green"><span class="kpi-icon"><svg><use href="#i-list"></use></svg></span><div><span>Grades</span><strong id="producao-grades">—</strong></div></article>
-              <article class="kpi-card kpi-orange"><span class="kpi-icon"><svg><use href="#i-check"></use></svg></span><div><span>Sapatas</span><strong id="producao-sapatas">—</strong></div></article>
+              <article class="kpi-card kpi-teal"><span class="kpi-icon"><svg><use href="#i-target"></use></svg></span><div><span id="producao-castelos-rotulo">Castelos · linha própria</span><strong id="producao-castelos">—</strong><small id="producao-castelos-nota" class="production-kpi-note"></small></div></article>
+              <article class="kpi-card kpi-green"><span class="kpi-icon"><svg><use href="#i-list"></use></svg></span><div><span>Grades</span><strong id="producao-grades">—</strong><small id="producao-grades-nota" class="production-kpi-note"></small></div></article>
+              <article class="kpi-card kpi-orange"><span class="kpi-icon"><svg><use href="#i-check"></use></svg></span><div><span>Sapatas</span><strong id="producao-sapatas">—</strong><small id="producao-sapatas-nota" class="production-kpi-note"></small></div></article>
               <article class="kpi-card kpi-blue"><span class="kpi-icon"><svg><use href="#i-calendar"></use></svg></span><div><span id="producao-itens-rotulo">Itens distintos</span><strong id="producao-itens">—</strong></div></article>
             </section>
-            <section class="content-grid production-monthly-grid">
+            <p id="producao-orientacao" class="quality-note">Selecione uma nota fiscal ou um molde para consultar sua composição.</p>
+            <section id="producao-composicao" aria-label="Moldes completos e seus componentes" hidden>
+              <div id="producao-moldes-cards" class="production-mould-list"></div>
+            </section>
+            <section id="producao-fora-molde" class="panel production-outside" hidden>
+              <h2 id="producao-fora-titulo">Fora deste molde · mesma NF</h2>
+              <div id="producao-fora-cards" class="production-component-grid"></div>
+            </section>
+            <section id="producao-evolucao" class="content-grid production-monthly-grid">
               <article class="panel"><h2>Quantidades por mês</h2><p class="quality-note">Compare unidades dentro de cada componente.</p><div class="chart-box quality-chart"><canvas id="grafico-producao-mensal" aria-label="Quantidades faturadas por mês e componente" role="img"></canvas></div></article>
             </section>
           </div>

@@ -9,6 +9,37 @@ Somente registros de **2026** entram no painel.
 
 ### Preenchimento manual atual
 
+`descricao_nf` identifica o conjunto comercial. Cada molde completo é agrupado
+por NF + OS principal + descrição fiscal; suas linhas repetidas não viram vários
+moldes. `produto_proprio` identifica os componentes que ficam dentro desse grupo
+(`COMPONENTE_DE_MOLDE`). Itens de outras OS da mesma NF ficam fora do grupo,
+como `COMPONENTE_AVULSO`, outro `MOLDE_COMPLETO` ou `OUTROS`, conforme a descrição
+fiscal. A ausência de OS usa NF + descrição e é registrada no método de vínculo.
+Moldes inteiros com descrição MOLD + produto reconhecido, sem componente no nome,
+seguem a regra de molde completo; isso não comprova composição física igual a KIT.
+
+O painel permite selecionar NF e molde completo. A seção de composição mostra
+somente os componentes do conjunto selecionado, em cartões por tipo. Não recria
+rankings nem tabelas de recorrência. Exemplo: NF 10921, OS 6984, contém 1 GRADE,
+15 SAPATAS e outros oito tipos; agitador/raspador de outras OS não entram nele.
+
+No layout aprovado, cada conjunto possui seu próprio cartão com descrição fiscal,
+NF, OS principal e indicador **1 conjunto identificado**. Os cartões dos componentes
+ficam dentro desse cartão pai. Ao selecionar um molde, a visão geral e o gráfico
+mensal dão lugar ao detalhe, acompanhado da seção **Fora deste molde · mesma NF**.
+Essa seção inclui outros conjuntos e itens de outras OS da nota, sem somar
+quantidades de componentes como se fossem unidades do conjunto.
+
+Sem seleção de NF/molde, o painel mantém os indicadores e a evolução mensal.
+Ao selecionar uma NF, o seletor de moldes mostra somente conjuntos dessa nota
+e do período escolhido. Os filtros são preservados na atualização automática
+quando seus valores ainda existem na base.
+
+Campos de produto próprio vazios preservam a linha fiscal para classificação,
+sem inventar a estrutura. Quantidades vazias são `null`; subtotais conhecidos
+são acompanhados de aviso de registros sem quantidade. A contagem de moldes
+é de grupos comerciais identificados, não de unidades fiscais não informadas.
+
 O usuário localiza, valida e insere os dados manualmente. O formato atual usa
 `nota_fiscal`, `emissao_nf`, `descricao_nf`, `os_principal`, `cod_produto_proprio`,
 `produto_proprio`, `qtde_utilizada`, `os_fabricacao` e campos de materiais de
@@ -21,8 +52,8 @@ sem materiais são preservadas por linha, assim como notas distintas. A classifi
 de componente usa a descrição do produto próprio (CAST/CASTELO, GRID/P/B, SHOE/SPT,
 etc.); descrições sem correspondência permanecem em OUTROS COMPONENTES.
 
-O cartão **OS de moldes completos** conta OS principais distintas com descrição
-fiscal explicitamente completa. Não infere quantidades fiscais dos conjuntos a
+O cartão **Moldes completos** conta os grupos NF + OS + descrição fiscal.
+Não infere quantidades fiscais dos conjuntos a
 partir de suas estruturas. O cartão **Castelos na estrutura** inclui os castelos
 informados como produtos próprios, inclusive os vinculados a conjuntos completos.
 

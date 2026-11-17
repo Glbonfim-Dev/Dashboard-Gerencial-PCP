@@ -1,6 +1,6 @@
 import unittest
 from openpyxl import Workbook
-from producao_reader import ler_linhas
+from producao_reader import ler_linhas, agrupar_moldes
 
 class ProducaoTests(unittest.TestCase):
     def sheet(self, rows):
@@ -30,6 +30,27 @@ class ProducaoTests(unittest.TestCase):
                          [45,'27/05/2026','GROMMET',30],
                          [45,'27/05/2026','GROMMET',18]])
         self.assertEqual(sum(r['quantidade'] for r in ler_linhas(ws)),68)
+
+    def test_molde_repetido_nas_linhas_e_avulso_na_mesma_nf(self):
+        ws = self.sheet([['nota_fiscal','emissao_nf','descricao_nf','os_principal','produto_proprio','qtde_utilizada'],
+            [10921,'26/02/2026','MOLD SPM30 FP RET H6 15V MOLDE COMPLETO',6984,'MOLD SPM30 FP RET H6 15V GRID P/B',1],
+            [10921,'26/02/2026','MOLD SPM30 FP RET H6 15V MOLDE COMPLETO',6984,'MOLD SPM30 FP RET H6 15V SHOE ASSY',15],
+            [10921,'26/02/2026','MOLD SPM30 AGITADOR 14CM',6992,None,None]])
+        rows = ler_linhas(ws)
+        self.assertEqual(len(agrupar_moldes(rows)),1)
+        self.assertEqual(rows[0]['molde_id'],rows[1]['molde_id'])
+        self.assertEqual(rows[1]['classificacao'],'COMPONENTE_DE_MOLDE')
+        self.assertEqual(rows[1]['componente'],'SAPATA')
+        self.assertEqual(rows[1]['quantidade'],15)
+        self.assertEqual(rows[2]['classificacao'],'COMPONENTE_AVULSO')
+        self.assertFalse(rows[2]['molde_id'])
+        self.assertIsNone(rows[2]['quantidade'])
+
+    def test_completos_mesma_descricao_os_diferentes_nao_se_misturam(self):
+        ws = self.sheet([['nota_fiscal','emissao_nf','descricao_nf','os_principal','produto_proprio','qtde_utilizada'],
+            [10921,'26/02/2026','MOLD SPM30 FP RET COMPLETO',1,'SHOE',2],
+            [10921,'26/02/2026','MOLD SPM30 FP RET COMPLETO',2,'SHOE',2]])
+        self.assertEqual(len(agrupar_moldes(ler_linhas(ws))),2)
 
     def test_quantidade_e_cfop_preservados(self):
         ws = self.sheet([['mes_ref','tipo_componente','quantidade','cfop','descricao_original'],

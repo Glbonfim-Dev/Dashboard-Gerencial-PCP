@@ -1,5 +1,7 @@
 """Leitura de Produção - KPI da planilha principal. Nunca grava no Excel."""
 import math
+import json
+import re
 from datetime import datetime
 from pathlib import Path
 from openpyxl import load_workbook
@@ -30,7 +32,7 @@ def ler_producao(caminho: Path) -> dict:
                     if str(row[0]).startswith(ANO+'-') and str(row[-1]).upper() == 'S':
                         meses_parciais.append(str(row[0]))
             if estrutura_nf:
-                avisos.append('Quantidades de componentes vêm de qtde_utilizada. Materiais de fabricação não são somados a esses componentes. O cartão de moldes conta OS principais distintas com descrição de conjunto completo, não unidades fiscais de moldes.')
+                avisos.append('Moldes são agrupados por NF, OS principal e descrição fiscal. Produtos próprios são classificados dentro desse conjunto; outros itens da mesma nota permanecem separados. Quantidades ausentes ficam sem informação.')
         if not registros:
             avisos.append('A aba Produção - KPI não contém quantidades reconhecidas de 2026.')
     finally:
@@ -40,6 +42,7 @@ def ler_producao(caminho: Path) -> dict:
         'registros': registros, 'meses': sorted({r['mes_ref'] for r in registros}),
         'meses_parciais': meses_parciais, 'granularidade': 'componente' if consolidado else 'item',
         'formato': 'estrutura_nf' if estrutura_nf else 'mensal',
+        'moldes': agrupar_moldes(registros) if estrutura_nf else [],
         'operacao_disponivel': bool(registros) and all(r['cfop'] for r in registros),
         'avisos': avisos,
         'data_base': datetime.fromtimestamp(caminho.stat().st_mtime).isoformat(timespec='seconds'),
@@ -101,7 +104,7 @@ def componente_descricao(description):
     import re
     text = chave_texto(description)
     patterns = [
-        ('MOLDE COMPLETO', r'\b(?:MOLDE COMPLETO|KIT COMPLETO|COMPLETO|COMPLET|COMPLETA)$'),
+        ('MOLDE COMPLETO', r'\b(?:MOLDE COMPLETO|KIT COMPLETO|COMPLETO|COMPLET|COMPL|COMPLETA)$'),
         ('CASTELO', r'\bCAST(?:ELO)?(?:\.|\s|$)'),
         ('GRADE', r'\bGRID\b|\bP/B\b'),
         ('SAPATA', r'\bSHOE\b|\bSPT\b|\bSAPATA\b'),
@@ -115,6 +118,27 @@ def componente_descricao(description):
                  'GROMMET','MOLD STRAP','PORT/S','B.MESTR']:
         if name in text: return name
     return 'OUTROS COMPONENTES'
+
+
+def classificacao_fiscal(description):
+    componente = componente_descricao(description)
+    if componente == 'MOLDE COMPLETO': return 'MOLDE_COMPLETO'
+    if componente != 'OUTROS COMPONENTES': return 'COMPONENTE_AVULSO'
+    texto = chave_texto(description)
+    if texto.startswith('MOLD ') and re.search(r'\b(?:FBE\w*|FBV\w*|FBC\w*|FMB\w*|FC\w*|FP|MF\w*)', texto):
+        return 'MOLDE_COMPLETO'
+    return 'OUTROS'
+
+
+def agrupar_moldes(registros):
+    grupos = {}
+    for r in registros:
+        if not r.get('molde_id'): continue
+        grupos.setdefault(r['molde_id'], {
+            'id': r['molde_id'], 'nf': r['nf'], 'os_principal': r['os_principal'],
+            'descricao': r['descricao_nf'], 'metodo_vinculo': r['metodo_vinculo'],
+        })
+    return list(grupos.values())
 
 
 def ler_estrutura(ws):
@@ -143,9 +167,12 @@ def ler_estrutura(ws):
             if parsed is None: raise ValueError(f'Data de emissão inválida em {ws.title}, linha {index}')
             month = parsed.strftime('%Y-%m')
         if not month.startswith(ANO+'-'): continue
-        qty = quantidade(data.get('qtde_utilizada'),ws,index)
-        desc = str(data.get('produto_proprio') or '').strip()
-        if not desc: raise ValueError(f'Produto próprio ausente em {ws.title}, linha {index}')
+        raw_qty = data.get('qtde_utilizada')
+        qty = None if raw_qty is None or raw_qty == '' else quantidade(raw_qty,ws,index)
+        produto_proprio = str(data.get('produto_proprio') or '').strip()
+        descricao_nf = str(data.get('descricao_nf') or '').strip()
+        desc = produto_proprio or descricao_nf
+        if not desc: raise ValueError(f'Descrição ausente em {ws.title}, linha {index}')
         code = str(data.get('cod_produto_proprio') or desc).strip()
         nf = str(data.get('nota_fiscal') or '').strip()
         os = str(data.get('os_principal') or '').strip()
@@ -153,8 +180,14 @@ def ler_estrutura(ws):
         key = (nf,os,code,fab)
         rec = registro(month,componente_descricao(desc),qty,{'descricao_original':desc,'chave_molde':code})
         rec.update(nf=nf,os_principal=os,os_fabricacao=fab,codigo_produto=code,
-                   descricao_nf=str(data.get('descricao_nf') or ''),unidade=str(data.get('unidade') or ''))
-        rec['os_molde_completo'] = os if componente_descricao(rec['descricao_nf'])=='MOLDE COMPLETO' else ''
+                   descricao_nf=descricao_nf,unidade=str(data.get('unidade') or ''),
+                   produto_proprio=produto_proprio, quantidade_informada=qty is not None)
+        fiscal = classificacao_fiscal(descricao_nf)
+        if not produto_proprio and fiscal == 'MOLDE_COMPLETO': rec['componente'] = 'MOLDE COMPLETO'
+        rec['molde_id'] = json.dumps([nf,os,chave_texto(descricao_nf)],ensure_ascii=False) if fiscal=='MOLDE_COMPLETO' else ''
+        rec['metodo_vinculo'] = 'NF + OS PRINCIPAL + DESCRICAO NF' if os else 'NF + DESCRICAO NF (SEM OS)'
+        rec['classificacao'] = ('COMPONENTE_DE_MOLDE' if produto_proprio else 'MOLDE_COMPLETO') if rec['molde_id'] else fiscal
+        rec['os_molde_completo'] = os if rec['molde_id'] else ''
         material = data.get('cod_material_fabricacao') or data.get('material_fabricacao')
         # Sem material, cada linha manual representa uma utilização própria.
         # Com material, colapsar apenas repetições idênticas do produto pai.
