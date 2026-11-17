@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "ultima_atualizacao": "2026-11-17T12:19:40-03:00",
+=======
+  "ultima_atualizacao": "2026-11-17T11:00:43-03:00",
+>>>>>>> 789ba5cec77e1ef5839fd458bd81b5f995d11fa0
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -2598,8 +2602,9 @@
     ]
   },
   "producao": {
-    "disponivel": true,
+    "disponivel": false,
     "origem": "Melhorias - Faturamento moldes 2026.xlsx · Produção - KPI",
+<<<<<<< HEAD
     "registros": [
       {
         "mes_ref": "2026-01",
@@ -7332,6 +7337,18 @@
       "Resultados vinculados às notas, não produção concluída. Compare unidades dentro de cada componente.",
       "O preenchimento e a validação da planilha são manuais. O dashboard atualiza a leitura dos dados salvos automaticamente.",
       "Quantidades de componentes vêm de qtde_utilizada. Materiais de fabricação não são somados a esses componentes. O cartão de moldes conta OS principais distintas com descrição de conjunto completo, não unidades fiscais de moldes."
+=======
+    "registros": [],
+    "meses": [],
+    "meses_parciais": [],
+    "granularidade": "item",
+    "operacao_disponivel": false,
+    "avisos": [
+      "Quantidades faturadas, não produção concluída. Compare unidades dentro de cada componente.",
+      "Castelos incorporados aos moldes completos não são contados separadamente.",
+      "A planilha é atualizada somente mediante solicitação. O dashboard apenas lê os dados salvos.",
+      "A aba Produção - KPI não contém quantidades reconhecidas de 2026."
+>>>>>>> 789ba5cec77e1ef5839fd458bd81b5f995d11fa0
     ],
     "data_base": "2026-11-17T10:59:54"
   }
