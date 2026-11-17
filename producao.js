@@ -31,7 +31,6 @@
     el("operacao-grupo").hidden = !fonte.operacao_disponivel;
     if (!fonte.operacao_disponivel) el("operacao").value = "";
     el("itens-rotulo").textContent = consolidado ? "Componentes distintos" : "Itens distintos";
-    el("ranking-titulo").textContent = fonte.formato === "estrutura_nf" ? "Produtos próprios mais utilizados" : consolidado ? "Componentes mais faturados" : "Itens mais faturados";
     el("recorrencia-titulo").textContent = fonte.formato === "estrutura_nf" ? "Recorrência dos produtos próprios" : consolidado ? "Recorrência dos componentes" : "Recorrência dos itens";
     el("avisos").replaceChildren(...(fonte.avisos || []).map((v) => { const li = document.createElement("li"); li.textContent = v; return li; }));
   }
@@ -77,7 +76,7 @@
     selecao = fonte.registros.filter((r) => (!ano || r.mes_ref.startsWith(ano)) && (!mes || r.mes_ref.slice(5) === mes) && (!comp || r.componente === comp) && (!operacao || futuro(r) === (operacao === "futura")));
     el("vazio").hidden = selecao.length > 0;
     el("conteudo").hidden = selecao.length === 0;
-    if (!selecao.length) { ["producao-mensal", "producao-ranking"].forEach(destruirChart); return; }
+    if (!selecao.length) { destruirChart("producao-mensal"); return; }
     componentes.forEach((c, i) => { el(["moldes", "castelos", "grades", "sapatas"][i]).textContent = nf.format(selecao.filter((r) => r.componente === c).reduce((s, r) => s + r.quantidade, 0)); });
     if (fonte.formato === "estrutura_nf") el("moldes").textContent = nf.format(new Set(selecao.map((r) => r.os_molde_completo).filter(Boolean)).size);
     const grupos = new Map();
@@ -99,7 +98,6 @@
     }
     const cats = comp ? [comp] : [...new Set(selecao.map((r) => r.componente))].sort();
     grafico("producao-mensal", "grafico-producao-mensal", "bar", meses, cats.map((c, i) => ({ label: c, backgroundColor: paleta[i % paleta.length], data: meses.map((m) => selecao.filter((r) => r.mes_ref === m && r.componente === c).reduce((s, r) => s + r.quantidade, 0)), borderRadius: 4 })));
-    grafico("producao-ranking", "grafico-producao-ranking", "bar", ranking.slice(0, 10).map((g) => g.descricao.length > 38 ? `${g.descricao.slice(0, 37)}…` : g.descricao), [{ label: fonte.formato === "estrutura_nf" ? "Quantidade utilizada" : "Unidades faturadas", data: ranking.slice(0, 10).map((g) => g.quantidade), backgroundColor: "#1769d2", borderRadius: 4 }], true);
   }
   for (let m = 1; m <= 12; m++) el("mes").add(new Option(mesesQualidade[m - 1], String(m).padStart(2, "0")));
   ["ano", "mes", "componente", "operacao"].forEach((id) => el(id).addEventListener("change", renderizar));

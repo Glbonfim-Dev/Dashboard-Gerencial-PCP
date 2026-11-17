@@ -63,7 +63,6 @@ test('filtros de outubro, entrega futura, totais e estado vazio', () => {
   contexto.window.producaoDashboard.preparar({ registros: [row('CASTELO',1,'')], meses: ['2026-10'], avisos: [], granularidade: 'componente', operacao_disponivel: false });
   assert.equal(element('producao-operacao-grupo').hidden, true);
   assert.equal(element('producao-operacao').value, '');
-  assert.equal(element('producao-ranking-titulo').textContent, 'Componentes mais faturados');
   contexto.window.producaoDashboard.renderizar();
   assert.equal(element('producao-castelos').textContent, '1');
   const a = { ...row('CASTELO',2,''), os_molde_completo: '100' };
