@@ -28,7 +28,7 @@ informados como produtos próprios, inclusive os vinculados a conjuntos completo
 
 Após salvar o Excel, a tarefa Windows existente verifica alterações a cada minuto,
 aguarda o arquivo estabilizar e executa `publicar_dashboard.py`. O site consulta
-o JSON a cada minuto e atualiza cartões, gráficos e tabelas mantendo os filtros.
+o JSON a cada minuto e atualiza cartões e gráficos mantendo os filtros.
 O computador da automação deve estar ligado, com sessão ativa e acesso à rede e
 ao GitHub. Fórmulas precisam estar calculadas e salvas no Excel. A publicação do
 GitHub Pages também pode acrescentar tempo ao ciclo.
@@ -56,18 +56,11 @@ interrompem a publicação, preservando o último JSON válido.
 
 ## Indicadores e limites
 
-A tabela de recorrência tem filtros próprios por texto do item, componente,
-intervalo de quantidade, intervalo de meses ativos e entrega futura (incluindo
-não discriminado). Eles atuam sobre os totais do período escolhido nos filtros
-gerais. O CSV respeita também essa seleção da tabela. O botão de limpeza da
-tabela preserva os filtros gerais e os gráficos.
-
 Filtros por ano, mês e componente; cartões de moldes completos, castelos,
-grades e sapatas; evolução mensal em largura completa, recorrência em
-meses e exportação CSV da seleção. Meses parciais são identificados pela fonte.
+grades e sapatas; evolução mensal em largura completa. Meses parciais são identificados pela fonte.
 
 A matriz mensal não identifica modelos, notas ou CFOP. Por isso o painel
-apresenta recorrência por componente e não oferece filtro de operação nesse
+apresenta quantidades por componente e não oferece filtro de operação nesse
 formato. Não se deve reconstituir esse detalhe por suposição.
 
 O leitor também aceita uma tabela com `mes_ref`, `tipo_componente` e
