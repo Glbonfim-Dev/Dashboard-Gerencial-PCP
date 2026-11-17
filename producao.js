@@ -49,8 +49,6 @@
     selecao = fonte.registros.filter((r) => (!ano || r.mes_ref.startsWith(ano)) && (!mes || r.mes_ref.slice(5) === mes) && (!comp || r.componente === comp) && (!operacao || futuro(r) === (operacao === "futura")));
     el("vazio").hidden = selecao.length > 0;
     el("conteudo").hidden = selecao.length === 0;
-    const parcial = (fonte.meses_parciais || []).filter((m) => (!ano || m.startsWith(ano)) && (!mes || m.slice(5) === mes));
-    el("fonte").textContent = `Fonte: ${fonte.origem || "não disponível"} · Base: ${fonte.data_base ? formatarAtualizacao(fonte.data_base) : "não informada"} · ${nf.format(selecao.length)} registros na seleção.${parcial.length ? ` Período parcial: ${parcial.join(", ")}.` : ""}`;
     if (!selecao.length) { ["producao-mensal", "producao-ranking"].forEach(destruirChart); return; }
     componentes.forEach((c, i) => { el(["moldes", "castelos", "grades", "sapatas"][i]).textContent = nf.format(selecao.filter((r) => r.componente === c).reduce((s, r) => s + r.quantidade, 0)); });
     const grupos = new Map();

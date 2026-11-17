@@ -483,9 +483,9 @@ function selecionarAba(aba) {
   $("#filtros-qualidade").hidden = aba !== "qualidade";
   $(".page-header h1").textContent = aba === "qualidade" ? "Qualidade 2026" : "Dashboard gerencial";
   $(".page-header p").textContent = aba === "qualidade" ? "Indicadores de qualidade / Columbia" : "Melhorias e faturamento / 2026";
+  $(".page-header p").hidden = aba === "producao";
   if (aba === "producao") {
     $(".page-header h1").textContent = "Produção - KPI";
-    $(".page-header p").textContent = "Quantidades faturadas e recorrência / Columbia";
   }
   if (estado.dados) aplicarFiltros();
 }
