@@ -2,6 +2,8 @@ __pycache__/
 *.py[cod]
 .env
 logs/
+# Saidas de analise, consultas executadas e backups locais; nao sao fontes do site.
+saida/
 dashboard.lock
 dados.json.tmp
 *.xlsm

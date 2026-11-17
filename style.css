@@ -128,6 +128,11 @@ tbody tr:hover { background: var(--surface-soft); }
 .modal-table { max-height: calc(100vh - 180px); padding: 0 20px 20px; overflow: auto; scrollbar-width: thin; }
 .modal-table th { position: sticky; z-index: 1; top: 0; }
 .quality-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.production-toolbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; padding: 20px 24px; margin-bottom: 16px; }
+.production-toolbar label { flex: 1 1 160px; display: grid; gap: 8px; color: var(--muted); font-size: 14px; }
+.production-toolbar select { width: 100%; min-height: 44px; padding: 8px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); background: var(--surface); }
+#producao-tabela td:first-child { min-width: 260px; max-width: 500px; white-space: normal; }
+#painel-producao .kpi-card strong { font-variant-numeric: tabular-nums; }
 .quality-chart { height: 300px; padding-top: 18px; }
 .quality-detail-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding-right: 24px; }
 .quality-detail-header label { flex: 0 1 360px; min-width: 0; margin: 12px 0 0 24px; }

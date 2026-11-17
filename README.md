@@ -1,5 +1,10 @@
 # Dashboard Gerencial – Melhorias e Faturamento 2026
 
+## Produção - KPI
+
+A nova aba lê somente os dados de 2026 da planilha principal.
+Consulte [fonte, formato e regras de atualização](docs/producao.md).
+
 Automação Windows central que verifica o Excel compartilhado a cada minuto,
 calcula os indicadores quando detecta um novo salvamento, cria `dados.json` e o
 publica no GitHub pela API REST. O GitHub Pages consome esse JSON e atualiza o
@@ -83,8 +88,8 @@ responsável está selecionado, mostra somente as ações dele.
 
 ### Aba Qualidade KPI 2026
 
-O dashboard possui duas abas de navegação: **Melhorias e Faturamento** e
-**Qualidade KPI 2026**, com o mesmo cabeçalho, cartões, painéis e filtros laterais.
+O dashboard possui três abas de navegação: **Melhorias e Faturamento**,
+**Qualidade KPI 2026** e **Produção - KPI**, mantendo a identidade visual existente.
 A aba de qualidade já existe no Excel compartilhado; não é necessário criá-la
 ou instalar macros. O nome fica em `QUALIDADE_CONFIG` de `config.py`.
 

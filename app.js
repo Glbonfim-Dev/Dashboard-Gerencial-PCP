@@ -278,6 +278,7 @@ function abrirAcoesPorStatus(indiceStatus) {
 
 // Atualiza todos os componentes depois de qualquer mudança nos filtros gerais.
 function renderizarTudo() {
+  if (estado.abaAtiva === "producao") { window.producaoDashboard?.renderizar(); return; }
   if (estado.abaAtiva === "qualidade") { renderizarQualidade(); return; }
   renderizarKPIs(); renderizarStatus(); renderizarResponsaveis(); renderizarMeta(); renderizarFaturamento(); renderizarAtencao(); renderizarTabelaCompleta();
 }
@@ -472,16 +473,20 @@ function renderizarQualidade() {
 
 function selecionarAba(aba) {
   estado.abaAtiva = aba;
-  ["gerencial", "qualidade"].forEach((nome) => {
+  ["gerencial", "qualidade", "producao"].forEach((nome) => {
     const ativa = nome === aba;
     $(`#aba-${nome}`).setAttribute("aria-selected", String(ativa));
     $(`#aba-${nome}`).tabIndex = ativa ? 0 : -1;
     $(`#painel-${nome}`).hidden = !ativa;
   });
-  $("#filtro-responsavel").closest(".filter-grid").hidden = aba === "qualidade";
+  $("#filtro-responsavel").closest(".filter-grid").hidden = aba !== "gerencial";
   $("#filtros-qualidade").hidden = aba !== "qualidade";
   $(".page-header h1").textContent = aba === "qualidade" ? "Qualidade 2026" : "Dashboard gerencial";
   $(".page-header p").textContent = aba === "qualidade" ? "Indicadores de qualidade / Columbia" : "Melhorias e faturamento / 2026";
+  if (aba === "producao") {
+    $(".page-header h1").textContent = "Produção - KPI";
+    $(".page-header p").textContent = "Quantidades faturadas e recorrência / Columbia";
+  }
   if (estado.dados) aplicarFiltros();
 }
 
@@ -497,7 +502,7 @@ async function atualizarDados() {
     if (!resposta.ok) throw new Error(`HTTP ${resposta.status}`);
     const novosDados = await resposta.json();
     if (!Array.isArray(novosDados.lista_acoes)) throw new Error("dados.json não contém lista_acoes");
-    if (estado.dados?.ultima_atualizacao === novosDados.ultima_atualizacao) {
+    if (estado.dados?.ultima_atualizacao === novosDados.ultima_atualizacao && estado.dados?.producao?.data_base === novosDados.producao?.data_base) {
       $("#mensagem-erro").hidden = true;
       return;
     }
@@ -506,6 +511,7 @@ async function atualizarDados() {
       ? null
       : estado.dados?.faturamento?.mensal?.[estado.mesFaturamentoSelecionado]?.mes;
     estado.dados = novosDados;
+    window.producaoDashboard?.preparar(novosDados.producao);
     prepararFiltrosQualidade();
     $("#ultima-atualizacao").textContent = formatarAtualizacao(estado.dados.ultima_atualizacao);
     preencherSelect("#filtro-responsavel", [...new Set(estado.dados.lista_acoes.map((a) => a.responsavel))].sort());
@@ -529,6 +535,7 @@ async function atualizarDados() {
 // Liga os controles do HTML às funções de filtragem, modal e painel lateral.
 ["#filtro-responsavel", "#filtro-status", "#filtro-periodo"].forEach((id) => $(id).addEventListener("change", aplicarFiltros));
 $("#limpar-filtros").addEventListener("click", () => {
+  if (estado.abaAtiva === "producao") { window.producaoDashboard?.limpar(); return; }
   if (estado.abaAtiva === "qualidade") {
     $("#qualidade-ano").value = String(estado.dados?.qualidade?.ano || 2026);
     $("#qualidade-mes").value = "";
@@ -540,12 +547,13 @@ $("#limpar-filtros").addEventListener("click", () => {
 mesesQualidade.forEach((mes, i) => $("#qualidade-mes").add(new Option(mes, String(i + 1))));
 ["#qualidade-ano", "#qualidade-mes"].forEach((id) => $(id).addEventListener("change", renderizarQualidade));
 $("#qualidade-indicador").addEventListener("change", renderizarDetalheQualidade);
-["gerencial", "qualidade"].forEach((aba) => {
+["gerencial", "qualidade", "producao"].forEach((aba) => {
   $(`#aba-${aba}`).addEventListener("click", () => selecionarAba(aba));
   $(`#aba-${aba}`).addEventListener("keydown", (event) => {
     if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
-    const proxima = event.key === "Home" ? "gerencial" : event.key === "End" ? "qualidade" : aba === "gerencial" ? "qualidade" : "gerencial";
+    const abas = ["gerencial", "qualidade", "producao"];
+    const proxima = event.key === "Home" ? abas[0] : event.key === "End" ? abas[abas.length - 1] : abas[(abas.indexOf(aba) + (event.key === "ArrowRight" ? 1 : abas.length - 1)) % abas.length];
     selecionarAba(proxima); $(`#aba-${proxima}`).focus();
   });
 });

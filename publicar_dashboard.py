@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from producao_reader import ler_producao
+
 import argparse
 import json
 import msvcrt
@@ -158,6 +160,7 @@ def main(argv: list[str] | None = None) -> int:
             aguardar_arquivo_disponivel(caminho_excel, logger)
             acoes, faturamento, qualidade = carregar_dados_excel(caminho_excel, logger)
             dados = calcular_indicadores(acoes, faturamento, caminho_excel.name, qualidade)
+            dados['producao'] = ler_producao(caminho_excel)
             logger.info(
                 "Indicadores calculados: %d acoes, %d atrasadas",
                 dados["acoes"]["total"],
