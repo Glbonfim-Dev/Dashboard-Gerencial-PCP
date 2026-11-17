@@ -10,7 +10,7 @@ test('filtros de outubro, entrega futura, totais e estado vazio', () => {
     if (!elements.has(id)) elements.set(id, {
       value: '', options: [], hidden: false, children: [], textContent: '',
       add(o) { this.options.push(o); }, replaceChildren(...items) { this.options = []; this.children = items; },
-      append(v) { this.children.push(v); }, addEventListener() {},
+      listeners: {}, append(v) { this.children.push(v); }, addEventListener(tipo, callback) { this.listeners[tipo] = callback; },
     });
     return elements.get(id);
   }
@@ -32,6 +32,28 @@ test('filtros de outubro, entrega futura, totais e estado vazio', () => {
   assert.equal(element('producao-castelos').textContent, '1');
   assert.equal(element('producao-sapatas').textContent, '283');
   assert.equal(element('producao-vazio').hidden, true);
+  element('producao-busca-item').value = 'sapata';
+  element('producao-busca-item').listeners.input();
+  assert.equal(element('producao-tabela').children.length, 1);
+  assert.equal(element('producao-tabela').children[0].children[0].textContent, 'SAPATA');
+  assert.equal(element('producao-moldes').textContent, '18');
+  element('producao-qtd-min').value = '300';
+  element('producao-qtd-min').listeners.input();
+  assert.match(element('producao-tabela-contagem').textContent, /^0 de/);
+  element('producao-tabela-limpar').listeners.click();
+  assert.equal(element('producao-tabela').children.length, 3);
+  element('producao-tabela-componente').value = 'CASTELO';
+  element('producao-tabela-componente').listeners.change();
+  assert.equal(element('producao-tabela').children.length, 1);
+  assert.equal(element('producao-tabela').children[0].children[0].textContent, 'CASTELO');
+  element('producao-meses-min').value = '2';
+  element('producao-meses-min').listeners.input();
+  assert.match(element('producao-tabela-contagem').textContent, /^0 de/);
+  element('producao-tabela-limpar').listeners.click();
+  element('producao-tabela-futura').value = 'sim';
+  element('producao-tabela-futura').listeners.change();
+  assert.equal(element('producao-tabela').children.length, 2);
+  element('producao-tabela-limpar').listeners.click();
   element('producao-operacao').value = 'futura'; contexto.window.producaoDashboard.renderizar();
   assert.equal(element('producao-moldes').textContent, '4');
   assert.equal(element('producao-sapatas').textContent, '15');

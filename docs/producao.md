@@ -56,6 +56,12 @@ interrompem a publicação, preservando o último JSON válido.
 
 ## Indicadores e limites
 
+A tabela de recorrência tem filtros próprios por texto do item, componente,
+intervalo de quantidade, intervalo de meses ativos e entrega futura (incluindo
+não discriminado). Eles atuam sobre os totais do período escolhido nos filtros
+gerais. O CSV respeita também essa seleção da tabela. O botão de limpeza da
+tabela preserva os filtros gerais e os gráficos.
+
 Filtros por ano, mês e componente; cartões de moldes completos, castelos,
 grades e sapatas; evolução mensal, ranking de componentes, recorrência em
 meses e exportação CSV da seleção. Meses parciais são identificados pela fonte.

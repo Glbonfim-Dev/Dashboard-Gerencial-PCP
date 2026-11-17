@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261117-producao-1" />
+    <link rel="stylesheet" href="style.css?v=20261117-producao-filtros-2" />
     <link rel="stylesheet" href="acesso.css?v=20261113-1" />
     <script src="acesso.js?v=20261113-colmac-3" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
     <script src="app.js?v=20261117-producao-1" defer></script>
-    <script src="producao.js?v=20261117-1" defer></script>
+    <script src="producao.js?v=20261117-filtros-2" defer></script>
   </head>
   <body>
     <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
@@ -122,7 +122,14 @@
               <article class="panel"><h2>Quantidades por mês</h2><p class="quality-note">Compare unidades dentro de cada componente.</p><div class="chart-box quality-chart"><canvas id="grafico-producao-mensal" aria-label="Quantidades faturadas por mês e componente" role="img"></canvas></div></article>
               <article class="panel"><h2 id="producao-ranking-titulo">Itens mais faturados</h2><p class="quality-note">Top 10 por quantidade</p><div class="chart-box quality-chart"><canvas id="grafico-producao-ranking" aria-label="Ranking por quantidade faturada" role="img"></canvas></div></article>
             </section>
-            <article class="panel quality-detail"><h2 id="producao-recorrencia-titulo">Recorrência dos itens</h2><p class="quality-note">Quantidade e meses com faturamento no período filtrado. Operações são discriminadas apenas quando informadas na fonte.</p><div class="table-scroll"><table><thead><tr><th>Item / componente</th><th>Componente</th><th>Quantidade</th><th>Meses ativos</th><th>Entrega futura (un.)</th></tr></thead><tbody id="producao-tabela"></tbody></table></div><button type="button" class="link-button" id="producao-exportar">Exportar seleção em CSV</button></article>
+            <article class="panel quality-detail"><h2 id="producao-recorrencia-titulo">Recorrência dos itens</h2><p class="quality-note">Quantidade e meses com faturamento no período filtrado. Operações são discriminadas apenas quando informadas na fonte.</p><div class="table-scroll"><table><thead><tr><th>Item / componente</th><th>Componente</th><th>Quantidade</th><th>Meses ativos</th><th>Entrega futura (un.)</th></tr>
+<tr class="production-table-filters">
+<th><input id="producao-busca-item" type="search" placeholder="Buscar item..." aria-label="Filtrar item ou componente por texto" /></th>
+<th><select id="producao-tabela-componente" aria-label="Filtrar componente na tabela"><option value="">Todos</option></select></th>
+<th><div class="production-range"><input id="producao-qtd-min" type="number" min="0" step="any" placeholder="De" aria-label="Quantidade mínima" /><input id="producao-qtd-max" type="number" min="0" step="any" placeholder="Até" aria-label="Quantidade máxima" /></div></th>
+<th><div class="production-range"><input id="producao-meses-min" type="number" min="1" max="12" placeholder="De" aria-label="Mínimo de meses ativos" /><input id="producao-meses-max" type="number" min="1" max="12" placeholder="Até" aria-label="Máximo de meses ativos" /></div></th>
+<th><select id="producao-tabela-futura" aria-label="Filtrar entrega futura"><option value="">Todas</option><option value="sim">Com entrega futura</option><option value="nao">Sem entrega futura</option><option value="nd">Não discriminado</option></select></th>
+</tr></thead><tbody id="producao-tabela"></tbody></table></div><p id="producao-tabela-contagem" class="quality-note" role="status"></p><button type="button" class="link-button" id="producao-tabela-limpar">Limpar filtros da tabela</button><button type="button" class="link-button" id="producao-exportar">Exportar seleção em CSV</button></article>
           </div>
           <details class="quality-notes"><summary>Fonte e critérios dos indicadores</summary><ul id="producao-avisos"></ul></details>
         </div>
