@@ -330,6 +330,15 @@ class AutomationTests(unittest.TestCase):
         self.assertEqual(base64.b64decode(payload["content"]), b'{"ok": true}\n')
         self.assertNotIn("sha", payload)
 
+    def test_github_rejeita_json_com_conflito_antes_de_acessar_rede(self) -> None:
+        from github_client import GitHubUploadError
+        sessao = FakeSession([])
+        cliente = GitHubClient(GitHubConfig('teste','empresa','dashboard'),
+                               logging.getLogger('json_invalido'),session=sessao)
+        with self.assertRaises(GitHubUploadError):
+            cliente.publicar_json(b'{\n<<<<<<< HEAD\n"valor":1\n=======\n"valor":2\n>>>>>>> ramo\n}')
+        self.assertEqual(sessao.chamadas, [])
+
     def test_github_atualiza_com_sha(self) -> None:
         # Arquivos existentes precisam enviar novamente o SHA retornado pelo GET.
         sessao = FakeSession([resposta(200, {"sha": "abc123"}), resposta(200, {"content": {}})])

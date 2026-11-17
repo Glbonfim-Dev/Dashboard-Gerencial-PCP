@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import json
 import logging
 import time
 from dataclasses import dataclass
@@ -109,6 +110,13 @@ class GitHubClient:
 
     def publicar_json(self, conteudo: bytes) -> None:
         """Consulta o SHA atual e cria ou atualiza dados.json."""
+
+        try:
+            documento = json.loads(conteudo)
+        except (ValueError, UnicodeDecodeError) as erro:
+            raise GitHubUploadError('Publicacao bloqueada: dados.json invalido; regenere pela planilha.') from erro
+        if not isinstance(documento, dict):
+            raise GitHubUploadError('Publicacao bloqueada: dados.json deve conter um objeto JSON.')
 
         self.logger.info(
             "Iniciando upload para %s/%s, branch %s, arquivo %s",
