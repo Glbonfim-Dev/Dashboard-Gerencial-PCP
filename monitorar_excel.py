@@ -22,7 +22,8 @@ def assinatura_arquivo(caminho: Path) -> dict[str, int]:
     """Retorna uma assinatura barata e suficiente para detectar um novo salvamento."""
 
     atributos = caminho.stat()
-    return {"tamanho": atributos.st_size, "modificado_ns": atributos.st_mtime_ns}
+    return {"tamanho": atributos.st_size, "modificado_ns": atributos.st_mtime_ns,
+            "cps_janela": int(time.time() // 300)}
 
 
 def ler_estado(caminho: Path) -> dict[str, int] | None:
@@ -36,6 +37,7 @@ def ler_estado(caminho: Path) -> dict[str, int] | None:
             return {
                 "tamanho": dados["tamanho"],
                 "modificado_ns": dados["modificado_ns"],
+                "cps_janela": dados.get("cps_janela"),
             }
     except (FileNotFoundError, OSError, json.JSONDecodeError, AttributeError):
         pass

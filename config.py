@@ -13,6 +13,8 @@ from pathlib import Path
 # Caminhos sempre relativos à pasta onde o projeto está instalado.
 PROJECT_DIR = Path(__file__).resolve().parent
 JSON_OUTPUT_PATH = PROJECT_DIR / "dados.json"
+# Publicacao da nova base CPS aguarda autorizacao expressa apos bloqueio da revisao.
+CPS_PUBLICACAO_AUTORIZADA = False
 LOCK_PATH = PROJECT_DIR / "dashboard.lock"
 
 # Política de espera aplicada logo após o salvamento do Excel.

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from producao_reader import ler_producao
+from producao_pivot import ler_producao_cps
 
 import argparse
 import json
@@ -160,7 +160,7 @@ def main(argv: list[str] | None = None) -> int:
             aguardar_arquivo_disponivel(caminho_excel, logger)
             acoes, faturamento, qualidade = carregar_dados_excel(caminho_excel, logger)
             dados = calcular_indicadores(acoes, faturamento, caminho_excel.name, qualidade)
-            dados['producao'] = ler_producao(caminho_excel)
+            dados['producao'] = ler_producao_cps()
             logger.info(
                 "Indicadores calculados: %d acoes, %d atrasadas",
                 dados["acoes"]["total"],
@@ -169,6 +169,10 @@ def main(argv: list[str] | None = None) -> int:
 
             conteudo_json = escrever_json_atomico(dados, JSON_OUTPUT_PATH)
             logger.info("JSON criado em %s", JSON_OUTPUT_PATH)
+
+            from config import CPS_PUBLICACAO_AUTORIZADA
+            if not argumentos.no_upload and dados.get('producao', {}).get('formato') == 'pivot_categorias' and not CPS_PUBLICACAO_AUTORIZADA:
+                raise ValueError('Nova base CPS validada localmente; publicacao aguarda autorizacao expressa do usuario.')
 
             load_dotenv(PROJECT_DIR / ".env")
             github_config = config_github_do_ambiente()

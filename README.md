@@ -2,7 +2,7 @@
 
 ## Produção - KPI
 
-A nova aba lê somente os dados de 2026 da planilha principal.
+A aba consulta o pivot CPS, de janeiro de 2026 até hoje, com cinco cartões clicáveis.
 Consulte [fonte, formato e regras de atualização](docs/producao.md).
 
 Automação Windows central que verifica o Excel compartilhado a cada minuto,

@@ -230,7 +230,7 @@ class AutomationTests(unittest.TestCase):
             ws.append([date(2026, 1, 1), 38, 0])
             wb.save(excel)
 
-            with patch("publicar_dashboard.JSON_OUTPUT_PATH", destino), patch("publicar_dashboard.LOCK_PATH", raiz / "lock"), patch.object(GitHubClient, "publicar_json") as upload:
+            with patch("publicar_dashboard.ler_producao_cps", return_value={'disponivel':False,'registros':[]}), patch("publicar_dashboard.JSON_OUTPUT_PATH", destino), patch("publicar_dashboard.LOCK_PATH", raiz / "lock"), patch.object(GitHubClient, "publicar_json") as upload:
                 def publicador(caminho: Path) -> int:
                     return publicar([str(caminho), "--no-upload"])
 
@@ -246,6 +246,9 @@ class AutomationTests(unittest.TestCase):
                 self.assertEqual(antes["faturamento"], depois["faturamento"])
                 self.assertEqual(antes["acoes"], depois["acoes"])
                 upload.assert_not_called()
+                with patch('publicar_dashboard.ler_producao_cps', return_value={'formato':'pivot_categorias','registros':[]}), patch('config.CPS_PUBLICACAO_AUTORIZADA', False):
+                    self.assertEqual(publicar([str(excel)]), 1)
+                    upload.assert_not_called()
 
     def test_validacao_de_extensao(self) -> None:
         with self.assertRaisesRegex(ValueError, "extensao"):
