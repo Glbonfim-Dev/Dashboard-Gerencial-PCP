@@ -4,7 +4,7 @@ from producao_pivot import normalizar,classificar,montar_sql
 
 class PivotTests(unittest.TestCase):
     def linha(self,**kw):
-        r=dict(data_mes_grade=date(2026,11,18),segmento='MOLDE',cod_produto_proprio='P1',produto_proprio='MOLD FP RET GRID P/B',unidade='UN',qtde_utilizada=1,empresa_auditoria=1,os_id=1,id_linha_produto='A',descricao_conjunto='MOLD FP RET MOLDE COMPLETO')
+        r=dict(data_mes_grade=date(2026,11,18),segmento='MOLDE',cod_produto_proprio='P1',produto_proprio='MOLD FP RET GRID P/B',unidade='UN',qtde_utilizada=1,empresa_auditoria=1,os_id=1,id_linha_produto='A',descricao_conjunto='MOLD FP RET GRID P/B',os_concluida=1,os_data_conclusao=date(2026,11,17),os_cancelada=0,fab_id=None)
         return {**r,**kw}
     def test_limite_atual_segmento_e_repeticao(self):
         r=self.linha();rows=[r,r,self.linha(data_mes_grade=date(2026,11,19)),self.linha(segmento='PECAS')]
@@ -23,7 +23,7 @@ class PivotTests(unittest.TestCase):
         self.assertEqual(classificar('MOLD FP RET AGITADOR',faturado=True)[0],'AUXILIAR')
         self.assertEqual(classificar('MOLD HTX700 FP RET H8 8V TERMO NOVO',faturado=True)[0],'PENDENTE')
     def test_saida_sem_identificadores_fiscais(self):
-        r=normalizar([self.linha(cliente='Cliente teste',os_principal='10473')],date(2026,11,18))['registros'][0]
+        r=normalizar([self.linha(cliente='Cliente teste',os_principal='10473',descricao_conjunto='MOLD FP MOLDE COMPLETO')],date(2026,11,18))['registros'][0]
         self.assertNotIn('nf',r);self.assertNotIn('os_id',r)
         self.assertEqual(r['cliente'],'Cliente teste');self.assertEqual(r['os'],'10473')
         self.assertTrue(r['conjunto_id'])
@@ -52,3 +52,46 @@ class PivotTests(unittest.TestCase):
     def test_quantidade_ausente_nao_vira_zero(self):
         row={**self.faturado(),'quantidade_faturada':None}
         self.assertIsNone(normalizar([row],date(2026,11,18))['registros'][0]['quantidade'])
+
+    def test_exclui_os_aberta_cancelada_sem_data_e_fora_do_mes(self):
+        for campos in [dict(os_concluida=0),dict(os_cancelada=1),
+                       dict(os_data_conclusao=None),dict(os_data_conclusao=date(2026,10,31)),
+                       dict(os_data_conclusao=date(2026,12,1)),dict(os_data_conclusao=date(2026,11,19))]:
+            with self.subTest(campos=campos):
+                self.assertFalse(normalizar([self.faturado(**campos)],date(2026,11,18))['registros'])
+
+    def test_sem_evidencia_de_conclusao_nao_publica(self):
+        row=self.linha()
+        for campo in ('os_concluida','os_data_conclusao'):row.pop(campo)
+        self.assertFalse(normalizar([row],date(2026,11,18))['registros'])
+
+    def test_fabricacao_aberta_nao_herda_conclusao_da_montagem(self):
+        row=self.linha(fab_id=2,fab_os='10604',fab_concluida=0,fab_data_conclusao=None,fab_cancelada=0)
+        self.assertFalse(normalizar([row],date(2026,11,18))['registros'])
+        row.update(fab_concluida=1,fab_data_conclusao=date(2026,10,31))
+        self.assertFalse(normalizar([row],date(2026,11,18))['registros'])
+        row['fab_data_conclusao']=date(2026,11,16)
+        p=normalizar([row],date(2026,11,18))
+        self.assertEqual(p['registros'][0]['os_producao'],'10604')
+        self.assertEqual(p['registros'][0]['data_conclusao'],'2026-11-16')
+
+    def test_componente_concluido_nao_conta_montagem_aberta_como_completa(self):
+        row=self.linha(descricao_conjunto='MOLD FP COMPLETO',os_concluida=0,
+            fab_id=2,fab_os='2',fab_concluida=1,fab_data_conclusao=date(2026,11,16),fab_cancelada=0)
+        p=normalizar([row],date(2026,11,18))
+        self.assertEqual(len(p['registros']),1)
+        self.assertEqual(p['registros'][0]['conjunto_id'],'')
+
+    def test_completo_tem_conclusao_propria_independente_do_mes_dos_componentes(self):
+        row=self.linha(descricao_conjunto='MOLD FP COMPLETO',os_principal='10',
+            fab_id=2,fab_os='2',fab_concluida=1,fab_data_conclusao=date(2026,10,31),fab_cancelada=0)
+        p=normalizar([row,row],date(2026,11,18))
+        self.assertEqual(len(p['registros']),1)
+        self.assertEqual(p['registros'][0]['categoria'],'COMPLETOS')
+        self.assertEqual(p['registros'][0]['quantidade'],1)
+
+    def test_completo_sem_composicao_nao_duplica_quantidade(self):
+        row={**self.faturado(),'descricao_conjunto':'MOLD FP COMPLETO','quantidade_faturada':2}
+        p=normalizar([row,row],date(2026,11,18))
+        self.assertEqual(len(p['registros']),1)
+        self.assertEqual(p['registros'][0]['quantidade'],2)

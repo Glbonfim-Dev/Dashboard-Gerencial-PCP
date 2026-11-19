@@ -42,4 +42,12 @@ test('categorias clicaveis, composicao, mes atual, limpeza e volume sem duplicar
  assert.equal(origens[1].children[0].textContent,'Cliente: Cliente B');
  assert.equal(origens[1].children[1].textContent,'OS: 10476');
  assert.equal(origens[1].children[3].textContent,'20 un.');
+ ctx.window.producaoDashboard.preparar({...data,registros:[records[0],{...row('COMPLETOS',1,'RESUMO'),os_producao:'10473'}]});
+ ctx.window.producaoDashboard.renderizar();
+ assert.equal(element('producao-total-COMPLETOS').textContent,'1');
+ assert.equal(element('producao-total-MOLDES_FP').textContent,'2');
+ ctx.window.producaoDashboard.preparar({...data,registros:[{...outro,os_producao:'10604'}]});
+ ctx.window.producaoDashboard.renderizar();
+ const fabricacao=element('producao-itens').children[0].children[2].children[0];
+ assert.equal(fabricacao.children[2].textContent,'Fabricação: 10604');
 });
