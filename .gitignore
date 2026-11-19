@@ -10,3 +10,5 @@ dados.json.tmp
 tests/_runtime_*
 automation/estado_monitor.json
 automation/estado_monitor.json.tmp
+automation/dados_runtime.json
+automation/dados_runtime.json.tmp

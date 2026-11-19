@@ -62,5 +62,11 @@ permitindo validar a leitura local. Nenhum envio alternativo deve contornar esse
 textual. `saida/` guarda auditorias locais e é ignorada pelo Git. Mudanças da
 consulta-base exigem revisão da semântica da grade.
 
+Na publicação automática, o arquivo de trabalho é `automation/dados_runtime.json`,
+ignorado pelo Git. O publicador envia seu conteúdo para `dados.json` no destino
+configurado, sem exigir commit manual local. `--no-upload` gera o `dados.json`
+local para conferência. A autorização de publicação, quando concedida, vale para
+os ciclos recorrentes; não existe pergunta interativa por salvamento.
+
 Testes: `py -3.12 -m unittest discover -s tests -p "test_*.py"`,
 `node tests/test_producao.cjs`, `node tests/test_acesso.cjs`.

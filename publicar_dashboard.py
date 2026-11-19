@@ -167,8 +167,10 @@ def main(argv: list[str] | None = None) -> int:
                 dados["acoes"]["atrasadas"],
             )
 
-            conteudo_json = escrever_json_atomico(dados, JSON_OUTPUT_PATH)
-            logger.info("JSON criado em %s", JSON_OUTPUT_PATH)
+            from config import JSON_RUNTIME_PATH
+            destino_json = JSON_OUTPUT_PATH if argumentos.no_upload else JSON_RUNTIME_PATH
+            conteudo_json = escrever_json_atomico(dados, destino_json)
+            logger.info("JSON criado em %s", destino_json)
 
             from config import CPS_PUBLICACAO_AUTORIZADA
             if not argumentos.no_upload and dados.get('producao', {}).get('formato') == 'pivot_categorias' and not CPS_PUBLICACAO_AUTORIZADA:

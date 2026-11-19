@@ -249,6 +249,13 @@ class AutomationTests(unittest.TestCase):
                 with patch('publicar_dashboard.ler_producao_cps', return_value={'formato':'pivot_categorias','registros':[]}), patch('config.CPS_PUBLICACAO_AUTORIZADA', False):
                     self.assertEqual(publicar([str(excel)]), 1)
                     upload.assert_not_called()
+                original = destino.read_bytes()
+                runtime = raiz / 'runtime.json'
+                with patch('publicar_dashboard.ler_producao_cps', return_value={'formato':'pivot_categorias','registros':[]}), patch('config.CPS_PUBLICACAO_AUTORIZADA', True), patch('config.JSON_RUNTIME_PATH', runtime), patch('publicar_dashboard.config_github_do_ambiente', return_value=GitHubConfig('teste','empresa','dashboard')):
+                    self.assertEqual(publicar([str(excel)]), 0)
+                    upload.assert_called_once()
+                    self.assertTrue(runtime.exists())
+                    self.assertEqual(destino.read_bytes(), original)
 
     def test_validacao_de_extensao(self) -> None:
         with self.assertRaisesRegex(ValueError, "extensao"):
