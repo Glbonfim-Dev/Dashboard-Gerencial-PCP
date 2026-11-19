@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-19T16:35:12-03:00",
+  "ultima_atualizacao": "2026-11-19T16:35:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -9830,7 +9830,7 @@
     "criterio": "concluido_e_faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-19",
-    "data_base": "2026-11-19T16:35:20.793459-03:00",
+    "data_base": "2026-11-19T16:35:52.840661-03:00",
     "avisos": [
       "Somente itens concluidos e faturados no mesmo mes. Componentes usam a OS de fabricacao vinculada quando existente.",
       "Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
