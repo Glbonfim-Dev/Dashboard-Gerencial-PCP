@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-19T10:39:43-03:00",
+  "ultima_atualizacao": "2026-11-19T13:12:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -46,15 +46,15 @@
   "faturamento": {
     "ano": 2026,
     "meta_total": 12400000.0,
-    "realizado_total": 8048749.41,
-    "percentual_atingimento": 64.91,
+    "realizado_total": 8098749.41,
+    "percentual_atingimento": 65.31,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Nov",
       "mes_completo": "Novembro",
       "meta": 1200000.0,
-      "realizado": 630000.0,
-      "percentual_atingimento": 52.5
+      "realizado": 680000.0,
+      "percentual_atingimento": 56.67
     },
     "mensal": [
       {
@@ -121,7 +121,7 @@
         "mes": "Nov",
         "mes_completo": "Novembro",
         "meta": 1200000.0,
-        "realizado": 630000.0
+        "realizado": 680000.0
       },
       {
         "mes": "Dez",
@@ -2993,12 +2993,12 @@
       },
       {
         "mes_ref": "2026-01",
-        "descricao": "CILINDRO HIDRAULICO ( FEED DRAWER CYLINDER C155 17 04 )",
-        "codigo_produto": "33787",
+        "descricao": "MOLD AGOSTINE850 FMBE 14CM P25MM 10V",
+        "codigo_produto": "33714",
         "quantidade": 1.0,
         "unidade": "",
-        "categoria": "PENDENTE",
-        "componente": "CILINDRO HIDRAULICO ( FEED DRAWER CYLINDER C155 17 04 )",
+        "categoria": "MOLDES_FB",
+        "componente": "MOLDE FB",
         "id_produto": "8828b5f242565b4b31279ea8",
         "conjunto_id": "",
         "conjunto_nome": "",
@@ -9468,7 +9468,7 @@
     ],
     "inicio": "2026-01-01",
     "fim": "2026-11-19",
-    "data_base": "2026-11-19T10:39:50.201001-03:00",
+    "data_base": "2026-11-19T13:12:50.316130-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
