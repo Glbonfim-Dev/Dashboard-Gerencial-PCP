@@ -129,6 +129,22 @@ tbody tr:hover { background: var(--surface-soft); }
 .modal-table th { position: sticky; z-index: 1; top: 0; }
 .quality-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .production-monthly-grid { grid-template-columns: minmax(0, 1fr); }
+.production-monthly-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 24px; }
+.production-monthly-heading h2 { padding: 0; margin-bottom: 6px; font-size: 24px; }
+.production-monthly-heading p { margin: 0; color: var(--muted); }
+.production-partial { border-radius: 20px; padding: 7px 12px; color: #975400; background: #fff0d3; font-size: 13px; }
+.production-mini-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; padding: 0 24px; }
+.production-mini { min-width: 0; border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb,var(--chart-color) 5%,white); padding: 16px; }
+.production-mini-heading { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.production-mini-heading h3 { margin: 4px 0 0; font-size: 17px; }
+.production-mini-heading h3::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--chart-color); margin-right: 8px; }
+.production-mini-heading > div { text-align: right; flex-shrink: 0; }
+.production-mini-heading strong { display: block; font-size: 25px; font-variant-numeric: tabular-nums; }
+.production-mini-heading span { color: var(--muted); font-size: 12px; }
+.production-mini-scale { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
+.production-mini-canvas { position: relative; height: 230px; margin-top: 6px; }
+@media(max-width:1200px){.production-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:700px){.production-mini-grid{grid-template-columns:minmax(0,1fr);padding:0 16px;gap:16px;}.production-monthly-heading{padding:20px 16px;}}
 .production-composition { margin-bottom: 24px; }
 .production-component-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; padding: 0 24px 24px; }
 .production-component-card { border: 1px solid var(--line); border-radius: 14px; padding: 16px; background: var(--surface-soft); }

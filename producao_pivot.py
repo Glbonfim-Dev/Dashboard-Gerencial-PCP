@@ -15,6 +15,20 @@ def hoje():
 def montar_sql(limite):
     s=(ROOT/'consultas/producao_pivot_base.sql').read_text(encoding='utf-8')
     s='\n'.join(s.splitlines())
+    # Mantém a consulta da grade como referência, aplicando a elegibilidade fiscal.
+    regras=(ROOT/'consultas/producao_documentos_validos.sql').read_text(encoding='utf-8')
+    substituicoes=[
+        (r'\bNF AS \(', regras+'\nNF AS ('),
+        (r'FROM TNOTA_FISCAL N', 'FROM DOCUMENTOS_VALIDOS N'),
+        (r'INNER JOIN TNOTA_FISCAL_ITEM I', 'INNER JOIN ITENS_PRODUCAO_VALIDOS I'),
+        (r'I\.QTDE AS QTDE_NF', 'I.QTDE_REMANESCENTE AS QTDE_NF, I.FATOR_REMANESCENTE'),
+        (r'S\.QTDE\b', 'S.QTDE, 1 AS FATOR_REMANESCENTE'),
+        (r'M\.QTDE_UTILIZADA,', 'M.QTDE_UTILIZADA * I.FATOR_REMANESCENTE AS QTDE_UTILIZADA,'),
+    ]
+    # Faz as substituições antes de inserir as CTEs para não alterá-las recursivamente.
+    for pattern,replacement in reversed(substituicoes):
+        s,count=re.subn(pattern,lambda _:replacement,s)
+        if count!=1:raise ValueError('Definicao da grade mudou; revisar elegibilidade fiscal')
     s=s.replace(':FtDateInicio',"'2026-01-01'").replace(':FtDateFim',f"'{limite.isoformat()}'")
     match=re.search(r'SELECT\s+COALESCE\(\s+NULLIF\(I.NUMERO_NFSE',s)
     if not match: raise ValueError('Definicao da grade mudou; revisar consulta')

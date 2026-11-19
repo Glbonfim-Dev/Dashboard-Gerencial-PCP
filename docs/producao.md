@@ -36,11 +36,31 @@ Não somar os cartões como um total de peças. O clique abre itens e volumes ab
 Em Completos, cada modelo expande sua composição. Não há informações de NF na tela,
 rankings ou tabelas de recorrência. Nomenclaturas não reconhecidas ficam pendentes.
 
+O painel mensal segue a Opção 1 aprovada: seis minigráficos em uma grade de três
+colunas (duas no tablet, uma no celular), uma categoria por quadro. Cada gráfico
+tem escala independente explícita, valores sobre as barras e total no período.
+O mês atual é identificado como parcial e sua barra usa uma tonalidade mais clara.
+Os filtros existentes atualizam simultaneamente os cartões e os seis gráficos.
+
 Cada linha de produto é contada uma vez por mês (empresa/OS/GUID), removendo
 multiplicações das junções. A reaparição em outro mês é preservada conforme a
 grade, sem comprovar nova produção física. Campos vazios não viram zeros.
 
 ## Atualização
+
+A elegibilidade fiscal é aplicada em `consultas/producao_documentos_validos.sql`:
+notas canceladas são excluídas; NF-e dos modelos 55/65 exige status 100.
+Devoluções não entram como produção. Quando a devolução válida referencia
+explicitamente a nota de origem e o mesmo produto, seu volume é abatido da
+origem, inclusive em mês anterior. Uma devolução integral retira o item;
+uma parcial mantém o saldo e aplica a mesma proporção à composição.
+Referências duplicadas não multiplicam o desconto. Várias origens possíveis
+para o mesmo item devolvido não são atribuídas automaticamente. Uma nova nota
+válida continua elegível; não se elimina um item apenas pela repetição da OS.
+As devoluções consideradas têm emissão até a data atual da consulta.
+
+Teste SQL com dados sintéticos, sem gravar no CPS:
+`$env:CPS_TEST_INTEGRACAO='1'; py -3.12 -m unittest discover -s tests -p "test_documentos_validos.py"`.
 
 O publicador mantém melhorias/faturamento/qualidade da planilha e consulta
 `producao_pivot.py` para produção. Não escreve no Excel. A tarefa Windows verifica

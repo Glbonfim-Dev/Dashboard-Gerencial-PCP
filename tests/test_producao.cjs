@@ -10,6 +10,15 @@ test('categorias clicaveis, composicao, mes atual, limpeza e volume sem duplicar
  ctx.window.producaoDashboard.preparar(data);ctx.window.producaoDashboard.renderizar();
  assert.equal(element('producao-mes').value,'11');
  assert.equal(element('producao-total-COMPLETOS').textContent,'2');assert.equal(element('producao-total-MOLDES_FP').textContent,'2');assert.equal(element('producao-total-SAPATAS').textContent,'16');
+ assert.equal(Object.keys(ctx.estado.charts).length,6);
+ const fp=ctx.estado.charts['producao-mensal-MOLDES_FP'].config;
+ const sap=ctx.estado.charts['producao-mensal-SAPATAS'].config;
+ assert.equal(fp.data.datasets.length,1);assert.equal(fp.data.datasets[0].data[0],2);
+ assert.equal(sap.data.datasets[0].data[0],16);
+ assert.ok(sap.options.scales.y.max>fp.options.scales.y.max);
+ assert.equal(fp.options.plugins.legend.display,false);
+ const labels=[];const chart={chartArea:{top:0},ctx:{save(){},restore(){},fillText(t){labels.push(t);}},getDatasetMeta(){return {data:[{x:10,y:20}]};}};
+ sap.plugins[0].afterDatasetsDraw(chart);assert.deepEqual(labels,['16']);
  element('producao-card-COMPLETOS').listeners.click();assert.equal(element('producao-detalhes').hidden,false);assert.equal(element('producao-itens').children.length,1);
  const accordion=element('producao-itens').children[0];assert.equal(accordion.children[2].children.length,4);
  element('producao-card-SAPATAS').listeners.click();assert.equal(element('producao-itens').children.length,1);assert.equal(element('producao-itens').children[0].children[1].textContent,'16 un.');
@@ -17,5 +26,8 @@ test('categorias clicaveis, composicao, mes atual, limpeza e volume sem duplicar
  element('producao-card-CANECOS').listeners.click();assert.equal(element('producao-itens').children[0].children[1].textContent,'4 un.');
  element('producao-mes').value='10';element('producao-mes').listeners.change();assert.equal(element('producao-total-SAPATAS').textContent,'0');
  ctx.window.producaoDashboard.limpar();assert.equal(element('producao-total-SAPATAS').textContent,'16');assert.equal(element('producao-detalhes').hidden,true);
+ const anual=ctx.estado.charts['producao-mensal-SAPATAS'].config;
+ assert.equal(anual.data.labels.length,11);
+ assert.equal(anual.data.datasets[0].data.reduce((s,n)=>s+(n||0),0),16);
  ctx.window.producaoDashboard.preparar(data);assert.equal(element('producao-mes').value,'');
 });
