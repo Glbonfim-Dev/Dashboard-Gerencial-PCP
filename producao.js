@@ -1,7 +1,7 @@
 "use strict";
 (() => {
-  const categorias={COMPLETOS:"Moldes Completos",MOLDES_FP:"Moldes FP",MOLDES_FB:"Moldes FB",SAPATAS:"Sapatas",CASTELOS:"Castelos"};
-  const coresCategorias=["#1769d2","#00806f","#13a36f","#e99a16","#8054d9"];
+  const categorias={COMPLETOS:"Moldes Completos",MOLDES_FP:"Moldes FP",MOLDES_FB:"Moldes FB",SAPATAS:"Sapatas",CASTELOS:"Castelos",CANECOS:"Canecos"};
+  const coresCategorias=["#1769d2","#00806f","#13a36f","#e99a16","#8054d9","#437e99"];
   const el=(id)=>document.getElementById(`producao-${id}`);
   const numero=new Intl.NumberFormat("pt-BR",{maximumFractionDigits:2});
   let fonte={registros:[]},inicializado=false,ativa=null;
@@ -12,7 +12,8 @@
   function conjuntos(rows){
     return [...agrupar(rows.filter((r)=>r.conjunto_id),(r)=>r.conjunto_id).values()].map((items)=>{
       const grids=items.filter((r)=>["MOLDES_FP","MOLDES_FB"].includes(r.categoria));
-      return {descricao:items[0].conjunto_nome,quantidade:grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):null,componentes:items};
+      const diretos=items.filter((r)=>r.categoria==="COMPLETOS");
+      return {descricao:items[0].conjunto_nome,quantidade:grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):diretos.some((r)=>Number.isFinite(r.quantidade))?soma(diretos):null,componentes:items.filter((r)=>r.categoria!=="COMPLETOS")};
     });
   }
   function itensCategoria(rows,key){
@@ -48,6 +49,7 @@
       const summary=document.createElement("summary");summary.append(node("span","",item.descricao));summary.append(node("strong","production-mould-badge",item.quantidade===null?"Volume a confirmar":`${numero.format(item.quantidade)} conjuntos${item.pendentes?" · parcial":""}`));details.append(summary);
       details.append(node("h3","production-component-heading","Componentes deste item"));
       const grid=node("div","production-component-grid","");
+      if(!item.componentes.length)grid.append(node("p","quality-note","Composição não informada na base; volume proveniente do item faturado."));
       [...agrupar(item.componentes,(r)=>r.componente).entries()].forEach(([nome,items])=>{
         const card=node("article","production-component-card","");card.append(node("span","production-component-name",nome));card.append(node("strong","",volume(items)));card.append(node("small","",items.some((r)=>r.quantidade===null)?"Subtotal informado · há quantidades pendentes":"unidades"));grid.append(card);
       });details.append(grid);return details;
@@ -64,7 +66,7 @@
     });renderizarDetalhes(rows);
     destruirChart("producao-mensal");
     if(!rows.length)return;
-    const fim=Number((fonte.fim||"2026-11-18").slice(5,7));
+    const fim=Number((fonte.fim||new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"}).format(new Date())).slice(5,7));
     const meses=Array.from({length:fim},(_,i)=>`2026-${String(i+1).padStart(2,"0")}`).filter((m)=>!mes||m.slice(5)===mes);
     estado.charts["producao-mensal"]=new Chart(document.getElementById("grafico-producao-mensal"),{type:"bar",data:{labels:meses.map((m)=>mesesQualidade[Number(m.slice(5))-1]),datasets:Object.entries(categorias).map(([key,label],i)=>({label,backgroundColor:coresCategorias[i],borderRadius:4,data:meses.map((m)=>{const items=itensCategoria(rows.filter((r)=>r.mes_ref===m),key);return items.length&&!items.some((r)=>Number.isFinite(r.quantidade))?null:soma(items);})}))},options:{responsive:true,maintainAspectRatio:false,scales:{y:{beginAtZero:true}},plugins:{tooltip:{callbacks:{label:(c)=>`${c.dataset.label}: ${numero.format(c.parsed.y)}`}}}}});
   }

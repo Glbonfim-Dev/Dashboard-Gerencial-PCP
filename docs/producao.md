@@ -6,6 +6,13 @@ produto próprio e `qtde_utilizada`. A consulta original está em
 e limite de linhas. O mês acompanha a data da grade, conforme aprovado.
 A saída não contém números de NF, OS nem clientes.
 
+Quando o produto próprio está vazio na grade, usar descrição e quantidade do item
+faturado. Produto próprio preenchido tem prioridade na mesma OS/mês; não somar
+o item faturado à sua composição. Repetições das junções são eliminadas pelo GUID
+da linha própria ou identificador do item faturado, conforme a origem. Itens
+fiscais distintos são preservados. Quantidades conflitantes na mesma chave
+impedem a publicação. A origem da quantidade é registrada na base gerada.
+
 O início é 01/01/2026. O fim é hoje em America/Sao_Paulo, limitado a 31/12/2026.
 O dia atual é incluído e datas futuras são excluídas. O mês atual é parcial
 e inicialmente selecionado; o filtro permite o acumulado de janeiro até hoje.
@@ -13,14 +20,18 @@ e inicialmente selecionado; o filtro permite o acumulado de janeiro até hoje.
 ## Cartões
 
 - **Moldes Completos**: conjuntos identificados como COMPLETO/COMPLET/COMPLETA/COMPL.
-  Volume pelo GRID/PB da composição, sem somar os demais componentes. Sem GRID/PB,
-  o volume permanece pendente.
+  Volume pelo GRID/PB da composição, sem somar os demais componentes. Quando toda
+  a composição está ausente, usar o volume explícito do item completo faturado.
+  Se nenhum desses volumes estiver informado, permanece pendente.
 - **Moldes FP**: GRID/PB de FP ou PAVER.
-- **Moldes FB**: GRID/PB de FB (FBE/FBV/FBEDESM etc.), FC ou MF.
+- **Moldes FB**: GRID/PB de FB (FBE/FBV/FBEDESM etc.), FMB, FC ou MF.
+- Molde avulso com família FP/FB e assinatura dimensional reconhecida também
+  entra na família, mesmo sem GRID/PB. Termos novos continuam pendentes.
 - **Sapatas**: SPT/SHOE/SAPATA, inclusive dentro dos completos.
 - **Castelos**: CAST/CAST. C/PORT.SP/CASTELO. Cavalete não acrescenta castelo.
+- **Canecos**: ENDCORE/COREBAR/CANECO, conforme nomenclaturas confirmadas.
 
-As categorias se sobrepõem: GRID de conjunto completo alimenta Completos e FP/FB.
+São seis cartões clicáveis. As categorias se sobrepõem: GRID de conjunto completo alimenta Completos e FP/FB.
 Não somar os cartões como um total de peças. O clique abre itens e volumes abaixo.
 Em Completos, cada modelo expande sua composição. Não há informações de NF na tela,
 rankings ou tabelas de recorrência. Nomenclaturas não reconhecidas ficam pendentes.

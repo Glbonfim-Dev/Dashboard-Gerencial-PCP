@@ -16,6 +16,12 @@ class PivotTests(unittest.TestCase):
         self.assertEqual(classificar('CAV/SUP')[0],'AUXILIAR')
         self.assertEqual(classificar('HEATER,3X7CAST,600W')[0],'AUXILIAR')
         self.assertEqual(classificar('TERMO NOVO')[0],'PENDENTE')
+        self.assertEqual(classificar('20.48 ENDCORE (M50)')[0],'CANECOS')
+        self.assertEqual(classificar('COREBAR ASSEMBL')[0],'CANECOS')
+        self.assertEqual(classificar('MOLD HTX700 FMB14CM P25MM 8V',faturado=True)[0],'MOLDES_FB')
+        self.assertEqual(classificar('MOLD CRISTOFOLINI FBE14X39CM P25MM 8V',faturado=True)[0],'MOLDES_FB')
+        self.assertEqual(classificar('MOLD FP RET AGITADOR',faturado=True)[0],'AUXILIAR')
+        self.assertEqual(classificar('MOLD HTX700 FP RET H8 8V TERMO NOVO',faturado=True)[0],'PENDENTE')
     def test_saida_sem_identificadores_fiscais(self):
         r=normalizar([self.linha()],date(2026,11,18))['registros'][0]
         self.assertNotIn('nf',r);self.assertNotIn('cliente',r);self.assertNotIn('os_id',r)
@@ -25,3 +31,23 @@ class PivotTests(unittest.TestCase):
     def test_consulta_so_leitura_e_data(self):
         sql=montar_sql(date(2026,11,18));self.assertIn("'2026-11-18'",sql)
         self.assertNotIn(':FtDate',sql);self.assertIn('LIMIT 20001',sql)
+        self.assertNotIn("nullif(trim(q.produto_proprio),'') IS NOT NULL",sql)
+    def faturado(self,**kw):
+        return self.linha(produto_proprio=None,qtde_utilizada=None,id_linha_produto=None,
+            id_item_faturado=101,tipo_item_faturado='PRODUTO',quantidade_faturada=12,
+            codigo_item_faturado=33,descricao_conjunto='MOLD MBP6 FP RET H6 12V SHOE ASSY',**kw)
+    def test_fallback_quantidade_faturada_e_repeticoes(self):
+        row=self.faturado();p=normalizar([row,row],date(2026,11,18))
+        self.assertEqual(len(p['registros']),1)
+        r=p['registros'][0];self.assertEqual(r['categoria'],'SAPATAS')
+        self.assertEqual(r['quantidade'],12);self.assertEqual(r['origem_quantidade'],'item_faturado')
+    def test_proprio_tem_prioridade_sem_dupla_fonte(self):
+        p=normalizar([self.linha(),self.faturado()],date(2026,11,18))
+        self.assertEqual(len(p['registros']),1)
+        self.assertEqual(p['registros'][0]['origem_quantidade'],'produto_proprio')
+    def test_fallback_preserva_itens_fiscais_distintos(self):
+        a=self.faturado();b={**a,'id_item_faturado':102}
+        self.assertEqual(len(normalizar([a,b],date(2026,11,18))['registros']),2)
+    def test_quantidade_ausente_nao_vira_zero(self):
+        row={**self.faturado(),'quantidade_faturada':None}
+        self.assertIsNone(normalizar([row],date(2026,11,18))['registros'][0]['quantidade'])

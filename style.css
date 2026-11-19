@@ -158,6 +158,10 @@ tbody tr:hover { background: var(--surface-soft); }
 @media (max-width: 420px) { .production-component-grid { grid-template-columns: 1fr; } }
 .production-kpi-note { display: block; color: var(--muted); margin-top: 4px; font-size: 12px; }
 .production-category { cursor: pointer; text-align: left; width: 100%; font-family: inherit; }
+.production-category-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+@media(max-width:1450px){.production-category-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:700px){.production-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:420px){.production-category-grid{grid-template-columns:1fr;}}
 .production-category:hover, .production-category[aria-expanded="true"] { border-color: var(--primary); background: #eaf2ff; }
 .production-category[aria-expanded="true"] { box-shadow: 0 0 0 1px var(--primary); }
 .production-category small { display: block; margin-top: 12px; color: var(--primary); }
