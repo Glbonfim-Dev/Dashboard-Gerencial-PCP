@@ -13,9 +13,9 @@ from pathlib import Path
 # Caminhos sempre relativos à pasta onde o projeto está instalado.
 PROJECT_DIR = Path(__file__).resolve().parent
 JSON_OUTPUT_PATH = PROJECT_DIR / "dados.json"
-# A revisao exige autorizacao explicita do payload e destino GitHub.
-# Uma vez concedida, a publicacao recorrente nao pede confirmacoes por salvamento.
-CPS_PUBLICACAO_AUTORIZADA = False
+# Autorizacao expressa do usuario em 19/11/2026: envio recorrente dos dados
+# da planilha/CPS para Glbonfim-Dev/Dashboard-Gerencial-PCP e site publicado.
+CPS_PUBLICACAO_AUTORIZADA = True
 JSON_RUNTIME_PATH = PROJECT_DIR / 'automation' / 'dados_runtime.json'
 LOCK_PATH = PROJECT_DIR / "dashboard.lock"
 
