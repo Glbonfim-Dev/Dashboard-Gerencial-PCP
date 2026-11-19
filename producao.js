@@ -13,7 +13,7 @@
     return [...agrupar(rows.filter((r)=>r.conjunto_id),(r)=>r.conjunto_id).values()].map((items)=>{
       const grids=items.filter((r)=>["MOLDES_FP","MOLDES_FB"].includes(r.categoria));
       const diretos=items.filter((r)=>r.categoria==="COMPLETOS");
-      return {descricao:items[0].conjunto_nome,cliente:items[0].cliente,os:items[0].os,mes_ref:items[0].mes_ref,quantidade:diretos.some((r)=>Number.isFinite(r.quantidade))?soma(diretos):grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):null,componentes:items.filter((r)=>r.categoria!=="COMPLETOS")};
+      return {descricao:items[0].conjunto_nome,cliente:items[0].cliente,os:items[0].os,mes_ref:items[0].mes_ref,quantidade:grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):diretos.some((r)=>Number.isFinite(r.quantidade))?soma(diretos):null,componentes:items.filter((r)=>r.categoria!=="COMPLETOS")};
     });
   }
   function itensCategoria(rows,key){
@@ -22,7 +22,7 @@
       descricao:items[0].descricao,quantidade:items.some((r)=>Number.isFinite(r.quantidade))?soma(items):null,
       pendentes:items.filter((r)=>!Number.isFinite(r.quantidade)).length,
       componentes:items.flatMap((r)=>r.componentes||[]),
-      origens:[...agrupar(items,(r)=>JSON.stringify([r.cliente||"",r.os||"",r.os_producao||"",r.mes_ref])).values()].map((grupo)=>({cliente:grupo[0].cliente,os:grupo[0].os,os_producao:grupo[0].os_producao,mes_ref:grupo[0].mes_ref,quantidade:grupo.some((r)=>Number.isFinite(r.quantidade))?soma(grupo):null}))
+      origens:[...agrupar(items,(r)=>JSON.stringify([r.cliente||"",r.os||"",r.mes_ref])).values()].map((grupo)=>({cliente:grupo[0].cliente,os:grupo[0].os,mes_ref:grupo[0].mes_ref,quantidade:grupo.some((r)=>Number.isFinite(r.quantidade))?soma(grupo):null}))
     })).sort((a,b)=>(b.quantidade||0)-(a.quantidade||0)||a.descricao.localeCompare(b.descricao));
   }
   function renderizarOrigens(item,completo=false){
@@ -31,7 +31,6 @@
       const linha=node("div","production-origin","");
       linha.append(node("span","production-origin-client",`Cliente: ${origem.cliente||"Não informado"}`));
       linha.append(node("span","production-origin-os",`OS: ${origem.os||"Não informada"}`));
-      if(origem.os_producao&&origem.os_producao!==origem.os)linha.append(node("span","production-origin-os",`Fabricação: ${origem.os_producao}`));
       if(!el("mes").value)linha.append(node("span","production-origin-month",`${mesesQualidade[Number(origem.mes_ref.slice(5))-1]} / 2026`));
       linha.append(node("span","production-origin-quantity",origem.quantidade===null?"Quantidade não informada":`${numero.format(origem.quantidade)} ${completo?"conjuntos":"un."}`));
       lista.append(linha);
@@ -63,7 +62,7 @@
       const summary=document.createElement("summary");summary.append(node("span","",item.descricao));summary.append(node("strong","production-mould-badge",item.quantidade===null?"Volume a confirmar":`${numero.format(item.quantidade)} conjuntos${item.pendentes?" · parcial":""}`));details.append(summary);
       details.append(node("h3","production-component-heading","Componentes deste item"));
       const grid=node("div","production-component-grid","");
-      if(!item.componentes.length)grid.append(node("p","quality-note","Nenhum componente com conclusão e faturamento no mesmo mês nesta base."));
+      if(!item.componentes.length)grid.append(node("p","quality-note","Composição não informada na base; volume proveniente do item faturado."));
       [...agrupar(item.componentes,(r)=>r.componente).entries()].forEach(([nome,items])=>{
         const card=node("article","production-component-card","");card.append(node("span","production-component-name",nome));card.append(node("strong","",volume(items)));card.append(node("small","",items.some((r)=>r.quantidade===null)?"Subtotal informado · há quantidades pendentes":"unidades"));grid.append(card);
       });details.append(grid);details.append(renderizarOrigens(item,true));return details;

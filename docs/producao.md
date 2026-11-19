@@ -3,13 +3,13 @@
 Produção vem da grade CPS **ITENS PRODUZIDO (COM DEPENDENCIAS)**, segmento MOLDE,
 produto próprio e `qtde_utilizada`. A consulta original está em
 `consultas/producao_pivot_base.sql`. Somente SELECT, transação read-only, timeout
-e limite de linhas. Somente entram itens concluídos e faturados no mesmo mês.
-Exige `concluido=1`, data de conclusão preenchida até hoje e OS não cancelada.
-Quando o produto próprio possui uma OS de fabricação vinculada, a conclusão
-é verificada nessa OS; sem vínculo, utiliza a OS principal. A conclusão da
-montagem não substitui a conclusão de uma OS de fabricação vinculada e aberta.
-Conclusão e faturamento em meses diferentes ficam fora deste indicador,
-inclusive do acumulado; não são transferidos para outro mês.
+e limite de linhas. O mês acompanha a data da grade, conforme aprovado.
+A condição principal é o faturamento válido no mês, pela emissão da NF.
+Situação e data de conclusão da OS não filtram as quantidades e não são
+apresentadas no painel. Um item concluído em outubro e faturado em novembro
+entra em novembro; uma OS ainda aberta não impede contar um item faturado.
+Componentes de moldes completos também alimentam seus cartões individuais:
+por exemplo, o castelo de um conjunto faturado entra no cartão Castelos.
 A saída não contém números de NF. Por solicitação do usuário, os detalhes dos
 produtos incluem cliente e número da OS da grade. O total do produto permanece
 consolidado, com o volume discriminado por cliente/OS/mês logo abaixo.
@@ -28,9 +28,6 @@ e inicialmente selecionado; o filtro permite o acumulado de janeiro até hoje.
 ## Cartões
 
 - **Moldes Completos**: conjuntos identificados como COMPLETO/COMPLET/COMPLETA/COMPL.
-  Exige conclusão da OS principal no mesmo mês do faturamento. Possui registro
-  de volume próprio, sem depender de o componente ter sido fabricado naquele
-  mês: um conjunto pode ser montado com componentes concluídos anteriormente.
   Volume pelo GRID/PB da composição, sem somar os demais componentes. Quando toda
   a composição está ausente, usar o volume explícito do item completo faturado.
   Se nenhum desses volumes estiver informado, permanece pendente.
@@ -54,9 +51,8 @@ O mês atual é identificado como parcial e sua barra usa uma tonalidade mais cl
 Os filtros existentes atualizam simultaneamente os cartões e os seis gráficos.
 
 Cada linha de produto é contada uma vez por mês (empresa/OS/GUID), removendo
-multiplicações das junções. A reaparição em outro mês não passa na regra de
-conclusão no mesmo mês. Campos vazios não viram zeros. A data de conclusão e
-a OS efetiva da produção acompanham cada registro para conferência.
+multiplicações das junções. A reaparição em outro mês é preservada conforme a
+grade, sem comprovar nova produção física. Campos vazios não viram zeros.
 
 ## Atualização
 
