@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-19T16:05:44-03:00",
+  "ultima_atualizacao": "2026-11-19T16:08:54-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -2612,7 +2612,9 @@
         "id_produto": "d490f29bccc28e2096fc37fd",
         "conjunto_id": "43176cae50c907d8e6ccb690",
         "conjunto_nome": "MOLD IMPIANT FBV14X39CM P20MM 21V COMPL",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "6912"
       },
       {
         "mes_ref": "2026-01",
@@ -2625,7 +2627,9 @@
         "id_produto": "36b8d4153b66cc0ff4d89e7a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "6864"
       },
       {
         "mes_ref": "2026-01",
@@ -2638,7 +2642,9 @@
         "id_produto": "3d8d983379fbcbf6282930d6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "6865"
       },
       {
         "mes_ref": "2026-01",
@@ -2651,7 +2657,9 @@
         "id_produto": "cc610a1c39041b9db17ae50e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "LUMAR BANANEIRAS",
+        "os": "7045"
       },
       {
         "mes_ref": "2026-01",
@@ -2664,7 +2672,9 @@
         "id_produto": "487d8023390f5643d5c9628b",
         "conjunto_id": "e4c7bc6664a747b74dd336a4",
         "conjunto_nome": "MOLD EVO FP 16F H10 36V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7050"
       },
       {
         "mes_ref": "2026-01",
@@ -2677,7 +2687,9 @@
         "id_produto": "101d46ca7397f594e45fd659",
         "conjunto_id": "e4c7bc6664a747b74dd336a4",
         "conjunto_nome": "MOLD EVO FP 16F H10 36V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7050"
       },
       {
         "mes_ref": "2026-01",
@@ -2690,7 +2702,9 @@
         "id_produto": "e9ccc15456db009d0369fa8c",
         "conjunto_id": "e4c7bc6664a747b74dd336a4",
         "conjunto_nome": "MOLD EVO FP 16F H10 36V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7050"
       },
       {
         "mes_ref": "2026-01",
@@ -2703,7 +2717,9 @@
         "id_produto": "8447e181fafb8e7e2c8b46d6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COMERCIAL CONSTROE",
+        "os": "7165"
       },
       {
         "mes_ref": "2026-01",
@@ -2716,7 +2732,9 @@
         "id_produto": "08fe4d77faea46b434910ff0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COMERCIAL CONSTROE",
+        "os": "7166"
       },
       {
         "mes_ref": "2026-01",
@@ -2729,7 +2747,9 @@
         "id_produto": "d9ad015f6401b577c12ca274",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "6927"
       },
       {
         "mes_ref": "2026-01",
@@ -2742,7 +2762,9 @@
         "id_produto": "4e1be4e44214fc70869b023b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "6928"
       },
       {
         "mes_ref": "2026-01",
@@ -2755,7 +2777,9 @@
         "id_produto": "42652ab4feaafc3fc7d726d7",
         "conjunto_id": "645875a07d2ff00924ec9207",
         "conjunto_nome": "MOLD HTX700 FP 16F H8 10V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6947"
       },
       {
         "mes_ref": "2026-01",
@@ -2768,7 +2792,9 @@
         "id_produto": "62ba9780c3a4611bd8cc898e",
         "conjunto_id": "645875a07d2ff00924ec9207",
         "conjunto_nome": "MOLD HTX700 FP 16F H8 10V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6947"
       },
       {
         "mes_ref": "2026-01",
@@ -2781,7 +2807,9 @@
         "id_produto": "9ff8c01d6e4d609494dfab70",
         "conjunto_id": "645875a07d2ff00924ec9207",
         "conjunto_nome": "MOLD HTX700 FP 16F H8 10V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6947"
       },
       {
         "mes_ref": "2026-01",
@@ -2794,7 +2822,9 @@
         "id_produto": "8859e1bac51d9c0131ce96d8",
         "conjunto_id": "645875a07d2ff00924ec9207",
         "conjunto_nome": "MOLD HTX700 FP 16F H8 10V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6947"
       },
       {
         "mes_ref": "2026-01",
@@ -2807,7 +2837,9 @@
         "id_produto": "876e1ba4d88615c7e2101115",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6948"
       },
       {
         "mes_ref": "2026-01",
@@ -2820,7 +2852,9 @@
         "id_produto": "27d5e546ac89b8dd5b9ac433",
         "conjunto_id": "c63b4377f6b41ddc60bc60d2",
         "conjunto_nome": "MOLD HTX700 MF 7X15X30X65CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6949"
       },
       {
         "mes_ref": "2026-01",
@@ -2833,7 +2867,9 @@
         "id_produto": "17583bb55cd53bc64b69f513",
         "conjunto_id": "c63b4377f6b41ddc60bc60d2",
         "conjunto_nome": "MOLD HTX700 MF 7X15X30X65CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6949"
       },
       {
         "mes_ref": "2026-01",
@@ -2846,7 +2882,9 @@
         "id_produto": "f33ec0a491ccd88307b7ff93",
         "conjunto_id": "c63b4377f6b41ddc60bc60d2",
         "conjunto_nome": "MOLD HTX700 MF 7X15X30X65CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6949"
       },
       {
         "mes_ref": "2026-01",
@@ -2859,7 +2897,9 @@
         "id_produto": "a71fab326bb85807eb4ea8a8",
         "conjunto_id": "c63b4377f6b41ddc60bc60d2",
         "conjunto_nome": "MOLD HTX700 MF 7X15X30X65CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6949"
       },
       {
         "mes_ref": "2026-01",
@@ -2872,7 +2912,9 @@
         "id_produto": "ef97a436053c1e57f4078a9d",
         "conjunto_id": "04658a02f18bcd48b1ff071b",
         "conjunto_nome": "MOLD HTX700 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6950"
       },
       {
         "mes_ref": "2026-01",
@@ -2885,7 +2927,9 @@
         "id_produto": "826d1f3adb6f14138805df23",
         "conjunto_id": "04658a02f18bcd48b1ff071b",
         "conjunto_nome": "MOLD HTX700 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6950"
       },
       {
         "mes_ref": "2026-01",
@@ -2898,7 +2942,9 @@
         "id_produto": "8978102da3724fb2c9d064b8",
         "conjunto_id": "04658a02f18bcd48b1ff071b",
         "conjunto_nome": "MOLD HTX700 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6950"
       },
       {
         "mes_ref": "2026-01",
@@ -2911,7 +2957,9 @@
         "id_produto": "cb9cb826e0152a205d31ec4a",
         "conjunto_id": "04658a02f18bcd48b1ff071b",
         "conjunto_nome": "MOLD HTX700 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FX LOCACOES E PRESTACOES DE SERVICOS LTDA",
+        "os": "6950"
       },
       {
         "mes_ref": "2026-01",
@@ -2924,7 +2972,9 @@
         "id_produto": "24c21e823703f9bfb3946502",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BSR ART. DE CONCRETO",
+        "os": "7046"
       },
       {
         "mes_ref": "2026-01",
@@ -2937,7 +2987,9 @@
         "id_produto": "37ebebb0c2487bb1d133ab2f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLB – BLOCOS E LAJES",
+        "os": "7356"
       },
       {
         "mes_ref": "2026-01",
@@ -2950,7 +3002,9 @@
         "id_produto": "4e3134601861bdcdb03d48ff",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "6943"
       },
       {
         "mes_ref": "2026-01",
@@ -2963,7 +3017,9 @@
         "id_produto": "2382a001421713e24e4550c1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "6944"
       },
       {
         "mes_ref": "2026-01",
@@ -2976,7 +3032,9 @@
         "id_produto": "03667372b28a6bf734c09e97",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "7278"
       },
       {
         "mes_ref": "2026-01",
@@ -2989,7 +3047,9 @@
         "id_produto": "8828b5f242565b4b31279ea8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "M W PAVIMENTOS DE CONCRETO",
+        "os": "6993"
       },
       {
         "mes_ref": "2026-01",
@@ -3002,7 +3062,9 @@
         "id_produto": "52c726c005a42da292993898",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7118"
       },
       {
         "mes_ref": "2026-01",
@@ -3015,7 +3077,9 @@
         "id_produto": "af349fe99555fe087d0e7cde",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7119"
       },
       {
         "mes_ref": "2026-01",
@@ -3028,7 +3092,9 @@
         "id_produto": "55ba913270fa184660a36a74",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7120"
       },
       {
         "mes_ref": "2026-01",
@@ -3041,7 +3107,9 @@
         "id_produto": "417ddef47956c5d59f4be7e8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7121"
       },
       {
         "mes_ref": "2026-01",
@@ -3054,7 +3122,9 @@
         "id_produto": "d5098b35f6b8b36d0589505c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7122"
       },
       {
         "mes_ref": "2026-01",
@@ -3067,7 +3137,9 @@
         "id_produto": "3569ae97bf956340fe8e3e1f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "7123"
       },
       {
         "mes_ref": "2026-01",
@@ -3080,7 +3152,9 @@
         "id_produto": "0cfa07ab893a328442782547",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "7169"
       },
       {
         "mes_ref": "2026-01",
@@ -3093,7 +3167,9 @@
         "id_produto": "f915f397cd8b583ce34e2eaa",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "7170"
       },
       {
         "mes_ref": "2026-01",
@@ -3106,7 +3182,9 @@
         "id_produto": "4da41f41fbc5f7db70096ea0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "7277"
       },
       {
         "mes_ref": "2026-02",
@@ -3119,7 +3197,9 @@
         "id_produto": "0e5cd6bddbb96b977c26248f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KERBER PRE MOLDADOS",
+        "os": "7250"
       },
       {
         "mes_ref": "2026-02",
@@ -3132,7 +3212,9 @@
         "id_produto": "53b118088519f04b047a1a92",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KERBER PRE MOLDADOS",
+        "os": "7251"
       },
       {
         "mes_ref": "2026-02",
@@ -3145,7 +3227,9 @@
         "id_produto": "b2cff11df0eba3ff788cd782",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMOLAJE",
+        "os": "7286"
       },
       {
         "mes_ref": "2026-02",
@@ -3158,7 +3242,9 @@
         "id_produto": "1b5d4649d6115489ae4b1f67",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "SILVEIRA PRE MOLDADOS",
+        "os": "6920"
       },
       {
         "mes_ref": "2026-02",
@@ -3171,7 +3257,9 @@
         "id_produto": "af24bea06972beff5444c2cc",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "7141"
       },
       {
         "mes_ref": "2026-02",
@@ -3184,7 +3272,9 @@
         "id_produto": "9a8f206424edb7cd2e664bd5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "7142"
       },
       {
         "mes_ref": "2026-02",
@@ -3197,7 +3287,9 @@
         "id_produto": "473dd0cbd03665bf26a5d488",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "M G DE QUEIROZ",
+        "os": "7160"
       },
       {
         "mes_ref": "2026-02",
@@ -3210,7 +3302,9 @@
         "id_produto": "084d70d34783839fc42b89bd",
         "conjunto_id": "0a41a21e4fd56b15c25b39ed",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7124"
       },
       {
         "mes_ref": "2026-02",
@@ -3223,7 +3317,9 @@
         "id_produto": "4b244abc033c41443fc3eb97",
         "conjunto_id": "0a41a21e4fd56b15c25b39ed",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7124"
       },
       {
         "mes_ref": "2026-02",
@@ -3236,7 +3332,9 @@
         "id_produto": "c036141338cef68d55d59c80",
         "conjunto_id": "0a41a21e4fd56b15c25b39ed",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7124"
       },
       {
         "mes_ref": "2026-02",
@@ -3249,7 +3347,9 @@
         "id_produto": "fd1ce2dba895cfcf595dbb7d",
         "conjunto_id": "463f2de6adb52e6422b2bca0",
         "conjunto_nome": "MOLD MBP6 FP 16F H8 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7125"
       },
       {
         "mes_ref": "2026-02",
@@ -3262,7 +3362,9 @@
         "id_produto": "68a7fb6651596e8d6efea27d",
         "conjunto_id": "463f2de6adb52e6422b2bca0",
         "conjunto_nome": "MOLD MBP6 FP 16F H8 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7125"
       },
       {
         "mes_ref": "2026-02",
@@ -3275,7 +3377,9 @@
         "id_produto": "2bb1279ee0153f028f230c7a",
         "conjunto_id": "463f2de6adb52e6422b2bca0",
         "conjunto_nome": "MOLD MBP6 FP 16F H8 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "7125"
       },
       {
         "mes_ref": "2026-02",
@@ -3288,7 +3392,9 @@
         "id_produto": "efa5b538b3414fe691170bcb",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANDINO",
+        "os": "7126"
       },
       {
         "mes_ref": "2026-02",
@@ -3301,7 +3407,9 @@
         "id_produto": "da66b16b7d28d19472ebb058",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANDINO",
+        "os": "7127"
       },
       {
         "mes_ref": "2026-02",
@@ -3314,7 +3422,9 @@
         "id_produto": "dd0c0929940af2c81586cd8d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANDINO",
+        "os": "7128"
       },
       {
         "mes_ref": "2026-02",
@@ -3327,7 +3437,9 @@
         "id_produto": "e0734c1e3d487eef9771b56a",
         "conjunto_id": "3a71ce924aa98c4509b9f577",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "IF PRE MOLDADOS",
+        "os": "7202"
       },
       {
         "mes_ref": "2026-02",
@@ -3340,7 +3452,9 @@
         "id_produto": "aaf2a372c2276a978d556212",
         "conjunto_id": "3a71ce924aa98c4509b9f577",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "IF PRE MOLDADOS",
+        "os": "7202"
       },
       {
         "mes_ref": "2026-02",
@@ -3353,7 +3467,9 @@
         "id_produto": "0285a754129763042571e252",
         "conjunto_id": "3a71ce924aa98c4509b9f577",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "IF PRE MOLDADOS",
+        "os": "7202"
       },
       {
         "mes_ref": "2026-02",
@@ -3366,7 +3482,9 @@
         "id_produto": "3457dfaaa5a033e01db15791",
         "conjunto_id": "3a71ce924aa98c4509b9f577",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "IF PRE MOLDADOS",
+        "os": "7202"
       },
       {
         "mes_ref": "2026-02",
@@ -3379,7 +3497,9 @@
         "id_produto": "53051179aeaf562bdcfb13e1",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3392,7 +3512,9 @@
         "id_produto": "22e534b894eadca94f76458e",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3405,7 +3527,9 @@
         "id_produto": "16d22ad8a6dea35e8a7dae14",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3418,7 +3542,9 @@
         "id_produto": "7ebe2cf14fc9ac0e7f2b854f",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3431,7 +3557,9 @@
         "id_produto": "b920a4020b243aabeb8d8dac",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3444,7 +3572,9 @@
         "id_produto": "81a3e26179a1fc557a789d93",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3457,7 +3587,9 @@
         "id_produto": "0dee98b457214252b1160064",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3470,7 +3602,9 @@
         "id_produto": "2dea1f8d718188da83ed268f",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3483,7 +3617,9 @@
         "id_produto": "b40a1757733d8a6e41c39b39",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3496,7 +3632,9 @@
         "id_produto": "580de9c913772a5dccb4165e",
         "conjunto_id": "badd5b6659af5ed54b4bd878",
         "conjunto_nome": "MOLD SPM20 FP RET H6 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7244"
       },
       {
         "mes_ref": "2026-02",
@@ -3509,7 +3647,9 @@
         "id_produto": "a947b31210b046f03fbad96f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7246"
       },
       {
         "mes_ref": "2026-02",
@@ -3522,7 +3662,9 @@
         "id_produto": "cdb5248ddf9feb2c6aa3f70e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "SILVEIRA PRE MOLDADOS",
+        "os": "7307"
       },
       {
         "mes_ref": "2026-02",
@@ -3535,7 +3677,9 @@
         "id_produto": "b45dd032ef34f40442ec946d",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3548,7 +3692,9 @@
         "id_produto": "de0bb549afe98f3e6908a078",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3561,7 +3707,9 @@
         "id_produto": "89c39687301a44569136d507",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3574,7 +3722,9 @@
         "id_produto": "9b245e45efac67b3fc7114a7",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3587,7 +3737,9 @@
         "id_produto": "4ebcb223c73663d409ca4516",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3600,7 +3752,9 @@
         "id_produto": "5a708bd2059dbae3628a8903",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3613,7 +3767,9 @@
         "id_produto": "159b3e557fce7cb2015282a3",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3626,7 +3782,9 @@
         "id_produto": "9614f8eca48b807f00bfe625",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3639,7 +3797,9 @@
         "id_produto": "2a805a58bc2ed40bbda6d333",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3652,7 +3812,9 @@
         "id_produto": "b2a529b833a2097a881e32fd",
         "conjunto_id": "f8b8b9ae1bd8999c75f77fbe",
         "conjunto_nome": "MOLD SPM30 FP RET H6 15V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6984"
       },
       {
         "mes_ref": "2026-02",
@@ -3665,7 +3827,9 @@
         "id_produto": "f048ed36102b35c096d46b55",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6988"
       },
       {
         "mes_ref": "2026-02",
@@ -3678,7 +3842,9 @@
         "id_produto": "f9e2abf1cb7ebecc6a80391c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6989"
       },
       {
         "mes_ref": "2026-02",
@@ -3691,7 +3857,9 @@
         "id_produto": "fafcf60fc1e2c8ce2ddd7dc3",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6991"
       },
       {
         "mes_ref": "2026-02",
@@ -3704,7 +3872,9 @@
         "id_produto": "175e791a42269d6ade5b3153",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "S A CAMPOS INDUSTRIA E COMERCIO DE MATERIAIS PARA CONSTRUCAO",
+        "os": "6992"
       },
       {
         "mes_ref": "2026-02",
@@ -3717,7 +3887,9 @@
         "id_produto": "3ea2622b34eba49254d08267",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3730,7 +3902,9 @@
         "id_produto": "c4a23ae3b092db67b524c489",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3743,7 +3917,9 @@
         "id_produto": "64f34acf79592d70198f3561",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3756,7 +3932,9 @@
         "id_produto": "f0a5a4a60d61272589133b6f",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3769,7 +3947,9 @@
         "id_produto": "036a7d507adcff11400ca00c",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3782,7 +3962,9 @@
         "id_produto": "8ee0af2ab0af735db8d440d5",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3795,7 +3977,9 @@
         "id_produto": "93e5d11aa091d18a6e737f2e",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3808,7 +3992,9 @@
         "id_produto": "65c68c13609f8e1c1b0eace7",
         "conjunto_id": "d1b014f0b82906117181f2a7",
         "conjunto_nome": "MOLD SPM20 FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7245"
       },
       {
         "mes_ref": "2026-02",
@@ -3821,7 +4007,9 @@
         "id_produto": "8aff955f2a255d2c1e30a1c1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7247"
       },
       {
         "mes_ref": "2026-02",
@@ -3834,7 +4022,9 @@
         "id_produto": "753f5f09dc0d98ce2e38b94c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7248"
       },
       {
         "mes_ref": "2026-02",
@@ -3847,7 +4037,9 @@
         "id_produto": "130c33a9535b94f9e86c6772",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R&B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7249"
       },
       {
         "mes_ref": "2026-02",
@@ -3860,7 +4052,9 @@
         "id_produto": "39e535e69477ba7e780dfab0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "DUROBLOCO FABRICACAO DE PRE-MOLDADOS LTDA",
+        "os": "7252"
       },
       {
         "mes_ref": "2026-02",
@@ -3873,7 +4067,9 @@
         "id_produto": "641c001df4d65e56f09fe2e4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "DUROBLOCO FABRICACAO DE PRE-MOLDADOS LTDA",
+        "os": "7253"
       },
       {
         "mes_ref": "2026-02",
@@ -3886,7 +4082,9 @@
         "id_produto": "797f163808512917e9b6969f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8095"
       },
       {
         "mes_ref": "2026-03",
@@ -3899,7 +4097,9 @@
         "id_produto": "3194742ab0d439b93f5edf02",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BSR ART. DE CONCRETO",
+        "os": "7285"
       },
       {
         "mes_ref": "2026-03",
@@ -3912,7 +4112,9 @@
         "id_produto": "ca90525daa43d9e326ba65e1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR - M.W.",
+        "os": "7896"
       },
       {
         "mes_ref": "2026-03",
@@ -3925,7 +4127,9 @@
         "id_produto": "59075f900d37e32386f264c4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "7172"
       },
       {
         "mes_ref": "2026-03",
@@ -3938,7 +4142,9 @@
         "id_produto": "5e82d05f6bdaefeaf09a2942",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7319"
       },
       {
         "mes_ref": "2026-03",
@@ -3951,7 +4157,9 @@
         "id_produto": "4ec9c9e5b5085d5a0a9da3f9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7320"
       },
       {
         "mes_ref": "2026-03",
@@ -3964,7 +4172,9 @@
         "id_produto": "710bde79043cdd36cf7d3ba1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7321"
       },
       {
         "mes_ref": "2026-03",
@@ -3977,7 +4187,9 @@
         "id_produto": "c9616878f5d5859bd0f57767",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7322"
       },
       {
         "mes_ref": "2026-03",
@@ -3990,7 +4202,9 @@
         "id_produto": "b9859e531a7eff3f9f676cd7",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR - M.W.",
+        "os": "7897"
       },
       {
         "mes_ref": "2026-03",
@@ -4003,7 +4217,9 @@
         "id_produto": "af1181e8b8c0052a25a8875a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCOS PAULISTANO - NIVALDO",
+        "os": "7291"
       },
       {
         "mes_ref": "2026-03",
@@ -4016,7 +4232,9 @@
         "id_produto": "7c84305638b32595f9a0edcb",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCOS PAULISTANO - NIVALDO",
+        "os": "7292"
       },
       {
         "mes_ref": "2026-03",
@@ -4029,7 +4247,9 @@
         "id_produto": "2a22f6afee820335f4cc4419",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCOS PAULISTANO - NIVALDO",
+        "os": "7293"
       },
       {
         "mes_ref": "2026-03",
@@ -4042,7 +4262,9 @@
         "id_produto": "7e87a8c87492bb16eb4f0b80",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCOS PAULISTANO - NIVALDO",
+        "os": "7294"
       },
       {
         "mes_ref": "2026-03",
@@ -4055,7 +4277,9 @@
         "id_produto": "5052b8ce7a9cea533109dc53",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCOS PAULISTANO - NIVALDO",
+        "os": "7295"
       },
       {
         "mes_ref": "2026-03",
@@ -4068,7 +4292,9 @@
         "id_produto": "0325b22f03cb339c98a9e694",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "7314"
       },
       {
         "mes_ref": "2026-03",
@@ -4081,7 +4307,9 @@
         "id_produto": "a2552c8cd255aea6889bd35f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "7315"
       },
       {
         "mes_ref": "2026-03",
@@ -4094,7 +4322,9 @@
         "id_produto": "f6d98044e57eafa8fb512326",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "7316"
       },
       {
         "mes_ref": "2026-04",
@@ -4107,7 +4337,9 @@
         "id_produto": "f716a1222a8628b83e3731ba",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "7395"
       },
       {
         "mes_ref": "2026-04",
@@ -4120,7 +4352,9 @@
         "id_produto": "0bd87acba84cc7fc9130b74f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "7396"
       },
       {
         "mes_ref": "2026-04",
@@ -4133,7 +4367,9 @@
         "id_produto": "a95d01245fe55d77c2659f9c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "8163"
       },
       {
         "mes_ref": "2026-04",
@@ -4146,7 +4382,9 @@
         "id_produto": "7f2ca550c442f553d82bbe48",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "7898"
       },
       {
         "mes_ref": "2026-04",
@@ -4159,7 +4397,9 @@
         "id_produto": "aa7c97772c6fcc6506d42819",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "7900"
       },
       {
         "mes_ref": "2026-04",
@@ -4172,7 +4412,9 @@
         "id_produto": "1a0736d646d0c153315f419c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UNICA PRE-MOLDADOS",
+        "os": "7379"
       },
       {
         "mes_ref": "2026-04",
@@ -4185,7 +4427,9 @@
         "id_produto": "7d845db2dd370415c296852f",
         "conjunto_id": "e02b2587bb39da270321c1d6",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "UNICA PRE-MOLDADOS",
+        "os": "7380"
       },
       {
         "mes_ref": "2026-04",
@@ -4198,7 +4442,9 @@
         "id_produto": "62a8e595265ec9abd73a8342",
         "conjunto_id": "e02b2587bb39da270321c1d6",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "UNICA PRE-MOLDADOS",
+        "os": "7380"
       },
       {
         "mes_ref": "2026-04",
@@ -4211,7 +4457,9 @@
         "id_produto": "7aba67ed2173fcd912a3171c",
         "conjunto_id": "e02b2587bb39da270321c1d6",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "UNICA PRE-MOLDADOS",
+        "os": "7380"
       },
       {
         "mes_ref": "2026-04",
@@ -4224,7 +4472,9 @@
         "id_produto": "b01a1b5e0c5b34f5a22017b7",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "LUZ PREMOLDADOS",
+        "os": "7502"
       },
       {
         "mes_ref": "2026-04",
@@ -4237,7 +4487,9 @@
         "id_produto": "64ebf8261a7ae32ca2fedf32",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "LUZ PREMOLDADOS",
+        "os": "7503"
       },
       {
         "mes_ref": "2026-04",
@@ -4250,7 +4502,9 @@
         "id_produto": "dca3ccbc70f8152972696f02",
         "conjunto_id": "98b68f55668eed9e04e90090",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "7972"
       },
       {
         "mes_ref": "2026-04",
@@ -4263,7 +4517,9 @@
         "id_produto": "9517f1753f03970bd94caf72",
         "conjunto_id": "98b68f55668eed9e04e90090",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "7972"
       },
       {
         "mes_ref": "2026-04",
@@ -4276,7 +4532,9 @@
         "id_produto": "acb9af47f6d9de75f4610525",
         "conjunto_id": "98b68f55668eed9e04e90090",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "7972"
       },
       {
         "mes_ref": "2026-04",
@@ -4289,7 +4547,9 @@
         "id_produto": "cb3767bd04b2ec02f94d1acc",
         "conjunto_id": "98b68f55668eed9e04e90090",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "7972"
       },
       {
         "mes_ref": "2026-04",
@@ -4302,7 +4562,9 @@
         "id_produto": "c6b1d0184a34eba5de9129b2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "8151"
       },
       {
         "mes_ref": "2026-04",
@@ -4315,7 +4577,9 @@
         "id_produto": "76102054eab7f746cbac19f9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "RD BLOCOS E PISOS DE CONCRETO EIRELI - EPP",
+        "os": "8382"
       },
       {
         "mes_ref": "2026-04",
@@ -4328,7 +4592,9 @@
         "id_produto": "cac45a3c5342689eeeeedc92",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "8479"
       },
       {
         "mes_ref": "2026-04",
@@ -4341,7 +4607,9 @@
         "id_produto": "31178a42790fb2743c1f34ad",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "DUROBLOCO FABRICACAO DE PRE-MOLDADOS LTDA",
+        "os": "7378"
       },
       {
         "mes_ref": "2026-04",
@@ -4354,7 +4622,9 @@
         "id_produto": "bd83a85a493da10b8be9b34f",
         "conjunto_id": "1e8732b0449d503e4dbd876e",
         "conjunto_nome": "MOLD VIBRAFORTE FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FABRILAJE - PEIXOTO & CARVALHO",
+        "os": "8075"
       },
       {
         "mes_ref": "2026-04",
@@ -4367,7 +4637,9 @@
         "id_produto": "8ac34503759f81999d34178b",
         "conjunto_id": "1e8732b0449d503e4dbd876e",
         "conjunto_nome": "MOLD VIBRAFORTE FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FABRILAJE - PEIXOTO & CARVALHO",
+        "os": "8075"
       },
       {
         "mes_ref": "2026-04",
@@ -4380,7 +4652,9 @@
         "id_produto": "df3be1b1310bd8482c377ada",
         "conjunto_id": "1e8732b0449d503e4dbd876e",
         "conjunto_nome": "MOLD VIBRAFORTE FP 16F H8 8V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FABRILAJE - PEIXOTO & CARVALHO",
+        "os": "8075"
       },
       {
         "mes_ref": "2026-04",
@@ -4393,7 +4667,9 @@
         "id_produto": "95a8fde9ef6476b4fd11a411",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "8413"
       },
       {
         "mes_ref": "2026-04",
@@ -4406,7 +4682,9 @@
         "id_produto": "33abd599a4c19c44d62f75d1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7504"
       },
       {
         "mes_ref": "2026-04",
@@ -4419,7 +4697,9 @@
         "id_produto": "0be78e5807174a79370b9f2c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7505"
       },
       {
         "mes_ref": "2026-04",
@@ -4432,7 +4712,9 @@
         "id_produto": "abde5d128c2f9ca432b5bdd5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "7506"
       },
       {
         "mes_ref": "2026-04",
@@ -4445,7 +4727,9 @@
         "id_produto": "7f4d94880b08c2abb73570c0",
         "conjunto_id": "08039df788df95ad1d2b13c0",
         "conjunto_nome": "MOLD MBP4 FP QUAD44CM H6 1V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BRIQUET IND E COM DE ARTEF DE CIM LTDA",
+        "os": "7947"
       },
       {
         "mes_ref": "2026-04",
@@ -4458,7 +4742,9 @@
         "id_produto": "78bfe082ccf0fa6071d673a7",
         "conjunto_id": "08039df788df95ad1d2b13c0",
         "conjunto_nome": "MOLD MBP4 FP QUAD44CM H6 1V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BRIQUET IND E COM DE ARTEF DE CIM LTDA",
+        "os": "7947"
       },
       {
         "mes_ref": "2026-04",
@@ -4471,7 +4757,9 @@
         "id_produto": "a9b126a9f5942df2472ad6fb",
         "conjunto_id": "08039df788df95ad1d2b13c0",
         "conjunto_nome": "MOLD MBP4 FP QUAD44CM H6 1V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BRIQUET IND E COM DE ARTEF DE CIM LTDA",
+        "os": "7947"
       },
       {
         "mes_ref": "2026-04",
@@ -4484,7 +4772,9 @@
         "id_produto": "3f07c64c038b0d2502c37893",
         "conjunto_id": "ed2e65cc51fcaa4871c9a0d5",
         "conjunto_nome": "MOLD SPM30 FP 16F H8 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA",
+        "os": "8110"
       },
       {
         "mes_ref": "2026-04",
@@ -4497,7 +4787,9 @@
         "id_produto": "37d6bb978c9a0ae469785532",
         "conjunto_id": "ed2e65cc51fcaa4871c9a0d5",
         "conjunto_nome": "MOLD SPM30 FP 16F H8 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA",
+        "os": "8110"
       },
       {
         "mes_ref": "2026-04",
@@ -4510,7 +4802,9 @@
         "id_produto": "8203d54fe7690a0dbcc3e668",
         "conjunto_id": "ed2e65cc51fcaa4871c9a0d5",
         "conjunto_nome": "MOLD SPM30 FP 16F H8 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA",
+        "os": "8110"
       },
       {
         "mes_ref": "2026-04",
@@ -4523,7 +4817,9 @@
         "id_produto": "e54d70b0387b6d59022e767e",
         "conjunto_id": "ed2e65cc51fcaa4871c9a0d5",
         "conjunto_nome": "MOLD SPM30 FP 16F H8 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA",
+        "os": "8110"
       },
       {
         "mes_ref": "2026-04",
@@ -4536,7 +4832,9 @@
         "id_produto": "56acbb016fbd9548276bb527",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA ICA",
+        "os": "8111"
       },
       {
         "mes_ref": "2026-04",
@@ -4549,7 +4847,9 @@
         "id_produto": "f2ca77d18f0e3eb8d069225d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "8265"
       },
       {
         "mes_ref": "2026-04",
@@ -4562,7 +4862,9 @@
         "id_produto": "c15556aee816aed10103114f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "8266"
       },
       {
         "mes_ref": "2026-04",
@@ -4575,7 +4877,9 @@
         "id_produto": "4818f7bcd9746fd360879719",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8271"
       },
       {
         "mes_ref": "2026-04",
@@ -4588,7 +4892,9 @@
         "id_produto": "7173fc8df19a3d080febee00",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8271"
       },
       {
         "mes_ref": "2026-04",
@@ -4601,7 +4907,9 @@
         "id_produto": "0ca886f01e357c587460bb65",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8272"
       },
       {
         "mes_ref": "2026-04",
@@ -4614,7 +4922,9 @@
         "id_produto": "b3d2cdc6acdb72491fd56ca3",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8272"
       },
       {
         "mes_ref": "2026-04",
@@ -4627,7 +4937,9 @@
         "id_produto": "d2b0354606089d670c4c4162",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8273"
       },
       {
         "mes_ref": "2026-04",
@@ -4640,7 +4952,9 @@
         "id_produto": "065754e01a148edf1c194c4a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8273"
       },
       {
         "mes_ref": "2026-04",
@@ -4653,7 +4967,9 @@
         "id_produto": "cdacad5fd284993ab85257be",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8275"
       },
       {
         "mes_ref": "2026-04",
@@ -4666,7 +4982,9 @@
         "id_produto": "24b3ffffbcd0ae1b9764c952",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8275"
       },
       {
         "mes_ref": "2026-04",
@@ -4679,7 +4997,9 @@
         "id_produto": "bcec85c1089e2a62fdf9b8a8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8276"
       },
       {
         "mes_ref": "2026-04",
@@ -4692,7 +5012,9 @@
         "id_produto": "dad8303e95de04c35ad014a4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8276"
       },
       {
         "mes_ref": "2026-04",
@@ -4705,7 +5027,9 @@
         "id_produto": "fde320dfc75ae95d6d8f5f9f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8277"
       },
       {
         "mes_ref": "2026-04",
@@ -4718,7 +5042,9 @@
         "id_produto": "f128a475d6f2a658a6bf0c1c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8277"
       },
       {
         "mes_ref": "2026-04",
@@ -4731,7 +5057,9 @@
         "id_produto": "561fb1d110b6bf7f0fb1a701",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8278"
       },
       {
         "mes_ref": "2026-04",
@@ -4744,7 +5072,9 @@
         "id_produto": "3b7f48b110f54e907d4692f0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8279"
       },
       {
         "mes_ref": "2026-04",
@@ -4757,7 +5087,9 @@
         "id_produto": "5fcb755dafd983b9ccbde015",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8279"
       },
       {
         "mes_ref": "2026-04",
@@ -4770,7 +5102,9 @@
         "id_produto": "7b610c5cabaf95c0040ed66a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8281"
       },
       {
         "mes_ref": "2026-04",
@@ -4783,7 +5117,9 @@
         "id_produto": "b2c21b813bc1a35d28aba5f9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8281"
       },
       {
         "mes_ref": "2026-04",
@@ -4796,7 +5132,9 @@
         "id_produto": "eee8a775a4024985d112f888",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8282"
       },
       {
         "mes_ref": "2026-04",
@@ -4809,7 +5147,9 @@
         "id_produto": "b337a2f64fd8f4db20bc95ef",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8282"
       },
       {
         "mes_ref": "2026-04",
@@ -4822,7 +5162,9 @@
         "id_produto": "760e2264bf19196e1b7ec23a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8283"
       },
       {
         "mes_ref": "2026-04",
@@ -4835,7 +5177,9 @@
         "id_produto": "7e2845496e119dfd321e2c87",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8283"
       },
       {
         "mes_ref": "2026-04",
@@ -4848,7 +5192,9 @@
         "id_produto": "bf2aab21376538dd78cfbf70",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8284"
       },
       {
         "mes_ref": "2026-04",
@@ -4861,7 +5207,9 @@
         "id_produto": "399af3ef892ade48be02187e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8302"
       },
       {
         "mes_ref": "2026-04",
@@ -4874,7 +5222,9 @@
         "id_produto": "f54dde08d9922ee2eb27b356",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8303"
       },
       {
         "mes_ref": "2026-04",
@@ -4887,7 +5237,9 @@
         "id_produto": "bb506269d9f12968cfffad9d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8304"
       },
       {
         "mes_ref": "2026-04",
@@ -4900,7 +5252,9 @@
         "id_produto": "cd5cfa5d5b78aec896526510",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "8305"
       },
       {
         "mes_ref": "2026-05",
@@ -4913,7 +5267,9 @@
         "id_produto": "a57730efd7939f4767440674",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSERV BLOCOS & PAVERS",
+        "os": "8172"
       },
       {
         "mes_ref": "2026-05",
@@ -4926,7 +5282,9 @@
         "id_produto": "ce55f31b98bd1d6de67d06dc",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSERV BLOCOS & PAVERS",
+        "os": "8173"
       },
       {
         "mes_ref": "2026-05",
@@ -4939,7 +5297,9 @@
         "id_produto": "1401140f6e2c16ed1c465c11",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSERV BLOCOS & PAVERS",
+        "os": "8174"
       },
       {
         "mes_ref": "2026-05",
@@ -4952,7 +5312,9 @@
         "id_produto": "1abebcd4423185bbbea7f57d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "8577"
       },
       {
         "mes_ref": "2026-05",
@@ -4965,7 +5327,9 @@
         "id_produto": "7f00fec551d12ae6233af0fc",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "8578"
       },
       {
         "mes_ref": "2026-05",
@@ -4978,7 +5342,9 @@
         "id_produto": "099ee0cd4eb3b07bccbeecac",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "8565"
       },
       {
         "mes_ref": "2026-05",
@@ -4991,7 +5357,9 @@
         "id_produto": "5d40e2aa385e007a1ddda384",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTE INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7936"
       },
       {
         "mes_ref": "2026-05",
@@ -5004,7 +5372,9 @@
         "id_produto": "818a34ebe735c19f9044174d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTE INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7937"
       },
       {
         "mes_ref": "2026-05",
@@ -5017,7 +5387,9 @@
         "id_produto": "2817278b5da80d028e5d5c8b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTE INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "7938"
       },
       {
         "mes_ref": "2026-05",
@@ -5030,7 +5402,9 @@
         "id_produto": "d3cf53ec9c58649a2b570a9f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "8478"
       },
       {
         "mes_ref": "2026-05",
@@ -5043,7 +5417,9 @@
         "id_produto": "906ecae7bb837fb8c39b2a10",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "8702"
       },
       {
         "mes_ref": "2026-05",
@@ -5056,7 +5432,9 @@
         "id_produto": "a888601b6e6a93d217f4f7f6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "8714"
       },
       {
         "mes_ref": "2026-05",
@@ -5069,7 +5447,9 @@
         "id_produto": "2d8f938cd8befdcfe378837c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "8714"
       },
       {
         "mes_ref": "2026-05",
@@ -5082,7 +5462,9 @@
         "id_produto": "18d4a8806f12711f6fd8722d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "8714"
       },
       {
         "mes_ref": "2026-05",
@@ -5095,7 +5477,9 @@
         "id_produto": "f8771e099b098b44f2dbd176",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KERBER PRE MOLDADOS",
+        "os": "8286"
       },
       {
         "mes_ref": "2026-05",
@@ -5108,7 +5492,9 @@
         "id_produto": "fbf8ff5937df99ef35c5cc86",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KERBER PRE MOLDADOS",
+        "os": "8287"
       },
       {
         "mes_ref": "2026-05",
@@ -5121,7 +5507,9 @@
         "id_produto": "a910b1b901c068ed9340e450",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8322"
       },
       {
         "mes_ref": "2026-05",
@@ -5134,7 +5522,9 @@
         "id_produto": "5b17130221d93eb08296963a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8323"
       },
       {
         "mes_ref": "2026-05",
@@ -5147,7 +5537,9 @@
         "id_produto": "09eb3af9c5012bc38b68903c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8324"
       },
       {
         "mes_ref": "2026-05",
@@ -5160,7 +5552,9 @@
         "id_produto": "2defbc150ffa350962af7c00",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "8481"
       },
       {
         "mes_ref": "2026-05",
@@ -5173,7 +5567,9 @@
         "id_produto": "b1b1cb73ee96007d67157300",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "8482"
       },
       {
         "mes_ref": "2026-05",
@@ -5186,7 +5582,9 @@
         "id_produto": "79cf972cbc6cfb5393f39038",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "8483"
       },
       {
         "mes_ref": "2026-06",
@@ -5199,7 +5597,9 @@
         "id_produto": "993110d4ed67de431fcb5156",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KADU AMBIENTAL EMPRESA DE LIMPEZA E MANUTENCAO URBANA",
+        "os": "8096"
       },
       {
         "mes_ref": "2026-06",
@@ -5212,7 +5612,9 @@
         "id_produto": "8329856dd2a6bd2519aeec6c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "KADU AMBIENTAL EMPRESA DE LIMPEZA E MANUTENCAO URBANA",
+        "os": "8097"
       },
       {
         "mes_ref": "2026-06",
@@ -5225,7 +5627,9 @@
         "id_produto": "cbb87c06905dc59a5ac54977",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8574"
       },
       {
         "mes_ref": "2026-06",
@@ -5238,7 +5642,9 @@
         "id_produto": "04cd769f384fc49d2fdc87b9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8575"
       },
       {
         "mes_ref": "2026-06",
@@ -5251,7 +5657,9 @@
         "id_produto": "2352e0edbf3952c3a9f7a143",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8605"
       },
       {
         "mes_ref": "2026-06",
@@ -5264,7 +5672,9 @@
         "id_produto": "007b640574c4715dcbbdc484",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "8606"
       },
       {
         "mes_ref": "2026-06",
@@ -5277,7 +5687,9 @@
         "id_produto": "6d48ea8ffcefb416458b6f5d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "7899"
       },
       {
         "mes_ref": "2026-06",
@@ -5290,7 +5702,9 @@
         "id_produto": "635721772551326ecfab1aac",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "7901"
       },
       {
         "mes_ref": "2026-06",
@@ -5303,7 +5717,9 @@
         "id_produto": "c5e51cee055817bd68f1bdaf",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5316,7 +5732,9 @@
         "id_produto": "0bd85c1d06c0d10360d86ffc",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5329,7 +5747,9 @@
         "id_produto": "debada8f5eac40f8a65d90ac",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5342,7 +5762,9 @@
         "id_produto": "49416cfd471d232df23ec2ac",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5355,7 +5777,9 @@
         "id_produto": "c2047ae68a6c5a66605e2513",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5368,7 +5792,9 @@
         "id_produto": "d69fdf048021b2c3478c11c8",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5381,7 +5807,9 @@
         "id_produto": "bf3cb0e23f7fec4007883d4f",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5394,7 +5822,9 @@
         "id_produto": "aec1f747dbd07fd43528898b",
         "conjunto_id": "c45438b2cec51301b8346f1c",
         "conjunto_nome": "MOLD SPM30 FP PETALA H6 12V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8289"
       },
       {
         "mes_ref": "2026-06",
@@ -5407,7 +5837,9 @@
         "id_produto": "81f572182b144416f6c66103",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "8290"
       },
       {
         "mes_ref": "2026-06",
@@ -5420,7 +5852,9 @@
         "id_produto": "742936d737d15567c242c42e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8436"
       },
       {
         "mes_ref": "2026-06",
@@ -5433,7 +5867,9 @@
         "id_produto": "0ff6d18967ae66ddfdce1628",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8437"
       },
       {
         "mes_ref": "2026-06",
@@ -5446,7 +5882,9 @@
         "id_produto": "33fe9ce9be71fae4bad4f48a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8438"
       },
       {
         "mes_ref": "2026-06",
@@ -5459,7 +5897,9 @@
         "id_produto": "5516ed2a756d8d27f97e1ccb",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "8753"
       },
       {
         "mes_ref": "2026-06",
@@ -5472,7 +5912,9 @@
         "id_produto": "528587012a5dad026654ccbb",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "8754"
       },
       {
         "mes_ref": "2026-06",
@@ -5485,7 +5927,9 @@
         "id_produto": "ed128e3d83f81f4604f6195c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7949"
       },
       {
         "mes_ref": "2026-06",
@@ -5498,7 +5942,9 @@
         "id_produto": "d93d57ed2094e34cd5ad84c9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7950"
       },
       {
         "mes_ref": "2026-06",
@@ -5511,7 +5957,9 @@
         "id_produto": "47fcb4a78871d9d1bcd66d38",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7951"
       },
       {
         "mes_ref": "2026-06",
@@ -5524,7 +5972,9 @@
         "id_produto": "64c9ed8af223dfc1c643926a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7953"
       },
       {
         "mes_ref": "2026-06",
@@ -5537,7 +5987,9 @@
         "id_produto": "141f4c39eccd2f858ead45e9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GROOVE INDUSTRIA DE BLOCOS DE CONCRETOS LTDA.",
+        "os": "7954"
       },
       {
         "mes_ref": "2026-06",
@@ -5550,7 +6002,9 @@
         "id_produto": "69eab5b172f779ac106a0267",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "8563"
       },
       {
         "mes_ref": "2026-06",
@@ -5563,7 +6017,9 @@
         "id_produto": "0ca3170ab002e7c868b5c721",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE-MOLDADOS LTDA",
+        "os": "8564"
       },
       {
         "mes_ref": "2026-06",
@@ -5576,7 +6032,9 @@
         "id_produto": "85e27b42879de2fa13c21d05",
         "conjunto_id": "566d3252e6924247de6c5d05",
         "conjunto_nome": "MOLD HTX700 MF 10X12X30X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "M G DE QUEIROZ",
+        "os": "8601"
       },
       {
         "mes_ref": "2026-06",
@@ -5589,7 +6047,9 @@
         "id_produto": "2ad4dd282d73ff05f9030441",
         "conjunto_id": "566d3252e6924247de6c5d05",
         "conjunto_nome": "MOLD HTX700 MF 10X12X30X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "M G DE QUEIROZ",
+        "os": "8601"
       },
       {
         "mes_ref": "2026-06",
@@ -5602,7 +6062,9 @@
         "id_produto": "d4952dce3d92502448604fef",
         "conjunto_id": "566d3252e6924247de6c5d05",
         "conjunto_nome": "MOLD HTX700 MF 10X12X30X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "M G DE QUEIROZ",
+        "os": "8601"
       },
       {
         "mes_ref": "2026-06",
@@ -5615,7 +6077,9 @@
         "id_produto": "0053ef1945f1d9f2f85e23ea",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY - RJ",
+        "os": "8699"
       },
       {
         "mes_ref": "2026-06",
@@ -5628,7 +6092,9 @@
         "id_produto": "fb29f5d3b19b1e5887b0e91e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY - RJ",
+        "os": "8700"
       },
       {
         "mes_ref": "2026-06",
@@ -5641,7 +6107,9 @@
         "id_produto": "74286c8f88cfb2bd873fa794",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8821"
       },
       {
         "mes_ref": "2026-06",
@@ -5654,7 +6122,9 @@
         "id_produto": "4708be8669f84476d1341608",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8822"
       },
       {
         "mes_ref": "2026-06",
@@ -5667,7 +6137,9 @@
         "id_produto": "ed0f3ef28e5a39430113531a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8823"
       },
       {
         "mes_ref": "2026-06",
@@ -5680,7 +6152,9 @@
         "id_produto": "b09523b1f9f4b6be491ebaae",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8824"
       },
       {
         "mes_ref": "2026-06",
@@ -5693,7 +6167,9 @@
         "id_produto": "405dce88c1c1251f35ce0446",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "WIDEBLOC - WF",
+        "os": "8825"
       },
       {
         "mes_ref": "2026-06",
@@ -5706,7 +6182,9 @@
         "id_produto": "911515bc8fc5d25e3822b62e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8434"
       },
       {
         "mes_ref": "2026-06",
@@ -5719,7 +6197,9 @@
         "id_produto": "253c5f3386ed18801d3a1445",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8435"
       },
       {
         "mes_ref": "2026-06",
@@ -5732,7 +6212,9 @@
         "id_produto": "b3eda236138bba1f72698495",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8439"
       },
       {
         "mes_ref": "2026-06",
@@ -5745,7 +6227,9 @@
         "id_produto": "cf15811c04b03f3a5c49b93c",
         "conjunto_id": "ae50a5dec51881a24d071f5b",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "8538"
       },
       {
         "mes_ref": "2026-06",
@@ -5758,7 +6242,9 @@
         "id_produto": "f38d9584f86f9a0028103282",
         "conjunto_id": "ae50a5dec51881a24d071f5b",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "8538"
       },
       {
         "mes_ref": "2026-06",
@@ -5771,7 +6257,9 @@
         "id_produto": "3db5c5d0ec2b4dc6a78ecfbb",
         "conjunto_id": "ae50a5dec51881a24d071f5b",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "8538"
       },
       {
         "mes_ref": "2026-06",
@@ -5784,7 +6272,9 @@
         "id_produto": "a74a0134a72339b85eb2b918",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "8682"
       },
       {
         "mes_ref": "2026-06",
@@ -5797,7 +6287,9 @@
         "id_produto": "93281b00085ceabcb5839b17",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "SILVEIRA PRE MOLDADOS",
+        "os": "8692"
       },
       {
         "mes_ref": "2026-06",
@@ -5810,7 +6302,9 @@
         "id_produto": "6f73a0235095764dddbc9755",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PRELOC",
+        "os": "8707"
       },
       {
         "mes_ref": "2026-06",
@@ -5823,7 +6317,9 @@
         "id_produto": "58fdc635463568cdbebe5083",
         "conjunto_id": "c4f8a43bafd033246e60ce5e",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "8708"
       },
       {
         "mes_ref": "2026-06",
@@ -5836,7 +6332,9 @@
         "id_produto": "939f1126c0116426f48a90ab",
         "conjunto_id": "c4f8a43bafd033246e60ce5e",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "8708"
       },
       {
         "mes_ref": "2026-06",
@@ -5849,7 +6347,9 @@
         "id_produto": "542c9980c5bd0f366f55878d",
         "conjunto_id": "c4f8a43bafd033246e60ce5e",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "8708"
       },
       {
         "mes_ref": "2026-07",
@@ -5862,7 +6362,9 @@
         "id_produto": "a1837106b8e767a69d4c351d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GEOBLOCOS",
+        "os": "8885"
       },
       {
         "mes_ref": "2026-07",
@@ -5875,7 +6377,9 @@
         "id_produto": "fd981c96f19be26d4e3ee023",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GEOBLOCOS",
+        "os": "8886"
       },
       {
         "mes_ref": "2026-07",
@@ -5888,7 +6392,9 @@
         "id_produto": "dedb15f44c231432f8a611c0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BRIQUET IND E COM DE ARTEF DE CIM LTDA",
+        "os": "9166"
       },
       {
         "mes_ref": "2026-07",
@@ -5901,7 +6407,9 @@
         "id_produto": "f9b4dfec81683817cb477cf3",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "8887"
       },
       {
         "mes_ref": "2026-07",
@@ -5914,7 +6422,9 @@
         "id_produto": "be5ef554af224f6ee7a56024",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA LERROVILLE LTDA",
+        "os": "7991"
       },
       {
         "mes_ref": "2026-07",
@@ -5927,7 +6437,9 @@
         "id_produto": "0c292c21aaa125ddf3dda6b0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCASA",
+        "os": "9398"
       },
       {
         "mes_ref": "2026-07",
@@ -5940,7 +6452,9 @@
         "id_produto": "1a9babcedec081f3886de087",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COMERCIAL CONSTROE",
+        "os": "9388"
       },
       {
         "mes_ref": "2026-07",
@@ -5953,7 +6467,9 @@
         "id_produto": "bb237ed08381c8e04063faa6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COMERCIAL CONSTROE",
+        "os": "9389"
       },
       {
         "mes_ref": "2026-07",
@@ -5966,7 +6482,9 @@
         "id_produto": "71702f27d19e4f2c2e4ee9af",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTE INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "8701"
       },
       {
         "mes_ref": "2026-07",
@@ -5979,7 +6497,9 @@
         "id_produto": "51de80e1b28fc3d45da56f8c",
         "conjunto_id": "57450cd975cba60c5495f9b5",
         "conjunto_nome": "MOLD STORRER FP 16F H10 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "HEINIG PRE-MOLDADOS EM CONCRETO, ARGAMASSAS E AGREGADOS LTDA",
+        "os": "8838"
       },
       {
         "mes_ref": "2026-07",
@@ -5992,7 +6512,9 @@
         "id_produto": "ec2008e22a13efbf917e1d84",
         "conjunto_id": "57450cd975cba60c5495f9b5",
         "conjunto_nome": "MOLD STORRER FP 16F H10 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "HEINIG PRE-MOLDADOS EM CONCRETO, ARGAMASSAS E AGREGADOS LTDA",
+        "os": "8838"
       },
       {
         "mes_ref": "2026-07",
@@ -6005,7 +6527,9 @@
         "id_produto": "6ba3eacc7b7252dc90fb5a7f",
         "conjunto_id": "57450cd975cba60c5495f9b5",
         "conjunto_nome": "MOLD STORRER FP 16F H10 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "HEINIG PRE-MOLDADOS EM CONCRETO, ARGAMASSAS E AGREGADOS LTDA",
+        "os": "8838"
       },
       {
         "mes_ref": "2026-07",
@@ -6018,7 +6542,9 @@
         "id_produto": "4ef31fb37113a04c631a162d",
         "conjunto_id": "7d45a675ed2881b0f67c3ae3",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9274"
       },
       {
         "mes_ref": "2026-07",
@@ -6031,7 +6557,9 @@
         "id_produto": "f8bddedccfa75019b94ae639",
         "conjunto_id": "7d45a675ed2881b0f67c3ae3",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9274"
       },
       {
         "mes_ref": "2026-07",
@@ -6044,7 +6572,9 @@
         "id_produto": "0ce144c6bdf7b71b9daaea70",
         "conjunto_id": "7d45a675ed2881b0f67c3ae3",
         "conjunto_nome": "MOLD HTX900 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9274"
       },
       {
         "mes_ref": "2026-07",
@@ -6057,7 +6587,9 @@
         "id_produto": "159c45cd49d28057f6ef8ca9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TETRACON ESTRUTURAS DE CONCRETO LTDA",
+        "os": "8835"
       },
       {
         "mes_ref": "2026-07",
@@ -6070,7 +6602,9 @@
         "id_produto": "eb28edf96f4cc040b15f9902",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TETRACON ESTRUTURAS DE CONCRETO LTDA",
+        "os": "8836"
       },
       {
         "mes_ref": "2026-07",
@@ -6083,7 +6617,9 @@
         "id_produto": "12c6ac7873e6edf2f9976204",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "9154"
       },
       {
         "mes_ref": "2026-07",
@@ -6096,7 +6632,9 @@
         "id_produto": "e2aa8f759238f72bf4758df2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "9155"
       },
       {
         "mes_ref": "2026-07",
@@ -6109,7 +6647,9 @@
         "id_produto": "68004ba0f1333a67d9f220de",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "9156"
       },
       {
         "mes_ref": "2026-07",
@@ -6122,7 +6662,9 @@
         "id_produto": "3d5f81f83ea1175113c7ff98",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PAULO CESAR & CIA LTDA",
+        "os": "9157"
       },
       {
         "mes_ref": "2026-07",
@@ -6135,7 +6677,9 @@
         "id_produto": "439b037a1f60db349d9af3c4",
         "conjunto_id": "41184815cee0e43a56319bea",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "8582"
       },
       {
         "mes_ref": "2026-07",
@@ -6148,7 +6692,9 @@
         "id_produto": "cb6c96144ac177db233cc503",
         "conjunto_id": "41184815cee0e43a56319bea",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "8582"
       },
       {
         "mes_ref": "2026-07",
@@ -6161,7 +6707,9 @@
         "id_produto": "1c8e8714dfdfa1221dc4df9e",
         "conjunto_id": "41184815cee0e43a56319bea",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "8582"
       },
       {
         "mes_ref": "2026-07",
@@ -6174,7 +6722,9 @@
         "id_produto": "0f5effac8b019ba85d731113",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "8583"
       },
       {
         "mes_ref": "2026-07",
@@ -6187,7 +6737,9 @@
         "id_produto": "5c4ca42a25682bc928492c07",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "8584"
       },
       {
         "mes_ref": "2026-07",
@@ -6200,7 +6752,9 @@
         "id_produto": "4cbb141ca4c9b196ff175fb4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ITAUARA PREMOLDADOS",
+        "os": "9657"
       },
       {
         "mes_ref": "2026-07",
@@ -6213,7 +6767,9 @@
         "id_produto": "055ace844eaf730f5b8bd831",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCREMOLDE (NOVO)",
+        "os": "9041"
       },
       {
         "mes_ref": "2026-07",
@@ -6226,7 +6782,9 @@
         "id_produto": "5821d5bb9ea169c7330acde5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCREMOLDE (NOVO)",
+        "os": "9042"
       },
       {
         "mes_ref": "2026-07",
@@ -6239,7 +6797,9 @@
         "id_produto": "932b43a53384dfc83f472510",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "9303"
       },
       {
         "mes_ref": "2026-07",
@@ -6252,7 +6812,9 @@
         "id_produto": "dca654527ab4d5edd94dac45",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "9767"
       },
       {
         "mes_ref": "2026-07",
@@ -6265,7 +6827,9 @@
         "id_produto": "f44f7a8a6801c28b8c48b170",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANDINO",
+        "os": "8688"
       },
       {
         "mes_ref": "2026-07",
@@ -6278,7 +6842,9 @@
         "id_produto": "f3fcd5efe2f9dccb4df8504b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANDINO",
+        "os": "8689"
       },
       {
         "mes_ref": "2026-07",
@@ -6291,7 +6857,9 @@
         "id_produto": "e8088a01b65837a59dc95a09",
         "conjunto_id": "a411b72eca62b20e93d825a7",
         "conjunto_nome": "MOLD MBP4 FP 16F H6 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8690"
       },
       {
         "mes_ref": "2026-07",
@@ -6304,7 +6872,9 @@
         "id_produto": "0fcaec13edc63f1f0a75f2dd",
         "conjunto_id": "a411b72eca62b20e93d825a7",
         "conjunto_nome": "MOLD MBP4 FP 16F H6 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8690"
       },
       {
         "mes_ref": "2026-07",
@@ -6317,7 +6887,9 @@
         "id_produto": "0bfbfcecf2684a44d297829d",
         "conjunto_id": "a411b72eca62b20e93d825a7",
         "conjunto_nome": "MOLD MBP4 FP 16F H6 10V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8690"
       },
       {
         "mes_ref": "2026-07",
@@ -6330,7 +6902,9 @@
         "id_produto": "8e54d07d63665d4f46389a56",
         "conjunto_id": "ee067c18d46a1f99d5bb5caa",
         "conjunto_nome": "MOLD MBP4 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8691"
       },
       {
         "mes_ref": "2026-07",
@@ -6343,7 +6917,9 @@
         "id_produto": "1e999e860d667dd9cdee8c35",
         "conjunto_id": "ee067c18d46a1f99d5bb5caa",
         "conjunto_nome": "MOLD MBP4 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8691"
       },
       {
         "mes_ref": "2026-07",
@@ -6356,7 +6932,9 @@
         "id_produto": "a9bd7da5f0fc36d7fb0300a3",
         "conjunto_id": "ee067c18d46a1f99d5bb5caa",
         "conjunto_nome": "MOLD MBP4 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "GRANDINO",
+        "os": "8691"
       },
       {
         "mes_ref": "2026-07",
@@ -6369,7 +6947,9 @@
         "id_produto": "febaba0938aff78afb9d86e3",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9158"
       },
       {
         "mes_ref": "2026-07",
@@ -6382,7 +6962,9 @@
         "id_produto": "96a02cd602ea89d974dfb109",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9189"
       },
       {
         "mes_ref": "2026-07",
@@ -6395,7 +6977,9 @@
         "id_produto": "6249ef73b0e3b33cc817e53c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "9890"
       },
       {
         "mes_ref": "2026-07",
@@ -6408,7 +6992,9 @@
         "id_produto": "5acc3f04a771595b631b52d0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "9891"
       },
       {
         "mes_ref": "2026-07",
@@ -6421,7 +7007,9 @@
         "id_produto": "098de93491d55d05a99229de",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCRENORTE PRÉ-MOLDADOS",
+        "os": "9174"
       },
       {
         "mes_ref": "2026-07",
@@ -6434,7 +7022,9 @@
         "id_produto": "eef562c977bc03feeb292cac",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "9387"
       },
       {
         "mes_ref": "2026-07",
@@ -6447,7 +7037,9 @@
         "id_produto": "1b30119ed0d4d38b37dae9ca",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9470"
       },
       {
         "mes_ref": "2026-07",
@@ -6460,7 +7052,9 @@
         "id_produto": "a3040f0aca7743a2c5272d57",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9471"
       },
       {
         "mes_ref": "2026-07",
@@ -6473,7 +7067,9 @@
         "id_produto": "12287574f0dc72a05a7099dd",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6486,7 +7082,9 @@
         "id_produto": "2e9142d912952a5d155f8cd2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6499,7 +7097,9 @@
         "id_produto": "0b748cb9fd66caacf26a9744",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6512,7 +7112,9 @@
         "id_produto": "54fe9378a961e788e0fd2a9c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6525,7 +7127,9 @@
         "id_produto": "676429ff53b4f7cc672d0440",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6538,7 +7142,9 @@
         "id_produto": "22408c41c838e22d81a9048c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6551,7 +7157,9 @@
         "id_produto": "f508d69a6fff5858fbffc2f0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6564,7 +7172,9 @@
         "id_produto": "7dbdaefbd8a36c2b07dc87ab",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6577,7 +7187,9 @@
         "id_produto": "8552f8d86508476cf8367dfe",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6590,7 +7202,9 @@
         "id_produto": "2836956f25c9e196c076d459",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9472"
       },
       {
         "mes_ref": "2026-07",
@@ -6603,7 +7217,9 @@
         "id_produto": "741e1cab14ad23394519f87a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9473"
       },
       {
         "mes_ref": "2026-07",
@@ -6616,7 +7232,9 @@
         "id_produto": "7539b8a178ca8aabfb7b0176",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9474"
       },
       {
         "mes_ref": "2026-07",
@@ -6629,7 +7247,9 @@
         "id_produto": "55d5c7de24eec2c0716bbde1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCRENORTE PRÉ-MOLDADOS",
+        "os": "9521"
       },
       {
         "mes_ref": "2026-07",
@@ -6642,7 +7262,9 @@
         "id_produto": "564748a66de247b52d9e306c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCRENORTE PRÉ-MOLDADOS",
+        "os": "9522"
       },
       {
         "mes_ref": "2026-08",
@@ -6655,7 +7277,9 @@
         "id_produto": "b9500044a988a079c5dd7d61",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "9982"
       },
       {
         "mes_ref": "2026-08",
@@ -6668,7 +7292,9 @@
         "id_produto": "026cb315b26e2c85ccb95613",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "9984"
       },
       {
         "mes_ref": "2026-08",
@@ -6681,7 +7307,9 @@
         "id_produto": "e1f155ea5c5601fc7ab9e684",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "9932"
       },
       {
         "mes_ref": "2026-08",
@@ -6694,7 +7322,9 @@
         "id_produto": "825aed2941180d8cd74d4027",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10164"
       },
       {
         "mes_ref": "2026-08",
@@ -6707,7 +7337,9 @@
         "id_produto": "912feaf0422687a466e76ac2",
         "conjunto_id": "cb2a82cc5dce1e9baf40251c",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8965"
       },
       {
         "mes_ref": "2026-08",
@@ -6720,7 +7352,9 @@
         "id_produto": "691023459293259a37e33188",
         "conjunto_id": "cb2a82cc5dce1e9baf40251c",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8965"
       },
       {
         "mes_ref": "2026-08",
@@ -6733,7 +7367,9 @@
         "id_produto": "a0e231dd058e46dc1200742a",
         "conjunto_id": "cb2a82cc5dce1e9baf40251c",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8965"
       },
       {
         "mes_ref": "2026-08",
@@ -6746,7 +7382,9 @@
         "id_produto": "12b9d7d2ef2caaaa9257ff9a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8966"
       },
       {
         "mes_ref": "2026-08",
@@ -6759,7 +7397,9 @@
         "id_produto": "7076aa805a1452728c734267",
         "conjunto_id": "d87d7a5372e85679ac04ca77",
         "conjunto_nome": "MOLD HTX1100 FP SEXT25CM H8 7V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8967"
       },
       {
         "mes_ref": "2026-08",
@@ -6772,7 +7412,9 @@
         "id_produto": "6a595d0418d59e6bafa9e56b",
         "conjunto_id": "d87d7a5372e85679ac04ca77",
         "conjunto_nome": "MOLD HTX1100 FP SEXT25CM H8 7V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8967"
       },
       {
         "mes_ref": "2026-08",
@@ -6785,7 +7427,9 @@
         "id_produto": "ba538aa65c1cc90dfb1a233b",
         "conjunto_id": "d87d7a5372e85679ac04ca77",
         "conjunto_nome": "MOLD HTX1100 FP SEXT25CM H8 7V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "8967"
       },
       {
         "mes_ref": "2026-08",
@@ -6798,7 +7442,9 @@
         "id_produto": "6d80dc9056c45ccbc91ee634",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9210"
       },
       {
         "mes_ref": "2026-08",
@@ -6811,7 +7457,9 @@
         "id_produto": "5ab4eaffaf436586436f9cbc",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9211"
       },
       {
         "mes_ref": "2026-08",
@@ -6824,7 +7472,9 @@
         "id_produto": "2b1e40d689fb6e941edcf7f2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9212"
       },
       {
         "mes_ref": "2026-08",
@@ -6837,7 +7487,9 @@
         "id_produto": "859c8d8ed01f34ce6c869588",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9213"
       },
       {
         "mes_ref": "2026-08",
@@ -6850,7 +7502,9 @@
         "id_produto": "1488be0b6fe511e7aaa97b19",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9214"
       },
       {
         "mes_ref": "2026-08",
@@ -6863,7 +7517,9 @@
         "id_produto": "3506e3982ee6e97514c86ee5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MATA SUL INDUSTRIA DE ARTEFATOS DE CONCRETOS LTDA (NV)",
+        "os": "9215"
       },
       {
         "mes_ref": "2026-08",
@@ -6876,7 +7532,9 @@
         "id_produto": "6599f2adf1f2b1df60775a62",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "SILVEIRA PRE MOLDADOS",
+        "os": "9487"
       },
       {
         "mes_ref": "2026-08",
@@ -6889,7 +7547,9 @@
         "id_produto": "f257edfa35348316071fd2f5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9208"
       },
       {
         "mes_ref": "2026-08",
@@ -6902,7 +7562,9 @@
         "id_produto": "9c67d582241862e35adc22ab",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6915,7 +7577,9 @@
         "id_produto": "de52009414b274e8ba97fd96",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6928,7 +7592,9 @@
         "id_produto": "d1241fae317ad6ecb77edc7b",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6941,7 +7607,9 @@
         "id_produto": "f784beb4fff567244ff2ba6e",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6954,7 +7622,9 @@
         "id_produto": "9d030db5ff524ec6e065883b",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6967,7 +7637,9 @@
         "id_produto": "963522ee609b4c8222ceb6c3",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6980,7 +7652,9 @@
         "id_produto": "2e5d4769b5ccb0bb85347532",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -6993,7 +7667,9 @@
         "id_produto": "66c322639754372d3ac486d5",
         "conjunto_id": "df46eb5b1d9f08937b498120",
         "conjunto_nome": "MOLD SPM30 FP RET H8 6V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9209"
       },
       {
         "mes_ref": "2026-08",
@@ -7006,7 +7682,9 @@
         "id_produto": "e22900ac0ee21c48328adfe4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9684"
       },
       {
         "mes_ref": "2026-08",
@@ -7019,7 +7697,9 @@
         "id_produto": "1340b096029b71bb8b0110bb",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "10141"
       },
       {
         "mes_ref": "2026-08",
@@ -7032,7 +7712,9 @@
         "id_produto": "1cf61e9c5bba88bcaac86a32",
         "conjunto_id": "564c0467c5c02312f8315a80",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONCRENORTE (NV)",
+        "os": "9460"
       },
       {
         "mes_ref": "2026-08",
@@ -7045,7 +7727,9 @@
         "id_produto": "7438eee2a7fd623caedc5105",
         "conjunto_id": "564c0467c5c02312f8315a80",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONCRENORTE (NV)",
+        "os": "9460"
       },
       {
         "mes_ref": "2026-08",
@@ -7058,7 +7742,9 @@
         "id_produto": "e07dd08a5830dca7fa2f3441",
         "conjunto_id": "564c0467c5c02312f8315a80",
         "conjunto_nome": "MOLD MBP6 FP RET H6 12V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONCRENORTE (NV)",
+        "os": "9460"
       },
       {
         "mes_ref": "2026-08",
@@ -7071,7 +7757,9 @@
         "id_produto": "2d217fe6403cb292ed4e3cfd",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9538"
       },
       {
         "mes_ref": "2026-08",
@@ -7084,7 +7772,9 @@
         "id_produto": "0f81b185f7ba4b0ea3a52cb7",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9539"
       },
       {
         "mes_ref": "2026-08",
@@ -7097,7 +7787,9 @@
         "id_produto": "a3993ff1e645ae434a681c73",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9540"
       },
       {
         "mes_ref": "2026-08",
@@ -7110,7 +7802,9 @@
         "id_produto": "306cb32502698354ca5c45f7",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9541"
       },
       {
         "mes_ref": "2026-08",
@@ -7123,7 +7817,9 @@
         "id_produto": "2c4f11fd15d14d2418077504",
         "conjunto_id": "5e5a88acb0dad05d29716fce",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9216"
       },
       {
         "mes_ref": "2026-08",
@@ -7136,7 +7832,9 @@
         "id_produto": "7bc2f71b4c329f1904010a05",
         "conjunto_id": "5e5a88acb0dad05d29716fce",
         "conjunto_nome": "MOLD SPM30 MF 10X12X25X50CM COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PEDREIRA ICA LTDA",
+        "os": "9216"
       },
       {
         "mes_ref": "2026-08",
@@ -7149,7 +7847,9 @@
         "id_produto": "d70659d58948e28896a2527a",
         "conjunto_id": "d1bdb470c39acd51764faf4c",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9275"
       },
       {
         "mes_ref": "2026-08",
@@ -7162,7 +7862,9 @@
         "id_produto": "79cfe5d68fae262949cf6818",
         "conjunto_id": "d1bdb470c39acd51764faf4c",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9275"
       },
       {
         "mes_ref": "2026-08",
@@ -7175,7 +7877,9 @@
         "id_produto": "94165552b46c3ba40a765669",
         "conjunto_id": "d1bdb470c39acd51764faf4c",
         "conjunto_nome": "MOLD HTX900 FP RET H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9275"
       },
       {
         "mes_ref": "2026-08",
@@ -7188,7 +7892,9 @@
         "id_produto": "794a64f2719e762143cb2b4e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TASINARI PREMOLDADOS",
+        "os": "9276"
       },
       {
         "mes_ref": "2026-08",
@@ -7201,7 +7907,9 @@
         "id_produto": "a457bd75e3336d6607c2d165",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTE INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "9528"
       },
       {
         "mes_ref": "2026-08",
@@ -7214,7 +7922,9 @@
         "id_produto": "294c85e0545311aba63082c9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "9525"
       },
       {
         "mes_ref": "2026-08",
@@ -7227,7 +7937,9 @@
         "id_produto": "314201994fb8e10fe35666b6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "9526"
       },
       {
         "mes_ref": "2026-08",
@@ -7240,7 +7952,9 @@
         "id_produto": "d6f724bc237904b0a63d1bc1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "9527"
       },
       {
         "mes_ref": "2026-08",
@@ -7253,7 +7967,9 @@
         "id_produto": "d4836e623a11b986b90576f7",
         "conjunto_id": "0366cfc9f2130acee19a1cb2",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9300"
       },
       {
         "mes_ref": "2026-08",
@@ -7266,7 +7982,9 @@
         "id_produto": "d37c43492ce3a043ca12914c",
         "conjunto_id": "0366cfc9f2130acee19a1cb2",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9300"
       },
       {
         "mes_ref": "2026-08",
@@ -7279,7 +7997,9 @@
         "id_produto": "aa9240adb1345f9b8b235ea9",
         "conjunto_id": "0366cfc9f2130acee19a1cb2",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9300"
       },
       {
         "mes_ref": "2026-08",
@@ -7292,7 +8012,9 @@
         "id_produto": "facce670ef4469b7fa2c411e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9301"
       },
       {
         "mes_ref": "2026-08",
@@ -7305,7 +8027,9 @@
         "id_produto": "81b2a2788b114c7dcbdb1735",
         "conjunto_id": "9024e0cc0944853bbff13a85",
         "conjunto_nome": "MOLD HTX1100 MF 13X15X30X100CM COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9302"
       },
       {
         "mes_ref": "2026-08",
@@ -7318,7 +8042,9 @@
         "id_produto": "5614e50d961e131a6a68ac28",
         "conjunto_id": "9024e0cc0944853bbff13a85",
         "conjunto_nome": "MOLD HTX1100 MF 13X15X30X100CM COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9302"
       },
       {
         "mes_ref": "2026-08",
@@ -7331,7 +8057,9 @@
         "id_produto": "fe5060acfc84b73b27e88486",
         "conjunto_id": "9024e0cc0944853bbff13a85",
         "conjunto_nome": "MOLD HTX1100 MF 13X15X30X100CM COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "2 C PREMOLDADOS",
+        "os": "9302"
       },
       {
         "mes_ref": "2026-08",
@@ -7344,7 +8072,9 @@
         "id_produto": "c39853b54e5af1189a7312e6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GOIARTE SOLUCOES CONSTRUTIVAS EM CONCRETO LTDA",
+        "os": "9486"
       },
       {
         "mes_ref": "2026-08",
@@ -7357,7 +8087,9 @@
         "id_produto": "8d4b95cbee148b1a572c4006",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "9819"
       },
       {
         "mes_ref": "2026-08",
@@ -7370,7 +8102,9 @@
         "id_produto": "c7bfcc23ad94239f70fc2c86",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "9875"
       },
       {
         "mes_ref": "2026-08",
@@ -7383,7 +8117,9 @@
         "id_produto": "e34f33984934f6769bcdff0d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "9876"
       },
       {
         "mes_ref": "2026-08",
@@ -7396,7 +8132,9 @@
         "id_produto": "99241b8b2a24bb4ec6772464",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "9877"
       },
       {
         "mes_ref": "2026-08",
@@ -7409,7 +8147,9 @@
         "id_produto": "f9e393e7ae8238e04348371e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "10153"
       },
       {
         "mes_ref": "2026-08",
@@ -7422,7 +8162,9 @@
         "id_produto": "5790249bf412f12f5f07ece8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRULAR",
+        "os": "10154"
       },
       {
         "mes_ref": "2026-09",
@@ -7435,7 +8177,9 @@
         "id_produto": "3accd0a15e3607b189e1b6ef",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "QUITAUNA FABRICA DE BLOCOS LTDA",
+        "os": "9529"
       },
       {
         "mes_ref": "2026-09",
@@ -7448,7 +8192,9 @@
         "id_produto": "e6ead42b4a50f93736d1232c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PRELOC",
+        "os": "9958"
       },
       {
         "mes_ref": "2026-09",
@@ -7461,7 +8207,9 @@
         "id_produto": "8cbbeb5b43232fd25ceae2b6",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "10087"
       },
       {
         "mes_ref": "2026-09",
@@ -7474,7 +8222,9 @@
         "id_produto": "af21368a699efb8061b1a63e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "9769"
       },
       {
         "mes_ref": "2026-09",
@@ -7487,7 +8237,9 @@
         "id_produto": "b8fb117acb6645c3a7f64ce2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARTEFATOS PRODUTOS DE CONCRETO LTDA",
+        "os": "10090"
       },
       {
         "mes_ref": "2026-09",
@@ -7500,7 +8252,9 @@
         "id_produto": "faef54ba7bad172b7242d9b9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "9986"
       },
       {
         "mes_ref": "2026-09",
@@ -7513,7 +8267,9 @@
         "id_produto": "4ac8b8fc536b67b4ef9a2ba6",
         "conjunto_id": "d94c7e71f220445aba32710d",
         "conjunto_nome": "MOLD HTX1100 FP RET 12X24CM H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "9768"
       },
       {
         "mes_ref": "2026-09",
@@ -7526,7 +8282,9 @@
         "id_produto": "82b54b8f19ca140673ca8cf7",
         "conjunto_id": "d94c7e71f220445aba32710d",
         "conjunto_nome": "MOLD HTX1100 FP RET 12X24CM H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "9768"
       },
       {
         "mes_ref": "2026-09",
@@ -7539,7 +8297,9 @@
         "id_produto": "2bd45ac5fca83e79a2ebed82",
         "conjunto_id": "d94c7e71f220445aba32710d",
         "conjunto_nome": "MOLD HTX1100 FP RET 12X24CM H8 16V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "FLORESTAL PAVERS",
+        "os": "9768"
       },
       {
         "mes_ref": "2026-09",
@@ -7552,7 +8312,9 @@
         "id_produto": "f7eca18259f4deb68efac6b8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "9782"
       },
       {
         "mes_ref": "2026-09",
@@ -7565,7 +8327,9 @@
         "id_produto": "7255ebebc93c9de114f69701",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "9783"
       },
       {
         "mes_ref": "2026-09",
@@ -7578,7 +8342,9 @@
         "id_produto": "9edd54af208d2a1a560c772e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMOLAJE",
+        "os": "10216"
       },
       {
         "mes_ref": "2026-09",
@@ -7591,7 +8357,9 @@
         "id_produto": "b611df3c76fa061b7b610c26",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7604,7 +8372,9 @@
         "id_produto": "644f537d755b3bacfa0a921d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7617,7 +8387,9 @@
         "id_produto": "3290664337af98b7262cb76b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7630,7 +8402,9 @@
         "id_produto": "d07042e6a4b285494b5945c2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7643,7 +8417,9 @@
         "id_produto": "45a74354785fd83912cc285b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7656,7 +8432,9 @@
         "id_produto": "a8370d9c16c4842579821e76",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7669,7 +8447,9 @@
         "id_produto": "7d978f9c195f714185d50210",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7682,7 +8462,9 @@
         "id_produto": "51669f5322a5fc6acd866825",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7695,7 +8477,9 @@
         "id_produto": "52fe5a9333a68651633b7dff",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7708,7 +8492,9 @@
         "id_produto": "e5976ba322d55a8179ddfe9d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7721,7 +8507,9 @@
         "id_produto": "a08682261342aa99b1cb7caf",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "9644"
       },
       {
         "mes_ref": "2026-09",
@@ -7734,7 +8522,9 @@
         "id_produto": "f384b2887b58ab60997a1678",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PRELOC",
+        "os": "9959"
       },
       {
         "mes_ref": "2026-09",
@@ -7747,7 +8537,9 @@
         "id_produto": "16d90356f2c6b24c7c6586a9",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "9965"
       },
       {
         "mes_ref": "2026-09",
@@ -7760,7 +8552,9 @@
         "id_produto": "cc5b47e6bdd226eb5d056939",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "9966"
       },
       {
         "mes_ref": "2026-09",
@@ -7773,7 +8567,9 @@
         "id_produto": "30c30d3ddacfb811d9501157",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "9967"
       },
       {
         "mes_ref": "2026-09",
@@ -7786,7 +8582,9 @@
         "id_produto": "85ec0c838b2aa8b4ebbe4f23",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "9968"
       },
       {
         "mes_ref": "2026-09",
@@ -7799,7 +8597,9 @@
         "id_produto": "74ec7044a949f23d9d15dba2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "EUROPAVER - SAN CARLO",
+        "os": "9969"
       },
       {
         "mes_ref": "2026-09",
@@ -7812,7 +8612,9 @@
         "id_produto": "7998ce9a19db360d02cd182e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "10107"
       },
       {
         "mes_ref": "2026-09",
@@ -7825,7 +8627,9 @@
         "id_produto": "a875dc28aea0a0aa99a71192",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "10108"
       },
       {
         "mes_ref": "2026-09",
@@ -7838,7 +8642,9 @@
         "id_produto": "bf37cae3142d6dea6f799a44",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "10109"
       },
       {
         "mes_ref": "2026-09",
@@ -7851,7 +8657,9 @@
         "id_produto": "58bbfdf72eeaa13f7e23a551",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "10110"
       },
       {
         "mes_ref": "2026-09",
@@ -7864,7 +8672,9 @@
         "id_produto": "1d3ffed69ccebc13a1cf748e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "10111"
       },
       {
         "mes_ref": "2026-09",
@@ -7877,7 +8687,9 @@
         "id_produto": "13eb3b56d98494cd607aefa4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ITAUARA PREMOLDADOS",
+        "os": "10214"
       },
       {
         "mes_ref": "2026-09",
@@ -7890,7 +8702,9 @@
         "id_produto": "5ffc163fb72ccbe18962d9ce",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ITAUARA PREMOLDADOS",
+        "os": "10215"
       },
       {
         "mes_ref": "2026-09",
@@ -7903,7 +8717,9 @@
         "id_produto": "dd4aa3d46e5768a6f0e39c62",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10091"
       },
       {
         "mes_ref": "2026-09",
@@ -7916,7 +8732,9 @@
         "id_produto": "8599d48d72953276b2617d43",
         "conjunto_id": "6dca787322340700e0d8f0ee",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10092"
       },
       {
         "mes_ref": "2026-09",
@@ -7929,7 +8747,9 @@
         "id_produto": "aef3cb8068448349d982c737",
         "conjunto_id": "6dca787322340700e0d8f0ee",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10092"
       },
       {
         "mes_ref": "2026-09",
@@ -7942,7 +8762,9 @@
         "id_produto": "1ce320f51753a0764ac8bebe",
         "conjunto_id": "6dca787322340700e0d8f0ee",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10092"
       },
       {
         "mes_ref": "2026-09",
@@ -7955,7 +8777,9 @@
         "id_produto": "59d4ff6810f365b7e4f2f236",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10093"
       },
       {
         "mes_ref": "2026-09",
@@ -7968,7 +8792,9 @@
         "id_produto": "8e144e763f90338203f6f993",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10094"
       },
       {
         "mes_ref": "2026-09",
@@ -7981,7 +8807,9 @@
         "id_produto": "701ba14d5f94040a50250fe5",
         "conjunto_id": "ea8edea329fbd90434fe8936",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10095"
       },
       {
         "mes_ref": "2026-09",
@@ -7994,7 +8822,9 @@
         "id_produto": "8d525228e346e49e89910b9c",
         "conjunto_id": "ea8edea329fbd90434fe8936",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10095"
       },
       {
         "mes_ref": "2026-09",
@@ -8007,7 +8837,9 @@
         "id_produto": "846029eee77ca593a23a34ce",
         "conjunto_id": "ea8edea329fbd90434fe8936",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PREMAX PREMOLDADOS LTDA",
+        "os": "10095"
       },
       {
         "mes_ref": "2026-09",
@@ -8020,7 +8852,9 @@
         "id_produto": "2de42573a0de4dbdbc89e05e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANBLOCOS",
+        "os": "10183"
       },
       {
         "mes_ref": "2026-09",
@@ -8033,7 +8867,9 @@
         "id_produto": "743264ae2ac0032c35eae332",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "GRANBLOCOS",
+        "os": "10184"
       },
       {
         "mes_ref": "2026-09",
@@ -8046,7 +8882,9 @@
         "id_produto": "69a5b0291cc69af115db140c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CIDADE ENGENHARIA LTDA",
+        "os": "9961"
       },
       {
         "mes_ref": "2026-09",
@@ -8059,7 +8897,9 @@
         "id_produto": "2ca05dcffcbeaa31ba10cb19",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CIDADE ENGENHARIA LTDA",
+        "os": "9962"
       },
       {
         "mes_ref": "2026-09",
@@ -8072,7 +8912,9 @@
         "id_produto": "da086123fffe06d675125ef1",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CIDADE ENGENHARIA LTDA",
+        "os": "9963"
       },
       {
         "mes_ref": "2026-09",
@@ -8085,7 +8927,9 @@
         "id_produto": "187415bbe540444b652956ed",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY - RJ",
+        "os": "9970"
       },
       {
         "mes_ref": "2026-09",
@@ -8098,7 +8942,9 @@
         "id_produto": "65e3f04a0f0ab50d0d965de8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "10088"
       },
       {
         "mes_ref": "2026-09",
@@ -8111,7 +8957,9 @@
         "id_produto": "ac5ffaa07da1837665bc370c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "10089"
       },
       {
         "mes_ref": "2026-09",
@@ -8124,7 +8972,9 @@
         "id_produto": "8d11100e7257d2cc05660550",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UNICA PRE-MOLDADOS",
+        "os": "10254"
       },
       {
         "mes_ref": "2026-10",
@@ -8137,7 +8987,9 @@
         "id_produto": "7a3bba8dfd03f9f0d1c9673e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10505"
       },
       {
         "mes_ref": "2026-10",
@@ -8150,7 +9002,9 @@
         "id_produto": "6226f272bf1814b712cc49ae",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10506"
       },
       {
         "mes_ref": "2026-10",
@@ -8163,7 +9017,9 @@
         "id_produto": "f2ce49725470b52ce6815960",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARIADNA ARTEF DE CIM LTDA",
+        "os": "10603"
       },
       {
         "mes_ref": "2026-10",
@@ -8176,7 +9032,9 @@
         "id_produto": "364893bfe0237de98174b6a5",
         "conjunto_id": "0827ee62f9b8946415768b93",
         "conjunto_nome": "MOLD SPM20 MINI GUIA 8X15X45CM COMPLETO",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "R & B ARTEFATOS DE CIMENTO LTDA",
+        "os": "10270"
       },
       {
         "mes_ref": "2026-10",
@@ -8189,7 +9047,9 @@
         "id_produto": "bcf02d9ba6dde038c37e7296",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCRETUS PREMOLDADOS LTDA",
+        "os": "10212"
       },
       {
         "mes_ref": "2026-10",
@@ -8202,7 +9062,9 @@
         "id_produto": "95d29254b8c22a06f90faf55",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONCRETUS PREMOLDADOS LTDA",
+        "os": "10213"
       },
       {
         "mes_ref": "2026-10",
@@ -8215,7 +9077,9 @@
         "id_produto": "8ed75f8dc6f9b2de859fbba2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "DEPOSITO PERIMETRAL",
+        "os": "10275"
       },
       {
         "mes_ref": "2026-10",
@@ -8228,7 +9092,9 @@
         "id_produto": "09dbb64ea11aa4e49975707c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "M W PAVIMENTOS DE CONCRETO",
+        "os": "10353"
       },
       {
         "mes_ref": "2026-10",
@@ -8241,7 +9107,9 @@
         "id_produto": "4d03790839662a1806fc7554",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10471"
       },
       {
         "mes_ref": "2026-10",
@@ -8254,7 +9122,9 @@
         "id_produto": "45fe0fe787f471ad8395ed16",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10472"
       },
       {
         "mes_ref": "2026-10",
@@ -8267,7 +9137,9 @@
         "id_produto": "fc0a6c860c45aff602ceb276",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10473"
       },
       {
         "mes_ref": "2026-10",
@@ -8280,7 +9152,9 @@
         "id_produto": "9a91e2f7ff919bbf3b014e46",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10474"
       },
       {
         "mes_ref": "2026-10",
@@ -8293,7 +9167,9 @@
         "id_produto": "ba0b979ba49a1cb47a8eb515",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10475"
       },
       {
         "mes_ref": "2026-10",
@@ -8306,7 +9182,9 @@
         "id_produto": "e20faf0c5fa6399d7c88c9ac",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "CONSTRAM - CONSTRUCOES E ALUGUEL DE MAQUINAS LTDA",
+        "os": "10476"
       },
       {
         "mes_ref": "2026-10",
@@ -8319,7 +9197,9 @@
         "id_produto": "46284816ae7bd9b7424d8597",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "10717"
       },
       {
         "mes_ref": "2026-10",
@@ -8332,7 +9212,9 @@
         "id_produto": "d878bf3439e5d8c46e632434",
         "conjunto_id": "55187a99a3782abd6736eae1",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLB BLOCOS INDUSTRIA E COMERCIO LTDA",
+        "os": "10602"
       },
       {
         "mes_ref": "2026-10",
@@ -8345,7 +9227,9 @@
         "id_produto": "4f2d6021f73a22c886f84d62",
         "conjunto_id": "55187a99a3782abd6736eae1",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLB BLOCOS INDUSTRIA E COMERCIO LTDA",
+        "os": "10602"
       },
       {
         "mes_ref": "2026-10",
@@ -8358,7 +9242,9 @@
         "id_produto": "dc046e04664685a3c36f2e4e",
         "conjunto_id": "55187a99a3782abd6736eae1",
         "conjunto_nome": "MOLD EVO FP RET H6 50V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLB BLOCOS INDUSTRIA E COMERCIO LTDA",
+        "os": "10602"
       },
       {
         "mes_ref": "2026-10",
@@ -8371,7 +9257,9 @@
         "id_produto": "907df21e1cdf6b050dfcd0f2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE MOLDADOS LTDA",
+        "os": "10374"
       },
       {
         "mes_ref": "2026-10",
@@ -8384,7 +9272,9 @@
         "id_produto": "7ac5e24f5c8c21c6dc4a3f2b",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "TECPAVER PRE MOLDADOS LTDA",
+        "os": "10375"
       },
       {
         "mes_ref": "2026-10",
@@ -8397,7 +9287,9 @@
         "id_produto": "e582593c812dbb067c435e95",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10507"
       },
       {
         "mes_ref": "2026-10",
@@ -8410,7 +9302,9 @@
         "id_produto": "b943c61cf84dc5cd4f789114",
         "conjunto_id": "cfd3f14b35e90d8c7fc792c8",
         "conjunto_nome": "MOLD PWR FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARTECIM ARTEFATOS DE CIMENTO",
+        "os": "10359"
       },
       {
         "mes_ref": "2026-10",
@@ -8423,7 +9317,9 @@
         "id_produto": "b0b8d2e04e6ce46faa39ce14",
         "conjunto_id": "cfd3f14b35e90d8c7fc792c8",
         "conjunto_nome": "MOLD PWR FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARTECIM ARTEFATOS DE CIMENTO",
+        "os": "10359"
       },
       {
         "mes_ref": "2026-10",
@@ -8436,7 +9332,9 @@
         "id_produto": "88cccffe02b5936576d1c1bb",
         "conjunto_id": "cfd3f14b35e90d8c7fc792c8",
         "conjunto_nome": "MOLD PWR FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ARTECIM ARTEFATOS DE CIMENTO",
+        "os": "10359"
       },
       {
         "mes_ref": "2026-10",
@@ -8449,7 +9347,9 @@
         "id_produto": "7e79c61255f88150120fb809",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10508"
       },
       {
         "mes_ref": "2026-10",
@@ -8462,7 +9362,9 @@
         "id_produto": "42561c0aeec3cf867d36866a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "10278"
       },
       {
         "mes_ref": "2026-10",
@@ -8475,7 +9377,9 @@
         "id_produto": "b1de6dfff66799d8ac80bf89",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA",
+        "os": "10279"
       },
       {
         "mes_ref": "2026-10",
@@ -8488,7 +9392,9 @@
         "id_produto": "a357c78de9cbe326e06d261d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "10768"
       },
       {
         "mes_ref": "2026-10",
@@ -8501,7 +9407,9 @@
         "id_produto": "89e46bcbbc090d3a118284f2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA CONCRETE BLOCK MACHINE PTY.LTD.",
+        "os": "10769"
       },
       {
         "mes_ref": "2026-10",
@@ -8514,7 +9422,9 @@
         "id_produto": "3360a1f73663035769970b1a",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ITAUARA PREMOLDADOS",
+        "os": "10721"
       },
       {
         "mes_ref": "2026-10",
@@ -8527,7 +9437,9 @@
         "id_produto": "a1ba7f5194fcb97eece9c409",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ITAUARA PREMOLDADOS",
+        "os": "10722"
       },
       {
         "mes_ref": "2026-10",
@@ -8540,7 +9452,9 @@
         "id_produto": "0e2dd4538b2d35e9d55a9c0b",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8553,7 +9467,9 @@
         "id_produto": "8391d9e1711b29fbd3b589a4",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8566,7 +9482,9 @@
         "id_produto": "3198a9215a29a24bf43555ea",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8579,7 +9497,9 @@
         "id_produto": "3362d9fe6ccaea0e40d36747",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8592,7 +9512,9 @@
         "id_produto": "b6e7900540d21f42f8670017",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8605,7 +9527,9 @@
         "id_produto": "28d56e08c8b3ec6393fa4f8e",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8618,7 +9542,9 @@
         "id_produto": "f0e77472c602297ef6ac3c12",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8631,7 +9557,9 @@
         "id_produto": "112b0927f6a94a79f9b97105",
         "conjunto_id": "3b3ce44229eadbc7fde8dc91",
         "conjunto_nome": "MOLD SPM30 FP SEXT25CM H8 5V COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "BLOCO VILLE",
+        "os": "10761"
       },
       {
         "mes_ref": "2026-10",
@@ -8644,7 +9572,9 @@
         "id_produto": "9999d4411636817ad3a25bd4",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "10713"
       },
       {
         "mes_ref": "2026-10",
@@ -8657,7 +9587,9 @@
         "id_produto": "3b3662116a5400d79fd691af",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BLOCO SIGMA",
+        "os": "10714"
       },
       {
         "mes_ref": "2026-10",
@@ -8670,7 +9602,9 @@
         "id_produto": "6e6ec272e4704106168378ae",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "10715"
       },
       {
         "mes_ref": "2026-10",
@@ -8683,7 +9617,9 @@
         "id_produto": "fc76d322f218d68b01b7e57d",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY COMERCIO E INDUSTRIA DE ARTEFATOS DE CIMENTO LTDA",
+        "os": "10716"
       },
       {
         "mes_ref": "2026-10",
@@ -8696,7 +9632,9 @@
         "id_produto": "8e8dbbe29a2bb652e052c343",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10509"
       },
       {
         "mes_ref": "2026-11",
@@ -8709,7 +9647,9 @@
         "id_produto": "77fad802b9305a6338ac176c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MARJON ARTEFATOS DE CONCRETO LTDA",
+        "os": "10584"
       },
       {
         "mes_ref": "2026-11",
@@ -8722,7 +9662,9 @@
         "id_produto": "a3168e1abdab4e6c44d55db5",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MARJON ARTEFATOS DE CONCRETO LTDA",
+        "os": "10585"
       },
       {
         "mes_ref": "2026-11",
@@ -8735,7 +9677,9 @@
         "id_produto": "19b603cfca4505e670874a08",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "MARJON ARTEFATOS DE CONCRETO LTDA",
+        "os": "10586"
       },
       {
         "mes_ref": "2026-11",
@@ -8748,7 +9692,9 @@
         "id_produto": "6e6d62c70d56e35cd3d1f323",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "DEPOSITO PERIMETRAL",
+        "os": "10723"
       },
       {
         "mes_ref": "2026-11",
@@ -8761,7 +9707,9 @@
         "id_produto": "7f742deb0eb4d4240359f52f",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "BALTTECNICA INDUSTRIA DE PREMOLDADOS LTDA",
+        "os": "11097"
       },
       {
         "mes_ref": "2026-11",
@@ -8774,7 +9722,9 @@
         "id_produto": "557936b2e70edf0f8086c9a2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10510"
       },
       {
         "mes_ref": "2026-11",
@@ -8787,7 +9737,9 @@
         "id_produto": "bd9b0b515368eb0eb011cc12",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "HEINIG PRE-MOLDADOS EM CONCRETO, ARGAMASSAS E AGREGADOS LTDA",
+        "os": "10581"
       },
       {
         "mes_ref": "2026-11",
@@ -8800,7 +9752,9 @@
         "id_produto": "1f4f0355de8a093a68c251a2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "HEINIG PRE-MOLDADOS EM CONCRETO, ARGAMASSAS E AGREGADOS LTDA",
+        "os": "10582"
       },
       {
         "mes_ref": "2026-11",
@@ -8813,7 +9767,9 @@
         "id_produto": "ddb71f79587b0b62d393691a",
         "conjunto_id": "13015f2ec4d7bb812ce474fc",
         "conjunto_nome": "MOLD HTX900 FP 16F H8 14V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "10590"
       },
       {
         "mes_ref": "2026-11",
@@ -8826,7 +9782,9 @@
         "id_produto": "7b5fb8fe21654c6fa001a150",
         "conjunto_id": "13015f2ec4d7bb812ce474fc",
         "conjunto_nome": "MOLD HTX900 FP 16F H8 14V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "10590"
       },
       {
         "mes_ref": "2026-11",
@@ -8839,7 +9797,9 @@
         "id_produto": "9e03e244ce7a0f7f28bf3949",
         "conjunto_id": "13015f2ec4d7bb812ce474fc",
         "conjunto_nome": "MOLD HTX900 FP 16F H8 14V COMPLET",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "PRELOC",
+        "os": "10590"
       },
       {
         "mes_ref": "2026-11",
@@ -8852,7 +9812,9 @@
         "id_produto": "0d04fc6d2e5432ab843d8d6c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10511"
       },
       {
         "mes_ref": "2026-11",
@@ -8865,7 +9827,9 @@
         "id_produto": "22c60cbfb0805344e9e87a29",
         "conjunto_id": "1c72afc4770ab7027e98c5af",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10587"
       },
       {
         "mes_ref": "2026-11",
@@ -8878,7 +9842,9 @@
         "id_produto": "55eaecd76d3d6fad7a6d27d2",
         "conjunto_id": "1c72afc4770ab7027e98c5af",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10587"
       },
       {
         "mes_ref": "2026-11",
@@ -8891,7 +9857,9 @@
         "id_produto": "5c37aa1d783b1a789d2d7ab8",
         "conjunto_id": "1c72afc4770ab7027e98c5af",
         "conjunto_nome": "MOLD HTX1100 FP 16F H8 20V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10587"
       },
       {
         "mes_ref": "2026-11",
@@ -8904,7 +9872,9 @@
         "id_produto": "23d8a94aaa9e1b805076b278",
         "conjunto_id": "2907f97013b12578535552dd",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10588"
       },
       {
         "mes_ref": "2026-11",
@@ -8917,7 +9887,9 @@
         "id_produto": "eeb3c1ead7bbc9c088df8af0",
         "conjunto_id": "2907f97013b12578535552dd",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10588"
       },
       {
         "mes_ref": "2026-11",
@@ -8930,7 +9902,9 @@
         "id_produto": "405a0111f99d0bf793b8765f",
         "conjunto_id": "2907f97013b12578535552dd",
         "conjunto_nome": "MOLD HTX1100 FP RET H6 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10588"
       },
       {
         "mes_ref": "2026-11",
@@ -8943,7 +9917,9 @@
         "id_produto": "b5d527d5fc711bcbeb782b54",
         "conjunto_id": "817682d909a0fbff6f9990d5",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10589"
       },
       {
         "mes_ref": "2026-11",
@@ -8956,7 +9932,9 @@
         "id_produto": "85f11cc3824ab140d53d378b",
         "conjunto_id": "817682d909a0fbff6f9990d5",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10589"
       },
       {
         "mes_ref": "2026-11",
@@ -8969,7 +9947,9 @@
         "id_produto": "855ae414629f1d96ef068ac1",
         "conjunto_id": "817682d909a0fbff6f9990d5",
         "conjunto_nome": "MOLD HTX1100 FP RET H8 25V MOLDE COMPLETO",
-        "origem_quantidade": "produto_proprio"
+        "origem_quantidade": "produto_proprio",
+        "cliente": "ALLMIX CONCRETO USINADO LTDA",
+        "os": "10589"
       },
       {
         "mes_ref": "2026-11",
@@ -8982,7 +9962,9 @@
         "id_produto": "055631b41bc5a86fa3a60012",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "COLUMBIA MACHINE, INC - EUA",
+        "os": "10601"
       },
       {
         "mes_ref": "2026-11",
@@ -8995,7 +9977,9 @@
         "id_produto": "7eb5f3cadcd7bf2c77d99e20",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10606"
       },
       {
         "mes_ref": "2026-11",
@@ -9008,7 +9992,9 @@
         "id_produto": "0100bf8cbf402c3dddf40ae0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10607"
       },
       {
         "mes_ref": "2026-11",
@@ -9021,7 +10007,9 @@
         "id_produto": "7c7f5b5cd8754be15e3923e0",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10608"
       },
       {
         "mes_ref": "2026-11",
@@ -9034,7 +10022,9 @@
         "id_produto": "434577663eef206ea8ef0f6c",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10609"
       },
       {
         "mes_ref": "2026-11",
@@ -9047,7 +10037,9 @@
         "id_produto": "ec9583d1ec84644f805c42c8",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "W.F. BLOCOS",
+        "os": "10610"
       },
       {
         "mes_ref": "2026-11",
@@ -9060,7 +10052,9 @@
         "id_produto": "102fe7bd75f3e9232622740e",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARTECIM ARTEFATOS DE CIMENTO",
+        "os": "10758"
       },
       {
         "mes_ref": "2026-11",
@@ -9073,7 +10067,9 @@
         "id_produto": "479a3aab406781a2804d0bb2",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "ARTECIM ARTEFATOS DE CIMENTO",
+        "os": "10759"
       },
       {
         "mes_ref": "2026-11",
@@ -9086,12 +10082,14 @@
         "id_produto": "2dafddc2e6234f2376b0cb55",
         "conjunto_id": "",
         "conjunto_nome": "",
-        "origem_quantidade": "item_faturado"
+        "origem_quantidade": "item_faturado",
+        "cliente": "UBERPRE PREMOLDADOS",
+        "os": "10512"
       }
     ],
     "inicio": "2026-01-01",
     "fim": "2026-11-19",
-    "data_base": "2026-11-19T16:05:53.059459-03:00",
+    "data_base": "2026-11-19T16:09:02.995757-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
