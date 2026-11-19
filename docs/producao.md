@@ -4,7 +4,9 @@ Produção vem da grade CPS **ITENS PRODUZIDO (COM DEPENDENCIAS)**, segmento MOL
 produto próprio e `qtde_utilizada`. A consulta original está em
 `consultas/producao_pivot_base.sql`. Somente SELECT, transação read-only, timeout
 e limite de linhas. O mês acompanha a data da grade, conforme aprovado.
-A saída não contém números de NF, OS nem clientes.
+A saída não contém números de NF. Por solicitação do usuário, os detalhes dos
+produtos incluem cliente e número da OS da grade. O total do produto permanece
+consolidado, com o volume discriminado por cliente/OS/mês logo abaixo.
 
 Quando o produto próprio está vazio na grade, usar descrição e quantidade do item
 faturado. Produto próprio preenchido tem prioridade na mesma OS/mês; não somar

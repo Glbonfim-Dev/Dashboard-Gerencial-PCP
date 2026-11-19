@@ -2,7 +2,7 @@ const {test}=require('node:test');const assert=require('node:assert/strict');con
 test('categorias clicaveis, composicao, mes atual, limpeza e volume sem duplicar',()=>{
  const elements=new Map();
  function element(id){if(!elements.has(id))elements.set(id,{value:'',hidden:false,options:[],children:[],listeners:{},attributes:{},textContent:'',replaceChildren(...v){this.children=v;this.options=[];},add(v){this.options.push(v);},append(v){this.children.push(v);},setAttribute(k,v){this.attributes[k]=v;},addEventListener(k,v){this.listeners[k]=v;}});return elements.get(id);}
- const row=(cat,q,id,desc)=>({mes_ref:'2026-11',categoria:cat,componente:cat,quantidade:q,descricao:desc||cat,codigo_produto:id,id_produto:id,conjunto_id:'C1',conjunto_nome:'MOLD FP COMPLETO'});
+ const row=(cat,q,id,desc)=>({mes_ref:'2026-11',categoria:cat,componente:cat,quantidade:q,descricao:desc||cat,codigo_produto:id,id_produto:id,conjunto_id:'C1',conjunto_nome:'MOLD FP COMPLETO',cliente:'Cliente A',os:'10473'});
  const records=[row('MOLDES_FP',2,'GRID'),row('SAPATAS',16,'SPT'),row('CASTELOS',2,'CAST'),row('AUXILIAR',16,'RTD'),{...row('CANECOS',4,'ENDCORE'),conjunto_id:''}];
  const data={formato:'pivot_categorias',fim:'2026-11-18',registros:records};
  const ctx={window:{},document:{getElementById:element,createElement:()=>element(Symbol())},Option:function(t,v){this.text=t;this.value=v;},estado:{charts:{}},destruirChart(){},Chart:function(c,config){this.config=config;},mesesQualidade:['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'],formatarData:v=>v,Intl,Date,Map,Set};
@@ -30,4 +30,16 @@ test('categorias clicaveis, composicao, mes atual, limpeza e volume sem duplicar
  assert.equal(anual.data.labels.length,11);
  assert.equal(anual.data.datasets[0].data.reduce((s,n)=>s+(n||0),0),16);
  ctx.window.producaoDashboard.preparar(data);assert.equal(element('producao-mes').value,'');
+ const outro={...row('SAPATAS',20,'SPT'),cliente:'Cliente B',os:'10476',conjunto_id:''};
+ ctx.window.producaoDashboard.preparar({...data,registros:[records[1],outro]});
+ element('producao-card-SAPATAS').listeners.click();
+ const item=element('producao-itens').children[0];
+ assert.equal(item.children[1].textContent,'36 un.');
+ const origens=item.children[2].children;assert.equal(origens.length,2);
+ assert.equal(origens[0].children[0].textContent,'Cliente: Cliente A');
+ assert.equal(origens[0].children[1].textContent,'OS: 10473');
+ assert.equal(origens[0].children[3].textContent,'16 un.');
+ assert.equal(origens[1].children[0].textContent,'Cliente: Cliente B');
+ assert.equal(origens[1].children[1].textContent,'OS: 10476');
+ assert.equal(origens[1].children[3].textContent,'20 un.');
 });
