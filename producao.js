@@ -56,6 +56,32 @@
     });
     el("itens").replaceChildren(...(cards.length?cards:[node("p","quality-note","Nenhum item nesta categoria no período.")]));
   }
+  function renderizarGraficos(rows,mes){
+    destruirChart("producao-mensal");
+    const fim=fonte.fim||new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"}).format(new Date());
+    const ultimo=Math.min(12,Math.max(1,Number(fim.slice(5,7))));
+    const meses=Array.from({length:ultimo},(_,i)=>`2026-${String(i+1).padStart(2,"0")}`).filter((m)=>!mes||m.slice(5)===mes);
+    el("periodo-graficos").textContent=mes?`${mesesQualidade[Number(mes)-1]} · 2026`:`Janeiro a ${mesesQualidade[ultimo-1]} · 2026`;
+    const hoje=new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"}).format(new Date());
+    const parcial=fim.slice(0,7)===hoje.slice(0,7)&&(!mes||mes===fim.slice(5,7));
+    el("mes-parcial").hidden=!parcial;el("mes-parcial").textContent=`${mesesQualidade[ultimo-1]} parcial`;
+    Object.entries(categorias).forEach(([key,label],i)=>{
+      const nome=`producao-mensal-${key}`;destruirChart(nome);
+      const items=itensCategoria(rows,key);el(`soma-${key}`).textContent=volume(items);
+      const data=meses.map((m)=>{const v=itensCategoria(rows.filter((r)=>r.mes_ref===m),key);return v.length&&!v.some((r)=>Number.isFinite(r.quantidade))?null:soma(v);});
+      const maior=Math.max(0,...data.filter(Number.isFinite));
+      const base=10**Math.floor(Math.log10(maior||1));
+      const max=[1,2,5,10].map((v)=>v*base).find((v)=>v>=maior*1.12)||base*10;
+      el(`escala-${key}`).textContent=`Escala: 0–${numero.format(max)} un.`;
+      const valores={id:"valoresMensais",afterDatasetsDraw(chart){
+        const {ctx,chartArea}=chart;ctx.save();ctx.fillStyle="#071a33";ctx.font="600 12px Geist, Arial, sans-serif";ctx.textAlign="center";ctx.textBaseline="bottom";
+        chart.getDatasetMeta(0).data.forEach((bar,index)=>{const value=data[index];if(Number.isFinite(value))ctx.fillText(numero.format(value),bar.x,Math.max(chartArea.top+14,bar.y-5));});ctx.restore();
+      }};
+      const canvas=document.getElementById(`grafico-producao-${key}`);
+      canvas.setAttribute("aria-label",`${label}: ${meses.map((m,j)=>`${mesesQualidade[Number(m.slice(5))-1]} ${data[j]===null?"sem quantidade":numero.format(data[j])}`).join(", ")}`);
+      estado.charts[nome]=new Chart(canvas,{type:"bar",plugins:[valores],data:{labels:meses.map((m)=>mesesQualidade[Number(m.slice(5))-1]),datasets:[{label,data,borderRadius:4,maxBarThickness:32,backgroundColor:meses.map((m)=>parcial&&m===fim.slice(0,7)?`${coresCategorias[i]}70`:coresCategorias[i])}]},options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:18}},scales:{y:{beginAtZero:true,max,ticks:{precision:maior%1?2:0,maxTicksLimit:5},grid:{color:"#d7e1ea"}},x:{grid:{display:false},ticks:{autoSkip:false,maxRotation:0,font:{size:11}}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:(c)=>`${label}: ${numero.format(c.parsed.y)}`}}}}});
+    });
+  }
   function renderizar(){
     const mes=el("mes").value;
     const rows=fonte.registros.filter((r)=>r.mes_ref.startsWith("2026-")&&(!mes||r.mes_ref.slice(5)===mes));
@@ -64,11 +90,7 @@
     Object.keys(categorias).forEach((key)=>{
       const items=itensCategoria(rows,key);el(`total-${key}`).textContent=volume(items);
     });renderizarDetalhes(rows);
-    destruirChart("producao-mensal");
-    if(!rows.length)return;
-    const fim=Number((fonte.fim||new Intl.DateTimeFormat("sv-SE",{timeZone:"America/Sao_Paulo"}).format(new Date())).slice(5,7));
-    const meses=Array.from({length:fim},(_,i)=>`2026-${String(i+1).padStart(2,"0")}`).filter((m)=>!mes||m.slice(5)===mes);
-    estado.charts["producao-mensal"]=new Chart(document.getElementById("grafico-producao-mensal"),{type:"bar",data:{labels:meses.map((m)=>mesesQualidade[Number(m.slice(5))-1]),datasets:Object.entries(categorias).map(([key,label],i)=>({label,backgroundColor:coresCategorias[i],borderRadius:4,data:meses.map((m)=>{const items=itensCategoria(rows.filter((r)=>r.mes_ref===m),key);return items.length&&!items.some((r)=>Number.isFinite(r.quantidade))?null:soma(items);})}))},options:{responsive:true,maintainAspectRatio:false,scales:{y:{beginAtZero:true}},plugins:{tooltip:{callbacks:{label:(c)=>`${c.dataset.label}: ${numero.format(c.parsed.y)}`}}}}});
+    renderizarGraficos(rows,mes);
   }
   function limpar(){el("mes").value="";ativa=null;renderizar();}
   Object.keys(categorias).forEach((key)=>el(`card-${key}`).addEventListener("click",()=>{ativa=ativa===key?null:key;renderizar();}));

@@ -10,12 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261119-seis-categorias-2" />
+    <link rel="stylesheet" href="style.css?v=20261119-minigraficos-3" />
     <link rel="stylesheet" href="acesso.css?v=20261113-1" />
     <script src="acesso.js?v=20261113-colmac-3" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
     <script src="app.js?v=20261118-subtitulo-producao-1" defer></script>
-    <script src="producao.js?v=20261119-seis-categorias-2" defer></script>
+    <script src="producao.js?v=20261119-minigraficos-3" defer></script>
   </head>
   <body>
     <!-- Biblioteca interna de ícones SVG reutilizados na interface. -->
@@ -121,7 +121,16 @@
             <div class="production-details-heading"><h2 id="producao-detalhes-titulo"></h2><button type="button" id="producao-fechar" class="link-button">Fechar detalhes</button></div>
             <div id="producao-itens" class="production-item-list"></div>
           </section>
-          <section class="content-grid production-monthly-grid"><article class="panel"><h2>Quantidades por mês</h2><div class="chart-box quality-chart"><canvas id="grafico-producao-mensal" role="img" aria-label="Quantidades por categoria e mês"></canvas></div></article></section>
+          <section class="content-grid production-monthly-grid"><article class="panel production-monthly-panel">
+            <div class="production-monthly-heading"><div><h2>Quantidades por mês</h2><p id="producao-periodo-graficos"></p></div><span id="producao-mes-parcial" class="production-partial" hidden></span></div>
+            <div class="production-mini-grid">
+              <section class="production-mini" style="--chart-color:#1769d2" aria-labelledby="producao-titulo-COMPLETOS"><div class="production-mini-heading"><h3 id="producao-titulo-COMPLETOS">Moldes Completos</h3><div><strong id="producao-soma-COMPLETOS">—</strong><span>no período</span></div></div><p id="producao-escala-COMPLETOS" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-COMPLETOS" role="img" aria-label="Moldes Completos: quantidades por mês"></canvas></div></section>
+              <section class="production-mini" style="--chart-color:#00806f" aria-labelledby="producao-titulo-MOLDES_FP"><div class="production-mini-heading"><h3 id="producao-titulo-MOLDES_FP">Moldes FP</h3><div><strong id="producao-soma-MOLDES_FP">—</strong><span>no período</span></div></div><p id="producao-escala-MOLDES_FP" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-MOLDES_FP" role="img" aria-label="Moldes FP: quantidades por mês"></canvas></div></section>
+              <section class="production-mini" style="--chart-color:#13a36f" aria-labelledby="producao-titulo-MOLDES_FB"><div class="production-mini-heading"><h3 id="producao-titulo-MOLDES_FB">Moldes FB</h3><div><strong id="producao-soma-MOLDES_FB">—</strong><span>no período</span></div></div><p id="producao-escala-MOLDES_FB" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-MOLDES_FB" role="img" aria-label="Moldes FB: quantidades por mês"></canvas></div></section>
+              <section class="production-mini" style="--chart-color:#e99a16" aria-labelledby="producao-titulo-SAPATAS"><div class="production-mini-heading"><h3 id="producao-titulo-SAPATAS">Sapatas</h3><div><strong id="producao-soma-SAPATAS">—</strong><span>no período</span></div></div><p id="producao-escala-SAPATAS" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-SAPATAS" role="img" aria-label="Sapatas: quantidades por mês"></canvas></div></section>
+              <section class="production-mini" style="--chart-color:#8054d9" aria-labelledby="producao-titulo-CASTELOS"><div class="production-mini-heading"><h3 id="producao-titulo-CASTELOS">Castelos</h3><div><strong id="producao-soma-CASTELOS">—</strong><span>no período</span></div></div><p id="producao-escala-CASTELOS" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-CASTELOS" role="img" aria-label="Castelos: quantidades por mês"></canvas></div></section>
+              <section class="production-mini" style="--chart-color:#437e99" aria-labelledby="producao-titulo-CANECOS"><div class="production-mini-heading"><h3 id="producao-titulo-CANECOS">Canecos</h3><div><strong id="producao-soma-CANECOS">—</strong><span>no período</span></div></div><p id="producao-escala-CANECOS" class="production-mini-scale"></p><div class="production-mini-canvas"><canvas id="grafico-producao-CANECOS" role="img" aria-label="Canecos: quantidades por mês"></canvas></div></section>
+            </div><p class="quality-note">Escalas independentes por categoria. Compare os valores indicados.</p></article></section>
         </div>
         <div id="painel-gerencial" role="tabpanel" aria-labelledby="aba-gerencial">
         <!-- Indicadores calculados novamente sempre que os filtros mudam. -->

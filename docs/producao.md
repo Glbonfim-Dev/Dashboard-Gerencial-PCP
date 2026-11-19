@@ -36,6 +36,12 @@ Não somar os cartões como um total de peças. O clique abre itens e volumes ab
 Em Completos, cada modelo expande sua composição. Não há informações de NF na tela,
 rankings ou tabelas de recorrência. Nomenclaturas não reconhecidas ficam pendentes.
 
+O painel mensal segue a Opção 1 aprovada: seis minigráficos em uma grade de três
+colunas (duas no tablet, uma no celular), uma categoria por quadro. Cada gráfico
+tem escala independente explícita, valores sobre as barras e total no período.
+O mês atual é identificado como parcial e sua barra usa uma tonalidade mais clara.
+Os filtros existentes atualizam simultaneamente os cartões e os seis gráficos.
+
 Cada linha de produto é contada uma vez por mês (empresa/OS/GUID), removendo
 multiplicações das junções. A reaparição em outro mês é preservada conforme a
 grade, sem comprovar nova produção física. Campos vazios não viram zeros.
