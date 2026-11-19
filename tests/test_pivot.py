@@ -23,8 +23,9 @@ class PivotTests(unittest.TestCase):
         self.assertEqual(classificar('MOLD FP RET AGITADOR',faturado=True)[0],'AUXILIAR')
         self.assertEqual(classificar('MOLD HTX700 FP RET H8 8V TERMO NOVO',faturado=True)[0],'PENDENTE')
     def test_saida_sem_identificadores_fiscais(self):
-        r=normalizar([self.linha()],date(2026,11,18))['registros'][0]
-        self.assertNotIn('nf',r);self.assertNotIn('cliente',r);self.assertNotIn('os_id',r)
+        r=normalizar([self.linha(cliente='Cliente teste',os_principal='10473')],date(2026,11,18))['registros'][0]
+        self.assertNotIn('nf',r);self.assertNotIn('os_id',r)
+        self.assertEqual(r['cliente'],'Cliente teste');self.assertEqual(r['os'],'10473')
         self.assertTrue(r['conjunto_id'])
     def test_quantidade_conflitante_impede_publicacao(self):
         with self.assertRaises(ValueError):normalizar([self.linha(),self.linha(qtde_utilizada=2)],date(2026,11,18))

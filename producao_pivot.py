@@ -1,4 +1,4 @@
-"""Consulta CPS somente leitura. Saída pública sem números de NF/OS ou clientes."""
+"""Consulta CPS somente leitura. Cliente e OS nos detalhes, sem números de NF."""
 import hashlib
 import os
 import re
@@ -36,7 +36,7 @@ def montar_sql(limite):
     order=re.search(r'\nORDER BY\s+I.COD_EMPRESA',s)
     if not order: raise ValueError('Ordenacao da grade nao reconhecida')
     s=s[:order.start()].rstrip().rstrip(';')
-    return '''SELECT q.data_mes_grade, q.segmento,q.cod_produto_proprio,
+    return '''SELECT q.data_mes_grade, q.segmento,q.cod_produto_proprio,q.cliente,q.os_principal,
  q.produto_proprio,q.unidade,q.qtde_utilizada,q.empresa_auditoria,q.os_id,
  q.id_linha_produto,q.descricao_nf AS descricao_conjunto,
  q.id_item_faturado,q.tipo_item_faturado,q.quantidade_faturada,
@@ -109,7 +109,8 @@ def normalizar(rows,limite):
         record=dict(mes_ref=mes,descricao=descricao,codigo_produto=str(codigo or ''),
                     quantidade=qtd,unidade=str(row['unidade'] or ''),categoria=categoria,componente=componente,
                     id_produto=digest(key),conjunto_id=digest((mes,row['empresa_auditoria'],row['os_id'])) if completo else '',
-                    conjunto_nome=nome if completo else '',origem_quantidade='produto_proprio' if proprio else 'item_faturado')
+                    conjunto_nome=nome if completo else '',origem_quantidade='produto_proprio' if proprio else 'item_faturado',
+                    cliente=str(row.get('cliente') or '').strip(),os=str(row.get('os_principal') or '').strip())
         if key in registros:
             anterior=registros[key]
             if anterior['quantidade']!=qtd:raise ValueError('Quantidade conflitante na repeticao de produto')

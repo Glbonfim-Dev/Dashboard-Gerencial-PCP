@@ -13,7 +13,7 @@
     return [...agrupar(rows.filter((r)=>r.conjunto_id),(r)=>r.conjunto_id).values()].map((items)=>{
       const grids=items.filter((r)=>["MOLDES_FP","MOLDES_FB"].includes(r.categoria));
       const diretos=items.filter((r)=>r.categoria==="COMPLETOS");
-      return {descricao:items[0].conjunto_nome,quantidade:grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):diretos.some((r)=>Number.isFinite(r.quantidade))?soma(diretos):null,componentes:items.filter((r)=>r.categoria!=="COMPLETOS")};
+      return {descricao:items[0].conjunto_nome,cliente:items[0].cliente,os:items[0].os,mes_ref:items[0].mes_ref,quantidade:grids.some((r)=>Number.isFinite(r.quantidade))?soma(grids):diretos.some((r)=>Number.isFinite(r.quantidade))?soma(diretos):null,componentes:items.filter((r)=>r.categoria!=="COMPLETOS")};
     });
   }
   function itensCategoria(rows,key){
@@ -21,8 +21,21 @@
     return [...agrupar(base,(r)=>key==="COMPLETOS"?r.descricao:(r.codigo_produto||r.descricao)).values()].map((items)=>({
       descricao:items[0].descricao,quantidade:items.some((r)=>Number.isFinite(r.quantidade))?soma(items):null,
       pendentes:items.filter((r)=>!Number.isFinite(r.quantidade)).length,
-      componentes:items.flatMap((r)=>r.componentes||[])
+      componentes:items.flatMap((r)=>r.componentes||[]),
+      origens:[...agrupar(items,(r)=>JSON.stringify([r.cliente||"",r.os||"",r.mes_ref])).values()].map((grupo)=>({cliente:grupo[0].cliente,os:grupo[0].os,mes_ref:grupo[0].mes_ref,quantidade:grupo.some((r)=>Number.isFinite(r.quantidade))?soma(grupo):null}))
     })).sort((a,b)=>(b.quantidade||0)-(a.quantidade||0)||a.descricao.localeCompare(b.descricao));
+  }
+  function renderizarOrigens(item,completo=false){
+    const lista=node("div","production-origins","");
+    item.origens.forEach((origem)=>{
+      const linha=node("div","production-origin","");
+      linha.append(node("span","production-origin-client",`Cliente: ${origem.cliente||"Não informado"}`));
+      linha.append(node("span","production-origin-os",`OS: ${origem.os||"Não informada"}`));
+      if(!el("mes").value)linha.append(node("span","production-origin-month",`${mesesQualidade[Number(origem.mes_ref.slice(5))-1]} / 2026`));
+      linha.append(node("span","production-origin-quantity",origem.quantidade===null?"Quantidade não informada":`${numero.format(origem.quantidade)} ${completo?"conjuntos":"un."}`));
+      lista.append(linha);
+    });
+    return lista;
   }
   function preparar(dados){
     fonte=dados?.formato==="pivot_categorias"?dados:{registros:[],fim:"",formato:"aguardando"};
@@ -43,7 +56,7 @@
     const list=itensCategoria(rows,ativa);
     const cards=list.map((item)=>{
       if(ativa!=="COMPLETOS"){
-        const article=node("article","production-item-row","");article.append(node("span","",item.descricao));article.append(node("strong","",item.quantidade===null?"Quantidade não informada":`${numero.format(item.quantidade)} un.${item.pendentes?" · parcial":""}`));return article;
+        const article=node("article","production-item-row","");article.append(node("span","",item.descricao));article.append(node("strong","",item.quantidade===null?"Quantidade não informada":`${numero.format(item.quantidade)} un.${item.pendentes?" · parcial":""}`));article.append(renderizarOrigens(item));return article;
       }
       const details=document.createElement("details");details.className="production-accordion";
       const summary=document.createElement("summary");summary.append(node("span","",item.descricao));summary.append(node("strong","production-mould-badge",item.quantidade===null?"Volume a confirmar":`${numero.format(item.quantidade)} conjuntos${item.pendentes?" · parcial":""}`));details.append(summary);
@@ -52,7 +65,7 @@
       if(!item.componentes.length)grid.append(node("p","quality-note","Composição não informada na base; volume proveniente do item faturado."));
       [...agrupar(item.componentes,(r)=>r.componente).entries()].forEach(([nome,items])=>{
         const card=node("article","production-component-card","");card.append(node("span","production-component-name",nome));card.append(node("strong","",volume(items)));card.append(node("small","",items.some((r)=>r.quantidade===null)?"Subtotal informado · há quantidades pendentes":"unidades"));grid.append(card);
-      });details.append(grid);return details;
+      });details.append(grid);details.append(renderizarOrigens(item,true));return details;
     });
     el("itens").replaceChildren(...(cards.length?cards:[node("p","quality-note","Nenhum item nesta categoria no período.")]));
   }
