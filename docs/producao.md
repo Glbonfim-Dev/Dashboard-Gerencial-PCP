@@ -52,11 +52,10 @@ A senha vem de DB_PASSWORD ou do Cofre de Credenciais do Windows do usuário
 central, alvo `DashboardGerencial/CPS/DevLeitura`. Não há senha em arquivos do
 projeto. Outra máquina/usuário precisa configurar sua credencial. Requer psycopg.
 
-Estado da implantação: código e base validados localmente. A revisão automática
-bloqueou o envio dos novos dados de produção ao GitHub. Por isso,
-`CPS_PUBLICACAO_AUTORIZADA=False` em config.py impede também o upload indireto
-pela tarefa existente até autorização expressa do usuário. `--no-upload` continua
-permitindo validar a leitura local. Nenhum envio alternativo deve contornar esse bloqueio.
+Publicação recorrente autorizada expressamente pelo usuário em 19/11/2026 para
+`Glbonfim-Dev/Dashboard-Gerencial-PCP` e o site publicado. A configuração
+`CPS_PUBLICACAO_AUTORIZADA=True` habilita os ciclos sem confirmação por salvamento.
+`--no-upload` continua disponível para conferir a leitura apenas localmente.
 
 `dados.json` é gerado: em conflito de Git, regenerar, nunca misturar por merge
 textual. `saida/` guarda auditorias locais e é ignorada pelo Git. Mudanças da
