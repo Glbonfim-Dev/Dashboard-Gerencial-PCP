@@ -1,2 +1,6 @@
 # dados.json e gerado pela planilha: nao combinar conteudo por merge textual.
 dados.json -merge
+
+# Mantem HTML e CSS iguais no Git local e nas publicacoes pela API.
+*.html text eol=lf
+*.css text eol=lf
