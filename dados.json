@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-23T19:35:43-03:00",
+  "ultima_atualizacao": "2026-11-23T19:40:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10162,7 +10162,7 @@
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-23",
-    "data_base": "2026-11-23T19:35:52.251056-03:00",
+    "data_base": "2026-11-23T19:40:52.486365-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
