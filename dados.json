@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-23T10:15:44-03:00",
+  "ultima_atualizacao": "2026-11-23T10:20:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10085,12 +10085,42 @@
         "origem_quantidade": "item_faturado",
         "cliente": "UBERPRE PREMOLDADOS",
         "os": "10512"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "MOLD EVO FP RET H8 50V SHOE ASSY",
+        "codigo_produto": "27433",
+        "quantidade": 50.0,
+        "unidade": "",
+        "categoria": "SAPATAS",
+        "componente": "SAPATA",
+        "id_produto": "c619e9fce12f617efb31d7e9",
+        "conjunto_id": "",
+        "conjunto_nome": "",
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY - RJ",
+        "os": "10579"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "MOLD EVO FP RET H8 50V GRID P/B",
+        "codigo_produto": "16627",
+        "quantidade": 1.0,
+        "unidade": "",
+        "categoria": "MOLDES_FP",
+        "componente": "GRID / PB",
+        "id_produto": "d0254d075341811d17d37399",
+        "conjunto_id": "",
+        "conjunto_nome": "",
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERCITY - RJ",
+        "os": "10580"
       }
     ],
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-23",
-    "data_base": "2026-11-23T10:15:53.464524-03:00",
+    "data_base": "2026-11-23T10:20:53.154498-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
