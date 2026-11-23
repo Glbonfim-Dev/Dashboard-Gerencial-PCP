@@ -1,17 +1,17 @@
 {
-  "ultima_atualizacao": "2026-11-23T13:10:43-03:00",
+  "ultima_atualizacao": "2026-11-23T13:12:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
   ],
   "acoes": {
-    "total": 78,
-    "implementadas": 31,
+    "total": 79,
+    "implementadas": 32,
     "em_andamento": 22,
     "nao_iniciadas": 25,
     "outros": 0,
     "atrasadas": 42,
-    "percentual_concluido": 39.74
+    "percentual_concluido": 40.51
   },
   "responsaveis": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "nome": "MILTON",
-      "quantidade": 23
+      "quantidade": 24
     },
     {
       "nome": "ROGÉRIO",
@@ -385,6 +385,18 @@
       "proxima_vencimento": false
     },
     {
+      "acao": "Fazer dispositovo / frezas para usinar facões na U30.",
+      "responsavel": "MILTON",
+      "prazo": "2026-01-20",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
+    },
+    {
       "acao": "Identificar gargálos",
       "responsavel": "EDEMIR",
       "prazo": "2026-06-10",
@@ -604,18 +616,6 @@
       "acao": "Criar indicador de produção \"faturamento bruto x quantidade de produtos x GGF\"",
       "responsavel": "ROGÉRIO",
       "prazo": "2026-09-30",
-      "prazo_texto": "",
-      "status": "Em Andamento",
-      "observacao": "",
-      "data_conclusao": null,
-      "ano": 2026,
-      "atrasada": true,
-      "proxima_vencimento": false
-    },
-    {
-      "acao": "Substituir talha estação solda nº 2 por corrente",
-      "responsavel": "MILTON",
-      "prazo": "2026-10-20",
       "prazo_texto": "",
       "status": "Em Andamento",
       "observacao": "",
@@ -1543,11 +1543,11 @@
       "responsavel": "MILTON",
       "prazo": "2026-10-20",
       "prazo_texto": "",
-      "status": "Em Andamento",
+      "status": "Implementada",
       "observacao": "",
       "data_conclusao": null,
       "ano": 2026,
-      "atrasada": true,
+      "atrasada": false,
       "proxima_vencimento": false
     },
     {
@@ -1621,6 +1621,18 @@
       "ano": 2026,
       "atrasada": false,
       "proxima_vencimento": true
+    },
+    {
+      "acao": "Fazer dispositovo / frezas para usinar facões na U30.",
+      "responsavel": "MILTON",
+      "prazo": "2026-01-20",
+      "prazo_texto": "",
+      "status": "Em Andamento",
+      "observacao": "",
+      "data_conclusao": null,
+      "ano": 2026,
+      "atrasada": true,
+      "proxima_vencimento": false
     }
   ],
   "qualidade": {
@@ -10165,7 +10177,7 @@
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-23",
-    "data_base": "2026-11-23T13:10:52.570539-03:00",
+    "data_base": "2026-11-23T13:12:52.917977-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
