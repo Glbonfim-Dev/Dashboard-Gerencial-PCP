@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-26T15:20:44-03:00",
+  "ultima_atualizacao": "2026-11-26T15:22:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -46,15 +46,15 @@
   "faturamento": {
     "ano": 2026,
     "meta_total": 12400000.0,
-    "realizado_total": 8333749.41,
-    "percentual_atingimento": 67.21,
+    "realizado_total": 8366749.41,
+    "percentual_atingimento": 67.47,
     "meta_disponivel": true,
     "referencia_mensal": {
       "mes": "Nov",
       "mes_completo": "Novembro",
       "meta": 1200000.0,
-      "realizado": 915000.0,
-      "percentual_atingimento": 76.25
+      "realizado": 948000.0,
+      "percentual_atingimento": 79.0
     },
     "mensal": [
       {
@@ -121,7 +121,7 @@
         "mes": "Nov",
         "mes_completo": "Novembro",
         "meta": 1200000.0,
-        "realizado": 915000.0
+        "realizado": 948000.0
       },
       {
         "mes": "Dez",
@@ -10282,7 +10282,7 @@
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-26",
-    "data_base": "2026-11-26T15:20:53.039645-03:00",
+    "data_base": "2026-11-26T15:22:52.406083-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
