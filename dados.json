@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-27T11:45:43-03:00",
+  "ultima_atualizacao": "2026-11-27T11:50:43-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10415,6 +10415,21 @@
       },
       {
         "mes_ref": "2026-11",
+        "descricao": "PAN WELDMENT 612943X04",
+        "codigo_produto": "41815",
+        "quantidade": 1.0,
+        "unidade": "",
+        "categoria": "PENDENTE",
+        "componente": "PAN WELDMENT 612943X04",
+        "id_produto": "c1642db110a7d8e248d4f66c",
+        "conjunto_id": "",
+        "conjunto_nome": "",
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "11020"
+      },
+      {
+        "mes_ref": "2026-11",
         "descricao": "COREBAR ASSEMBLY 612943X05",
         "codigo_produto": "41816",
         "quantidade": 8.0,
@@ -10427,12 +10442,27 @@
         "origem_quantidade": "item_faturado",
         "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
         "os": "11021"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "COREBAR ASSEMBLY 611574X07",
+        "codigo_produto": "41826",
+        "quantidade": 7.0,
+        "unidade": "",
+        "categoria": "CANECOS",
+        "componente": "CANECO",
+        "id_produto": "c7c043b6a8616105c377fc4d",
+        "conjunto_id": "",
+        "conjunto_nome": "",
+        "origem_quantidade": "item_faturado",
+        "cliente": "INTERBLOCK ARTEFATOS DE CIMENTO S.A",
+        "os": "11022"
       }
     ],
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-27",
-    "data_base": "2026-11-27T11:45:53.028476-03:00",
+    "data_base": "2026-11-27T11:50:52.837463-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
