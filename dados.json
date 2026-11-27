@@ -1,5 +1,5 @@
 {
-  "ultima_atualizacao": "2026-11-27T10:20:44-03:00",
+  "ultima_atualizacao": "2026-11-27T10:25:44-03:00",
   "arquivo_origem": "Melhorias - Faturamento moldes 2026.xlsx",
   "periodos": [
     2026
@@ -10322,12 +10322,57 @@
         "origem_quantidade": "produto_proprio",
         "cliente": "ADEMAR DO BLOCO",
         "os": "11109"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "MOLD VP300 FP RET H6 12V CAST. C/PORT.SP",
+        "codigo_produto": "41454",
+        "quantidade": 0.0,
+        "unidade": "UN",
+        "categoria": "CASTELOS",
+        "componente": "CASTELO",
+        "id_produto": "2b777e8c1bb943295d860e8e",
+        "conjunto_id": "03bcb31020f95f273748dfbf",
+        "conjunto_nome": "MOLD VP300 FP RET H6 12V MOLDE COMPLETO",
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "10719"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "MOLD VP300 FP RET H6 12V GRID P/B",
+        "codigo_produto": "40285",
+        "quantidade": 0.0,
+        "unidade": "UN",
+        "categoria": "MOLDES_FP",
+        "componente": "GRID / PB",
+        "id_produto": "774bcb685a36ba97278a56bf",
+        "conjunto_id": "03bcb31020f95f273748dfbf",
+        "conjunto_nome": "MOLD VP300 FP RET H6 12V MOLDE COMPLETO",
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "10719"
+      },
+      {
+        "mes_ref": "2026-11",
+        "descricao": "MOLD VP300 FP RET H6 12V SHOE ASSY",
+        "codigo_produto": "41455",
+        "quantidade": 0.0,
+        "unidade": "UN",
+        "categoria": "SAPATAS",
+        "componente": "SAPATA",
+        "id_produto": "29a1ea55952356a987aa9444",
+        "conjunto_id": "03bcb31020f95f273748dfbf",
+        "conjunto_nome": "MOLD VP300 FP RET H6 12V MOLDE COMPLETO",
+        "origem_quantidade": "produto_proprio",
+        "cliente": "CONTERSOLO / PAVIMAN",
+        "os": "10719"
       }
     ],
     "criterio": "faturado_no_mes",
     "inicio": "2026-01-01",
     "fim": "2026-11-27",
-    "data_base": "2026-11-27T10:20:53.677176-03:00",
+    "data_base": "2026-11-27T10:25:53.814491-03:00",
     "avisos": [
       "Mes definido pela data da grade CPS. Produto proprio tem prioridade; na ausencia, descricao e quantidade do item faturado.",
       "Mes atual parcial. Repeticoes da mesma linha de produto sao contadas uma vez por mes.",
